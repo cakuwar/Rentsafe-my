@@ -1,0 +1,86 @@
+{
+  "totals": {
+    "SCAM": 316,
+    "LEGITIMATE": 158
+  },
+  "signals": {
+    "ren_number": {
+      "raw_scam_pct": 0.0,
+      "raw_legit_pct": 0.0,
+      "shown_scam_pct": 0.0,
+      "shown_legit_pct": 0.0,
+      "fires_more_on_scams": false
+    },
+    "registered_firm": {
+      "raw_scam_pct": 0.0,
+      "raw_legit_pct": 0.0,
+      "shown_scam_pct": 0.0,
+      "shown_legit_pct": 0.0,
+      "fires_more_on_scams": false
+    },
+    "viewing_first": {
+      "raw_scam_pct": 12.0,
+      "raw_legit_pct": 1.9,
+      "shown_scam_pct": 1.3,
+      "shown_legit_pct": 1.9,
+      "fires_more_on_scams": true
+    },
+    "formal_documents": {
+      "raw_scam_pct": 6.0,
+      "raw_legit_pct": 0.0,
+      "shown_scam_pct": 2.2,
+      "shown_legit_pct": 0.0,
+      "fires_more_on_scams": true
+    },
+    "stamping_mentioned": {
+      "raw_scam_pct": 8.5,
+      "raw_legit_pct": 0.0,
+      "shown_scam_pct": 2.8,
+      "shown_legit_pct": 0.0,
+      "fires_more_on_scams": true
+    },
+    "company_account": {
+      "raw_scam_pct": 23.1,
+      "raw_legit_pct": 0.0,
+      "shown_scam_pct": 0.0,
+      "shown_legit_pct": 0.0,
+      "fires_more_on_scams": true
+    },
+    "viewing_arranged": {
+      "raw_scam_pct": 17.7,
+      "raw_legit_pct": 4.4,
+      "shown_scam_pct": 4.1,
+      "shown_legit_pct": 4.4,
+      "fires_more_on_scams": true
+    },
+    "in_person_handover": {
+      "raw_scam_pct": 0.0,
+      "raw_legit_pct": 0.0,
+      "shown_scam_pct": 0.0,
+      "shown_legit_pct": 0.0,
+      "fires_more_on_scams": false
+    },
+    "payment_at_handover": {
+      "raw_scam_pct": 0.0,
+      "raw_legit_pct": 0.0,
+      "shown_scam_pct": 0.0,
+      "shown_legit_pct": 0.0,
+      "fires_more_on_scams": false
+    },
+    "platform_agreement": {
+      "raw_scam_pct": 0.0,
+      "raw_legit_pct": 0.0,
+      "shown_scam_pct": 0.0,
+      "shown_legit_pct": 0.0,
+      "fires_more_on_scams": false
+    }
+  },
+  "any_signal": {
+    "raw_scam_pct": 42.7,
+    "raw_legit_pct": 5.7,
+    "shown_scam_pct": 5.4,
+    "shown_legit_pct": 5.7
+  },
+  "signals_that_fire": 5,
+  "of_which_fire_more_on_scams": 5
+}

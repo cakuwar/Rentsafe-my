@@ -1,0 +1,130 @@
+{
+  "original_train": {
+    "rows": 379,
+    "scam": 253,
+    "legitimate": 126,
+    "majority_baseline": 0.668,
+    "features": {
+      "rm_amounts": {
+        "scam_mean": 3.415,
+        "legit_mean": 1.651,
+        "single_feature_accuracy": 0.728,
+        "shortcut": true
+      },
+      "messages": {
+        "scam_mean": 13.415,
+        "legit_mean": 8.873,
+        "single_feature_accuracy": 0.731,
+        "shortcut": true
+      },
+      "characters": {
+        "scam_mean": 532.929,
+        "legit_mean": 387.778,
+        "single_feature_accuracy": 0.773,
+        "shortcut": true
+      },
+      "question_marks": {
+        "scam_mean": 2.7,
+        "legit_mean": 2.167,
+        "single_feature_accuracy": 0.691,
+        "shortcut": true
+      },
+      "english_share": {
+        "scam_mean": 0.069,
+        "legit_mean": 0.054,
+        "single_feature_accuracy": 0.668,
+        "shortcut": true
+      }
+    },
+    "p_scam_given_4_amounts": 0.932
+  },
+  "augmented_only": {
+    "rows": 1772,
+    "scam": 886,
+    "legitimate": 886,
+    "majority_baseline": 0.5,
+    "features": {
+      "rm_amounts": {
+        "scam_mean": 2.931,
+        "legit_mean": 2.939,
+        "single_feature_accuracy": 0.506,
+        "shortcut": false
+      },
+      "messages": {
+        "scam_mean": 16.052,
+        "legit_mean": 16.068,
+        "single_feature_accuracy": 0.503,
+        "shortcut": false
+      },
+      "characters": {
+        "scam_mean": 668.0,
+        "legit_mean": 681.114,
+        "single_feature_accuracy": 0.515,
+        "shortcut": false
+      },
+      "question_marks": {
+        "scam_mean": 6.192,
+        "legit_mean": 6.668,
+        "single_feature_accuracy": 0.537,
+        "shortcut": false
+      },
+      "english_share": {
+        "scam_mean": 0.074,
+        "legit_mean": 0.069,
+        "single_feature_accuracy": 0.547,
+        "shortcut": false
+      }
+    },
+    "p_scam_given_4_amounts": 0.496
+  },
+  "combined": {
+    "rows": 2151,
+    "scam": 1139,
+    "legitimate": 1012,
+    "majority_baseline": 0.53,
+    "features": {
+      "rm_amounts": {
+        "scam_mean": 3.039,
+        "legit_mean": 2.779,
+        "single_feature_accuracy": 0.545,
+        "shortcut": false
+      },
+      "messages": {
+        "scam_mean": 15.466,
+        "legit_mean": 15.172,
+        "single_feature_accuracy": 0.54,
+        "shortcut": false
+      },
+      "characters": {
+        "scam_mean": 637.997,
+        "legit_mean": 644.592,
+        "single_feature_accuracy": 0.549,
+        "shortcut": false
+      },
+      "question_marks": {
+        "scam_mean": 5.416,
+        "legit_mean": 6.108,
+        "single_feature_accuracy": 0.548,
+        "shortcut": false
+      },
+      "english_share": {
+        "scam_mean": 0.073,
+        "legit_mean": 0.068,
+        "single_feature_accuracy": 0.541,
+        "shortcut": false
+      }
+    },
+    "p_scam_given_4_amounts": 0.552
+  },
+  "leakage": {
+    "validation split": 0,
+    "sealed test set": 0,
+    "minimal-pair test split": 0,
+    "real legit transcript": 0
+  },
+  "verdict": {
+    "shortcuts_in_combined": [],
+    "leaks": {},
+    "ok": true
+  }
+}

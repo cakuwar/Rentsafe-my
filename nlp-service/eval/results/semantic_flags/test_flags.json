@@ -1,0 +1,2706 @@
+{
+  "intfloat/multilingual-e5-base": [
+    {
+      "pair_id": "MP0408",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9094,
+          "threshold": 0.9065,
+          "message": "bayar guna DuitNow je, senang.",
+          "matched_example": "urgent bro, bayar sekarang juga."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0409",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0410",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0411",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9103,
+          "threshold": 0.9065,
+          "message": "kena settle before midnight ya.",
+          "matched_example": "booking kena settle tonight ok."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0412",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0413",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0414",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0415",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0416",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0417",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "keys_by_courier"
+      ],
+      "hits": [
+        {
+          "tactic": "keys_by_courier",
+          "similarity": 0.9308,
+          "threshold": 0.9067,
+          "message": "I'll send the keys by Poslaju once the money is in.",
+          "matched_example": "I'll mail you the key once it's settled."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0418",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9094,
+          "threshold": 0.9065,
+          "message": "bayar guna DuitNow je, senang.",
+          "matched_example": "urgent bro, bayar sekarang juga."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0419",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9103,
+          "threshold": 0.9065,
+          "message": "kena settle before midnight ya.",
+          "matched_example": "booking kena settle tonight ok."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0420",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9103,
+          "threshold": 0.9065,
+          "message": "kena settle before midnight ya.",
+          "matched_example": "booking kena settle tonight ok."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0421",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9094,
+          "threshold": 0.9065,
+          "message": "bayar guna DuitNow je, senang.",
+          "matched_example": "urgent bro, bayar sekarang juga."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0422",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0423",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0424",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9061,
+          "threshold": 0.9004,
+          "message": "maaf, tak boleh bela haiwan.",
+          "matched_example": "Tidak boleh lawat unit tu, maaf."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0424",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9061,
+          "threshold": 0.9004,
+          "message": "maaf, tak boleh bela haiwan.",
+          "matched_example": "Tidak boleh lawat unit tu, maaf."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0425",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0426",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0427",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0428",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9103,
+          "threshold": 0.9065,
+          "message": "kena settle before midnight ya.",
+          "matched_example": "booking kena settle tonight ok."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0429",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9103,
+          "threshold": 0.9065,
+          "message": "kena settle before midnight ya.",
+          "matched_example": "booking kena settle tonight ok."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0430",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0431",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9103,
+          "threshold": 0.9065,
+          "message": "kena settle before midnight ya.",
+          "matched_example": "booking kena settle tonight ok."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0432",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0433",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9061,
+          "threshold": 0.9004,
+          "message": "maaf, tak boleh bela haiwan.",
+          "matched_example": "Tidak boleh lawat unit tu, maaf."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0433",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9061,
+          "threshold": 0.9004,
+          "message": "maaf, tak boleh bela haiwan.",
+          "matched_example": "Tidak boleh lawat unit tu, maaf."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0434",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9103,
+          "threshold": 0.9065,
+          "message": "kena settle before midnight ya.",
+          "matched_example": "booking kena settle tonight ok."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0435",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0436",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0437",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0438",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9061,
+          "threshold": 0.9004,
+          "message": "maaf, tak boleh bela haiwan.",
+          "matched_example": "Tidak boleh lawat unit tu, maaf."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0438",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9061,
+          "threshold": 0.9004,
+          "message": "maaf, tak boleh bela haiwan.",
+          "matched_example": "Tidak boleh lawat unit tu, maaf."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0439",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9279,
+          "threshold": 0.9065,
+          "message": "kena selesai sebelum tengah malam ni ya.",
+          "matched_example": "Bayar sebelum 8 malam ini ya."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0440",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9061,
+          "threshold": 0.9004,
+          "message": "maaf, tak boleh bela haiwan.",
+          "matched_example": "Tidak boleh lawat unit tu, maaf."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0440",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "deadline_urgency",
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9061,
+          "threshold": 0.9004,
+          "message": "maaf, tak boleh bela haiwan.",
+          "matched_example": "Tidak boleh lawat unit tu, maaf."
+        },
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9279,
+          "threshold": 0.9065,
+          "message": "kena selesai sebelum tengah malam ni ya.",
+          "matched_example": "Bayar sebelum 8 malam ini ya."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0441",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0442",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0443",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9094,
+          "threshold": 0.9065,
+          "message": "bayar guna DuitNow je, senang.",
+          "matched_example": "urgent bro, bayar sekarang juga."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0444",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9279,
+          "threshold": 0.9065,
+          "message": "kena selesai sebelum tengah malam ni ya.",
+          "matched_example": "Bayar sebelum 8 malam ini ya."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0445",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9103,
+          "threshold": 0.9065,
+          "message": "kena settle before midnight ya.",
+          "matched_example": "booking kena settle tonight ok."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0446",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9061,
+          "threshold": 0.9004,
+          "message": "maaf, tak boleh bela haiwan.",
+          "matched_example": "Tidak boleh lawat unit tu, maaf."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0446",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9061,
+          "threshold": 0.9004,
+          "message": "maaf, tak boleh bela haiwan.",
+          "matched_example": "Tidak boleh lawat unit tu, maaf."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0447",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0448",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "keys_by_courier"
+      ],
+      "hits": [
+        {
+          "tactic": "keys_by_courier",
+          "similarity": 0.9308,
+          "threshold": 0.9067,
+          "message": "I'll send the keys by Poslaju once the money is in.",
+          "matched_example": "I'll mail you the key once it's settled."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0449",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "keys_by_courier"
+      ],
+      "hits": [
+        {
+          "tactic": "keys_by_courier",
+          "similarity": 0.9308,
+          "threshold": 0.9067,
+          "message": "I'll send the keys by Poslaju once the money is in.",
+          "matched_example": "I'll mail you the key once it's settled."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0450",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0451",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9103,
+          "threshold": 0.9065,
+          "message": "kena settle before midnight ya.",
+          "matched_example": "booking kena settle tonight ok."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0452",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "booking_fee",
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "booking_fee",
+          "similarity": 0.9309,
+          "threshold": 0.9304,
+          "message": "ada, yuran tempahan RM300 kena bank-in malam ni untuk simpan unit.",
+          "matched_example": "Kena bayar booking RM300 untuk simpan bilik."
+        },
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9279,
+          "threshold": 0.9065,
+          "message": "kena selesai sebelum tengah malam ni ya.",
+          "matched_example": "Bayar sebelum 8 malam ini ya."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0453",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0454",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "keys_by_courier"
+      ],
+      "hits": [
+        {
+          "tactic": "keys_by_courier",
+          "similarity": 0.9308,
+          "threshold": 0.9067,
+          "message": "I'll send the keys by Poslaju once the money is in.",
+          "matched_example": "I'll mail you the key once it's settled."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0455",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "booking_fee",
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "booking_fee",
+          "similarity": 0.9309,
+          "threshold": 0.9304,
+          "message": "ada, yuran tempahan RM300 kena bank-in malam ni untuk simpan unit.",
+          "matched_example": "Kena bayar booking RM300 untuk simpan bilik."
+        },
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9279,
+          "threshold": 0.9065,
+          "message": "kena selesai sebelum tengah malam ni ya.",
+          "matched_example": "Bayar sebelum 8 malam ini ya."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0456",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0457",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0458",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9103,
+          "threshold": 0.9065,
+          "message": "kena settle before midnight ya.",
+          "matched_example": "booking kena settle tonight ok."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0459",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9061,
+          "threshold": 0.9004,
+          "message": "maaf, tak boleh bela haiwan.",
+          "matched_example": "Tidak boleh lawat unit tu, maaf."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0459",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9061,
+          "threshold": 0.9004,
+          "message": "maaf, tak boleh bela haiwan.",
+          "matched_example": "Tidak boleh lawat unit tu, maaf."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0460",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0461",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0462",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0463",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9103,
+          "threshold": 0.9065,
+          "message": "kena settle before midnight ya.",
+          "matched_example": "booking kena settle tonight ok."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0464",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0465",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0466",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "keys_by_courier"
+      ],
+      "hits": [
+        {
+          "tactic": "keys_by_courier",
+          "similarity": 0.9308,
+          "threshold": 0.9067,
+          "message": "I'll send the keys by Poslaju once the money is in.",
+          "matched_example": "I'll mail you the key once it's settled."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0467",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "keys_by_courier"
+      ],
+      "hits": [
+        {
+          "tactic": "keys_by_courier",
+          "similarity": 0.9308,
+          "threshold": 0.9067,
+          "message": "I'll send the keys by Poslaju once the money is in.",
+          "matched_example": "I'll mail you the key once it's settled."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0468",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0469",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9103,
+          "threshold": 0.9065,
+          "message": "kena settle before midnight ya.",
+          "matched_example": "booking kena settle tonight ok."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0470",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9279,
+          "threshold": 0.9065,
+          "message": "kena selesai sebelum tengah malam ni ya.",
+          "matched_example": "Bayar sebelum 8 malam ini ya."
+        },
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9094,
+          "threshold": 0.9065,
+          "message": "bayar guna DuitNow je, senang.",
+          "matched_example": "urgent bro, bayar sekarang juga."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0471",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "booking_fee"
+      ],
+      "hits": [
+        {
+          "tactic": "booking_fee",
+          "similarity": 0.9309,
+          "threshold": 0.9304,
+          "message": "ada, yuran tempahan RM300 kena bank-in malam ni untuk simpan unit.",
+          "matched_example": "Kena bayar booking RM300 untuk simpan bilik."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0472",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0473",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0474",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0475",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0476",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9103,
+          "threshold": 0.9065,
+          "message": "kena settle before midnight ya.",
+          "matched_example": "booking kena settle tonight ok."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0477",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0478",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0479",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    }
+  ],
+  "mesolitica/embedding-malaysian-mistral-64M-32k": [
+    {
+      "pair_id": "MP0408",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0408",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "competition"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0409",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9743,
+          "threshold": 0.9619,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "We cannot open the room for you."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9286,
+          "threshold": 0.9035,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0409",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9435,
+          "threshold": 0.9226,
+          "message": "rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0410",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0411",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0412",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9284,
+          "threshold": 0.9226,
+          "message": "deposit bayar on signing day, lepas you puas hati dengan rumah.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0412",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0413",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0414",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0415",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0416",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0417",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0418",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9743,
+          "threshold": 0.9619,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "We cannot open the room for you."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9286,
+          "threshold": 0.9035,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0418",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9435,
+          "threshold": 0.9226,
+          "message": "rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0419",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9284,
+          "threshold": 0.9226,
+          "message": "deposit bayar on signing day, lepas you puas hati dengan rumah.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0419",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0420",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9284,
+          "threshold": 0.9226,
+          "message": "deposit bayar on signing day, lepas you puas hati dengan rumah.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0420",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0421",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "deadline_urgency",
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        },
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        },
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9743,
+          "threshold": 0.9619,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "We cannot open the room for you."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9286,
+          "threshold": 0.9035,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0421",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "competition",
+        "deadline_urgency",
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        },
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        },
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9435,
+          "threshold": 0.9226,
+          "message": "rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0422",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9578,
+          "threshold": 0.9444,
+          "message": "It is, nobody has taken it yet.",
+          "matched_example": "It's urgent, please hurry."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9146,
+          "threshold": 0.9035,
+          "message": "It is, nobody has taken it yet.",
+          "matched_example": "It's first come first serve."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0422",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9578,
+          "threshold": 0.9444,
+          "message": "It is, nobody has taken it yet.",
+          "matched_example": "It's urgent, please hurry."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9146,
+          "threshold": 0.9035,
+          "message": "It is, nobody has taken it yet.",
+          "matched_example": "It's first come first serve."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0423",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "deadline_urgency",
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9743,
+          "threshold": 0.9619,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "We cannot open the room for you."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9286,
+          "threshold": 0.9035,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        },
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0423",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "deadline_urgency",
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9435,
+          "threshold": 0.9226,
+          "message": "rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        },
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0424",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9743,
+          "threshold": 0.9619,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "We cannot open the room for you."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9286,
+          "threshold": 0.9035,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0424",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9435,
+          "threshold": 0.9226,
+          "message": "rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0425",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9389,
+          "threshold": 0.9035,
+          "message": "should be ok, nanti saya confirm.",
+          "matched_example": "ada yang tanya jgk, so decide cepat."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0425",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "competition"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9389,
+          "threshold": 0.9035,
+          "message": "should be ok, nanti saya confirm.",
+          "matched_example": "ada yang tanya jgk, so decide cepat."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0426",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9284,
+          "threshold": 0.9226,
+          "message": "deposit bayar on signing day, lepas you puas hati dengan rumah.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0426",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0427",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0428",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9389,
+          "threshold": 0.9035,
+          "message": "should be ok, nanti saya confirm.",
+          "matched_example": "ada yang tanya jgk, so decide cepat."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0428",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "competition"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9389,
+          "threshold": 0.9035,
+          "message": "should be ok, nanti saya confirm.",
+          "matched_example": "ada yang tanya jgk, so decide cepat."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0429",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0430",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0431",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9389,
+          "threshold": 0.9035,
+          "message": "should be ok, nanti saya confirm.",
+          "matched_example": "ada yang tanya jgk, so decide cepat."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0431",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "competition"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9389,
+          "threshold": 0.9035,
+          "message": "should be ok, nanti saya confirm.",
+          "matched_example": "ada yang tanya jgk, so decide cepat."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0432",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0433",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "deadline_urgency",
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        },
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9743,
+          "threshold": 0.9619,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "We cannot open the room for you."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9286,
+          "threshold": 0.9035,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0433",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "deadline_urgency",
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        },
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9435,
+          "threshold": 0.9226,
+          "message": "rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0434",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9284,
+          "threshold": 0.9226,
+          "message": "deposit bayar on signing day, lepas you puas hati dengan rumah.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0434",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0435",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0436",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0437",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "deadline_urgency",
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9743,
+          "threshold": 0.9619,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "We cannot open the room for you."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9286,
+          "threshold": 0.9035,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        },
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0437",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "competition",
+        "deadline_urgency",
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9435,
+          "threshold": 0.9226,
+          "message": "rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        },
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0438",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0439",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0440",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "deadline_urgency",
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        },
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        },
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9743,
+          "threshold": 0.9619,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "We cannot open the room for you."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9286,
+          "threshold": 0.9035,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0440",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "competition",
+        "deadline_urgency",
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        },
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        },
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9435,
+          "threshold": 0.9226,
+          "message": "rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0441",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0442",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9578,
+          "threshold": 0.9444,
+          "message": "It is, nobody has taken it yet.",
+          "matched_example": "It's urgent, please hurry."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9146,
+          "threshold": 0.9035,
+          "message": "It is, nobody has taken it yet.",
+          "matched_example": "It's first come first serve."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0442",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9578,
+          "threshold": 0.9444,
+          "message": "It is, nobody has taken it yet.",
+          "matched_example": "It's urgent, please hurry."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9146,
+          "threshold": 0.9035,
+          "message": "It is, nobody has taken it yet.",
+          "matched_example": "It's first come first serve."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0443",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0443",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0444",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9743,
+          "threshold": 0.9619,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "We cannot open the room for you."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9286,
+          "threshold": 0.9035,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0444",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "competition",
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9435,
+          "threshold": 0.9226,
+          "message": "rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0445",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0446",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9743,
+          "threshold": 0.9619,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "We cannot open the room for you."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9286,
+          "threshold": 0.9035,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0446",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9435,
+          "threshold": 0.9226,
+          "message": "rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0447",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0448",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0449",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9578,
+          "threshold": 0.9444,
+          "message": "It is, nobody has taken it yet.",
+          "matched_example": "It's urgent, please hurry."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9146,
+          "threshold": 0.9035,
+          "message": "It is, nobody has taken it yet.",
+          "matched_example": "It's first come first serve."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0449",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9578,
+          "threshold": 0.9444,
+          "message": "It is, nobody has taken it yet.",
+          "matched_example": "It's urgent, please hurry."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9146,
+          "threshold": 0.9035,
+          "message": "It is, nobody has taken it yet.",
+          "matched_example": "It's first come first serve."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0450",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0451",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0452",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        },
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9743,
+          "threshold": 0.9619,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "We cannot open the room for you."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9286,
+          "threshold": 0.9035,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0452",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "competition",
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        },
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9435,
+          "threshold": 0.9226,
+          "message": "rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0453",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0454",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0455",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0455",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0456",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0457",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0458",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0459",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        },
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9743,
+          "threshold": 0.9619,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "We cannot open the room for you."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9286,
+          "threshold": 0.9035,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0459",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "competition",
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        },
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9435,
+          "threshold": 0.9226,
+          "message": "rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0460",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9284,
+          "threshold": 0.9226,
+          "message": "deposit bayar on signing day, lepas you puas hati dengan rumah.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0460",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0461",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0462",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0463",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0464",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9284,
+          "threshold": 0.9226,
+          "message": "deposit bayar on signing day, lepas you puas hati dengan rumah.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0464",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0465",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0466",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0467",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0468",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0469",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9389,
+          "threshold": 0.9035,
+          "message": "should be ok, nanti saya confirm.",
+          "matched_example": "ada yang tanya jgk, so decide cepat."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0469",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "competition"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9389,
+          "threshold": 0.9035,
+          "message": "should be ok, nanti saya confirm.",
+          "matched_example": "ada yang tanya jgk, so decide cepat."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0470",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        },
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0470",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "deadline_urgency"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        },
+        {
+          "tactic": "deadline_urgency",
+          "similarity": 0.9564,
+          "threshold": 0.9444,
+          "message": "selamat, ada guard 24 jam.",
+          "matched_example": "Please transfer before 6pm today."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0471",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0471",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "competition"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9366,
+          "threshold": 0.9035,
+          "message": "ada, share dengan bilik lain.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0472",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0473",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0474",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition",
+        "viewing_refused"
+      ],
+      "hits": [
+        {
+          "tactic": "viewing_refused",
+          "similarity": 0.9743,
+          "threshold": 0.9619,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "We cannot open the room for you."
+        },
+        {
+          "tactic": "competition",
+          "similarity": 0.9286,
+          "threshold": 0.9035,
+          "message": "boleh, bagitahu masa, saya tunjukkan semua bilik.",
+          "matched_example": "Ramai orang tengah tanya pasal bilik ni."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0474",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9435,
+          "threshold": 0.9226,
+          "message": "rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0475",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0476",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0477",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9284,
+          "threshold": 0.9226,
+          "message": "deposit bayar on signing day, lepas you puas hati dengan rumah.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0477",
+      "label": "SCAM",
+      "layer1": false,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0478",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "pay_before_viewing"
+      ],
+      "hits": [
+        {
+          "tactic": "pay_before_viewing",
+          "similarity": 0.9284,
+          "threshold": 0.9226,
+          "message": "deposit bayar on signing day, lepas you puas hati dengan rumah.",
+          "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0478",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [],
+      "hits": []
+    },
+    {
+      "pair_id": "MP0479",
+      "label": "LEGITIMATE",
+      "layer1": false,
+      "semantic": [
+        "competition"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9389,
+          "threshold": 0.9035,
+          "message": "should be ok, nanti saya confirm.",
+          "matched_example": "ada yang tanya jgk, so decide cepat."
+        }
+      ]
+    },
+    {
+      "pair_id": "MP0479",
+      "label": "SCAM",
+      "layer1": true,
+      "semantic": [
+        "competition"
+      ],
+      "hits": [
+        {
+          "tactic": "competition",
+          "similarity": 0.9389,
+          "threshold": 0.9035,
+          "message": "should be ok, nanti saya confirm.",
+          "matched_example": "ada yang tanya jgk, so decide cepat."
+        }
+      ]
+    }
+  ]
+}

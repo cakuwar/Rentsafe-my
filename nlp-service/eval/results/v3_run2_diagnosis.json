@@ -1,0 +1,3182 @@
+{
+ "_note": "Retrain run 2 (NOT ACCEPTED), training/colab_diagnose_run2.py, message-aligned windows. influence = p(full) - p(without that line).",
+ "run": 2,
+ "A_by_kind_label": {
+  "core/SCAM": {
+   "rows": 34,
+   "accuracy": 0.4412,
+   "mean_p_scam": 0.4556
+  },
+  "fragment/LEGITIMATE": {
+   "rows": 9,
+   "accuracy": 1.0,
+   "mean_p_scam": 0.0372
+  },
+  "fragment/SCAM": {
+   "rows": 9,
+   "accuracy": 0.7778,
+   "mean_p_scam": 0.7511
+  },
+  "full/LEGITIMATE": {
+   "rows": 72,
+   "accuracy": 1.0,
+   "mean_p_scam": 0.0371
+  },
+  "full/SCAM": {
+   "rows": 72,
+   "accuracy": 0.7361,
+   "mean_p_scam": 0.6885
+  },
+  "prefix/LEGITIMATE": {
+   "rows": 34,
+   "accuracy": 1.0,
+   "mean_p_scam": 0.0379
+  },
+  "truncated/LEGITIMATE": {
+   "rows": 41,
+   "accuracy": 1.0,
+   "mean_p_scam": 0.0371
+  },
+  "truncated/SCAM": {
+   "rows": 41,
+   "accuracy": 0.8049,
+   "mean_p_scam": 0.7631
+  }
+ },
+ "B_seen_vs_new": {
+  "seen_wording_pair_accuracy": 1.0,
+  "seen_pairs": 40,
+  "new_wording_pair_accuracy": 0.7361,
+  "new_pairs": 72
+ },
+ "C_cores": {
+  "only 'can't show the unit'": {
+   "rows": 26,
+   "called_scam": 0.3846,
+   "mean_p_scam": 0.4196
+  },
+  "viewing refused + pay/pressure": {
+   "rows": 8,
+   "called_scam": 0.625,
+   "mean_p_scam": 0.5724
+  }
+ },
+ "D_failing_pairs": [
+  {
+   "pair_id": "MP0409",
+   "lang": "ms",
+   "p_legit_twin": 0.0374,
+   "p_scam_twin": 0.0462,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, bagitahu masa, saya tunjukkan semua bilik.",
+     "Owner: rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok."
+    ],
+    [
+     "Owner: takde yuran tempahan. deposit RM3000 dibayar bila sign, lepas viewing.",
+     "Owner: ada, yuran tempahan RM200 kena bank-in malam ni untuk simpan unit."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0411",
+   "lang": "mix",
+   "p_legit_twin": 0.0369,
+   "p_scam_twin": 0.0895,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, Sunday petang I ada kat sana, come and see.",
+     "Owner: tak boleh, I duduk Sabah, keys pun takde dengan I."
+    ],
+    [
+     "Owner: takde holding fee. deposit RM1200 bayar masa sign, after viewing.",
+     "Owner: ada, RM500 holding fee kena bank-in tonight untuk hold unit."
+    ],
+    [
+     "Owner: move in day kita jumpa, I handover keys, check inventory sama-sama.",
+     "Owner: ada 3 orang lagi nak, first pay first get."
+    ],
+    [
+     "Owner: agreement akan stamp kat LHDN, you simpan satu copy.",
+     "Owner: kena settle before midnight ya."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0412",
+   "lang": "mix",
+   "p_legit_twin": 0.037,
+   "p_scam_twin": 0.115,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, Sunday petang I ada kat sana, come and see.",
+     "Owner: tak boleh, I duduk Sabah, keys pun takde dengan I."
+    ],
+    [
+     "Owner: deposit bayar on signing day, lepas you puas hati dengan rumah.",
+     "Owner: deposit kena masuk today, kalau tak I bagi orang lain."
+    ],
+    [
+     "Owner: move in day kita jumpa, I handover keys, check inventory sama-sama.",
+     "Owner: ada 3 orang lagi nak, first pay first get."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0418",
+   "lang": "ms",
+   "p_legit_twin": 0.0369,
+   "p_scam_twin": 0.1295,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, bagitahu masa, saya tunjukkan semua bilik.",
+     "Owner: rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok."
+    ],
+    [
+     "Owner: deposit dibayar hari tandatangan perjanjian, lepas awak puas hati dengan rumah.",
+     "Owner: deposit kena masuk hari ni juga, kalau tak saya bagi orang lain."
+    ],
+    [
+     "Owner: kunci dan kad akses saya serahkan depan-depan hari pindah.",
+     "Owner: bayar guna DuitNow je, senang."
+    ],
+    [
+     "Owner: perjanjian sewa akan disetem di LHDN, satu salinan untuk awak.",
+     "Owner: kunci saya hantar guna Poslaju lepas duit masuk."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0421",
+   "lang": "ms",
+   "p_legit_twin": 0.037,
+   "p_scam_twin": 0.1138,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, bagitahu masa, saya tunjukkan semua bilik.",
+     "Owner: rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok."
+    ],
+    [
+     "Owner: deposit dibayar hari tandatangan perjanjian, lepas awak puas hati dengan rumah.",
+     "Owner: deposit kena masuk hari ni juga, kalau tak saya bagi orang lain."
+    ],
+    [
+     "Owner: hari masuk kita jumpa, saya serah kunci dan kita periksa inventori sama-sama.",
+     "Owner: akaun saya ada masalah, bank-in ke akaun kawan saya."
+    ],
+    [
+     "Owner: perjanjian sewa akan disetem di LHDN, satu salinan untuk awak.",
+     "Owner: bayar guna DuitNow je, senang."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0423",
+   "lang": "ms",
+   "p_legit_twin": 0.0365,
+   "p_scam_twin": 0.0837,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, bagitahu masa, saya tunjukkan semua bilik.",
+     "Owner: rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok."
+    ],
+    [
+     "Owner: deposit dibayar hari tandatangan perjanjian, lepas awak puas hati dengan rumah.",
+     "Owner: deposit kena masuk hari ni juga, kalau tak saya bagi orang lain."
+    ],
+    [
+     "Owner: kunci dan kad akses saya serahkan depan-depan hari pindah.",
+     "Owner: akaun saya ada masalah, bank-in ke akaun kawan saya."
+    ],
+    [
+     "Owner: perjanjian sewa akan disetem di LHDN, satu salinan untuk awak.",
+     "Owner: kunci saya hantar guna Poslaju lepas duit masuk."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0428",
+   "lang": "mix",
+   "p_legit_twin": 0.0372,
+   "p_scam_twin": 0.1509,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, bagi masa you free, I tunjuk semua bilik.",
+     "Owner: unit locked sampai old tenant keluar, no viewing for now."
+    ],
+    [
+     "Owner: takde holding fee. deposit RM3600 bayar masa sign, after viewing.",
+     "Owner: ada, RM200 holding fee kena bank-in tonight untuk hold unit."
+    ],
+    [
+     "Owner: keys dan access card I serah by hand on move-in day.",
+     "Owner: keys I hantar by Poslaju lepas duit masuk."
+    ],
+    [
+     "Owner: agreement akan stamp kat LHDN, you simpan satu copy.",
+     "Owner: kena settle before midnight ya."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0431",
+   "lang": "mix",
+   "p_legit_twin": 0.0369,
+   "p_scam_twin": 0.2637,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, Sunday petang I ada kat sana, come and see.",
+     "Owner: tak boleh, I duduk Sabah, keys pun takde dengan I."
+    ],
+    [
+     "Owner: takde holding fee. deposit RM3600 bayar masa sign, after viewing.",
+     "Owner: ada, RM500 holding fee kena bank-in tonight untuk hold unit."
+    ],
+    [
+     "Owner: move in day kita jumpa, I handover keys, check inventory sama-sama.",
+     "Owner: keys I hantar by Poslaju lepas duit masuk."
+    ],
+    [
+     "Owner: draft agreement I emel dulu, you check before sign.",
+     "Owner: kena settle before midnight ya."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0432",
+   "lang": "en",
+   "p_legit_twin": 0.0367,
+   "p_scam_twin": 0.2868,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: Sure, I'm there Sunday afternoon, come by and have a look.",
+     "Owner: Not really, I'm based in Sabah and nobody here has the keys."
+    ],
+    [
+     "Owner: No holding fee. The RM750 deposit is due at signing, after the viewing.",
+     "Owner: Yes, a RM800 holding fee has to be banked in tonight to keep the unit."
+    ],
+    [
+     "Owner: You'll get the keys and access card from me in person on the day.",
+     "Owner: Three others want this unit, whoever pays first gets it."
+    ],
+    [
+     "Owner: I'll email the draft agreement first so you can check it before signing.",
+     "Owner: This needs to be settled before midnight."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0433",
+   "lang": "ms",
+   "p_legit_twin": 0.037,
+   "p_scam_twin": 0.0969,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, bagitahu masa, saya tunjukkan semua bilik.",
+     "Owner: rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok."
+    ],
+    [
+     "Owner: deposit dibayar hari tandatangan perjanjian, lepas awak puas hati dengan rumah.",
+     "Owner: deposit kena masuk hari ni juga, kalau tak saya bagi orang lain."
+    ],
+    [
+     "Owner: hari masuk kita jumpa, saya serah kunci dan kita periksa inventori sama-sama.",
+     "Owner: akaun saya ada masalah, bank-in ke akaun kawan saya."
+    ],
+    [
+     "Owner: perjanjian sewa akan disetem di LHDN, satu salinan untuk awak.",
+     "Owner: kunci saya hantar guna Poslaju lepas duit masuk."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0440",
+   "lang": "ms",
+   "p_legit_twin": 0.0369,
+   "p_scam_twin": 0.0399,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, bagitahu masa, saya tunjukkan semua bilik.",
+     "Owner: rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok."
+    ],
+    [
+     "Owner: takde yuran tempahan. deposit RM1500 dibayar bila sign, lepas viewing.",
+     "Owner: ada, yuran tempahan RM800 kena bank-in malam ni untuk simpan unit."
+    ],
+    [
+     "Owner: hari masuk kita jumpa, saya serah kunci dan kita periksa inventori sama-sama.",
+     "Owner: kena selesai sebelum tengah malam ni ya."
+    ],
+    [
+     "Owner: draf perjanjian saya emel dulu, awak semak sebelum tandatangan.",
+     "Owner: akaun saya ada masalah, bank-in ke akaun kawan saya."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0444",
+   "lang": "ms",
+   "p_legit_twin": 0.037,
+   "p_scam_twin": 0.1582,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, bagitahu masa, saya tunjukkan semua bilik.",
+     "Owner: rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok."
+    ],
+    [
+     "Owner: takde yuran tempahan. deposit RM900 dibayar bila sign, lepas viewing.",
+     "Owner: ada, yuran tempahan RM800 kena bank-in malam ni untuk simpan unit."
+    ],
+    [
+     "Owner: hari masuk kita jumpa, saya serah kunci dan kita periksa inventori sama-sama.",
+     "Owner: jangan risau, kalau tak berkenan duit saya pulangkan semua."
+    ],
+    [
+     "Owner: perjanjian sewa akan disetem di LHDN, satu salinan untuk awak.",
+     "Owner: kena selesai sebelum tengah malam ni ya."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0446",
+   "lang": "ms",
+   "p_legit_twin": 0.0373,
+   "p_scam_twin": 0.0658,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, bagitahu masa, saya tunjukkan semua bilik.",
+     "Owner: rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok."
+    ],
+    [
+     "Owner: takde yuran tempahan. deposit RM900 dibayar bila sign, lepas viewing.",
+     "Owner: ada, yuran tempahan RM500 kena bank-in malam ni untuk simpan unit."
+    ],
+    [
+     "Owner: hari masuk kita jumpa, saya serah kunci dan kita periksa inventori sama-sama.",
+     "Owner: akaun saya ada masalah, bank-in ke akaun kawan saya."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0449",
+   "lang": "en",
+   "p_legit_twin": 0.0366,
+   "p_scam_twin": 0.0549,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: Sure, I'm there Sunday afternoon, come by and have a look.",
+     "Owner: Not really, I'm based in Sabah and nobody here has the keys."
+    ],
+    [
+     "Owner: No holding fee. The RM2200 deposit is due at signing, after the viewing.",
+     "Owner: Yes, a RM800 holding fee has to be banked in tonight to keep the unit."
+    ],
+    [
+     "Owner: On move-in day we'll meet, I'll hand over the keys and we'll go through the inventory together.",
+     "Owner: Three others want this unit, whoever pays first gets it."
+    ],
+    [
+     "Owner: I'll email the draft agreement first so you can check it before signing.",
+     "Owner: I'll send the keys by Poslaju once the money is in."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0452",
+   "lang": "ms",
+   "p_legit_twin": 0.037,
+   "p_scam_twin": 0.0419,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, bagitahu masa, saya tunjukkan semua bilik.",
+     "Owner: rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok."
+    ],
+    [
+     "Owner: takde yuran tempahan. deposit RM1800 dibayar bila sign, lepas viewing.",
+     "Owner: ada, yuran tempahan RM300 kena bank-in malam ni untuk simpan unit."
+    ],
+    [
+     "Owner: hari masuk kita jumpa, saya serah kunci dan kita periksa inventori sama-sama.",
+     "Owner: akaun saya ada masalah, bank-in ke akaun kawan saya."
+    ],
+    [
+     "Owner: perjanjian sewa akan disetem di LHDN, satu salinan untuk awak.",
+     "Owner: kena selesai sebelum tengah malam ni ya."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0459",
+   "lang": "ms",
+   "p_legit_twin": 0.0374,
+   "p_scam_twin": 0.0523,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, bagitahu masa, saya tunjukkan semua bilik.",
+     "Owner: rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok."
+    ],
+    [
+     "Owner: takde yuran tempahan. deposit RM1200 dibayar bila sign, lepas viewing.",
+     "Owner: ada, yuran tempahan RM800 kena bank-in malam ni untuk simpan unit."
+    ],
+    [
+     "Owner: kunci dan kad akses saya serahkan depan-depan hari pindah.",
+     "Owner: akaun saya ada masalah, bank-in ke akaun kawan saya."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0471",
+   "lang": "ms",
+   "p_legit_twin": 0.0372,
+   "p_scam_twin": 0.2647,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh je, petang Ahad saya ada kat sana, datang la tengok.",
+     "Owner: tak sempat, saya duduk Sabah sekarang, kunci pun takde dengan saya."
+    ],
+    [
+     "Owner: takde yuran tempahan. deposit RM1000 dibayar bila sign, lepas viewing.",
+     "Owner: ada, yuran tempahan RM300 kena bank-in malam ni untuk simpan unit."
+    ],
+    [
+     "Owner: kunci dan kad akses saya serahkan depan-depan hari pindah.",
+     "Owner: akaun saya ada masalah, bank-in ke akaun kawan saya."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0473",
+   "lang": "mix",
+   "p_legit_twin": 0.0369,
+   "p_scam_twin": 0.1777,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, Sunday petang I ada kat sana, come and see.",
+     "Owner: tak boleh, I duduk Sabah, keys pun takde dengan I."
+    ],
+    [
+     "Owner: takde holding fee. deposit RM2400 bayar masa sign, after viewing.",
+     "Owner: ada, RM200 holding fee kena bank-in tonight untuk hold unit."
+    ],
+    [
+     "Owner: keys dan access card I serah by hand on move-in day.",
+     "Owner: keys I hantar by Poslaju lepas duit masuk."
+    ],
+    [
+     "Owner: agreement akan stamp kat LHDN, you simpan satu copy.",
+     "Owner: ada 3 orang lagi nak, first pay first get."
+    ]
+   ]
+  },
+  {
+   "pair_id": "MP0474",
+   "lang": "ms",
+   "p_legit_twin": 0.0374,
+   "p_scam_twin": 0.0407,
+   "what": "scam twin missed",
+   "differing_lines": [
+    [
+     "Owner: boleh, bagitahu masa, saya tunjukkan semua bilik.",
+     "Owner: rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok."
+    ],
+    [
+     "Owner: takde yuran tempahan. deposit RM3000 dibayar bila sign, lepas viewing.",
+     "Owner: ada, yuran tempahan RM200 kena bank-in malam ni untuk simpan unit."
+    ]
+   ]
+  }
+ ],
+ "E": {
+  "real_legit_clean": {
+   "p": 0.9374,
+   "windows": [
+    {
+     "p": 0.0451,
+     "tokens": 508,
+     "starts": "Renter: Hi, I'm interested in USJ6 Medium Room | Near Da Men",
+     "ends": "you Renter: hi, can I move in earlier, on 29/9? Owner: 29/9?"
+    },
+    {
+     "p": 0.9374,
+     "tokens": 423,
+     "starts": "Owner: Move-in Breakdown: 1 Month Deposit: RM 600. 1 Month R",
+     "ends": " have an appointment at 11.4am later ya Renter: alright miss"
+    }
+   ],
+   "influence": [
+    [
+     0.8868,
+     18,
+     "Owner: This promotion is valid for the August move in only, and our rooms can reserve for up to 30 days only"
+    ],
+    [
+     0.3685,
+     6,
+     "Owner: MERDEKA MONTH | BOOK NOW & ENJOY 50% OFF YOUR 1ST MONTH RENTAL. Limited Time Only! 10 Aug 2026 - 31 Aug 2026. Terms & Conditions: 1 Month Deposit Required. 50% OFF Applies to the 1st Month Rental Only. Minimum 12-Month Tenancy Required. Early Termination May Incur a RM300 Penalty and Credit Reporting Action if Unpaid (CTOS). Must Move-In Within August 2026. Limited Units Available - Secure Yours Today!"
+    ],
+    [
+     0.1643,
+     14,
+     "Owner: Since you're travelling from Kelantan, are you planning to view any other rooms around the area as well?"
+    ],
+    [
+     0.0612,
+     8,
+     "Owner: Additional Info: Minimum 12-Month Tenancy. Move-in fee includes agreement fee, aircond servicing & room cleaning upon move-out. Utilities & Facilities: Every room has its own electricity meter (prepaid top-up system). Water included. FREE WiFi"
+    ],
+    [
+     0.0411,
+     7,
+     "Owner: Move-in Breakdown: 1 Month Deposit: RM 600. 1 Month Rental: RM 300. Move-in Fee: RM 300. Access Card Deposit: RM 100. Monthly Rental: RM 600. Total Move-in: RM 1300"
+    ],
+    [
+     0.0042,
+     19,
+     "Renter: eh sorry"
+    ],
+    [
+     0.0023,
+     21,
+     "Owner: Can move in earlier"
+    ],
+    [
+     0.0017,
+     26,
+     "Owner: Yes"
+    ],
+    [
+     0.0016,
+     20,
+     "Renter: 29/8 miss"
+    ],
+    [
+     0.001,
+     24,
+     "Renter: can miss"
+    ],
+    [
+     0.0003,
+     33,
+     "Renter: alright miss"
+    ],
+    [
+     0.0,
+     29,
+     "Renter: okay already signed miss"
+    ],
+    [
+     0.0,
+     23,
+     "Renter: alright noted"
+    ],
+    [
+     0.0,
+     5,
+     "Owner: [room photos and video] [address redacted] ROOM [number redacted]"
+    ],
+    [
+     0.0,
+     4,
+     "Renter: have any picture or video?"
+    ],
+    [
+     0.0,
+     3,
+     "Renter: can i take look?"
+    ],
+    [
+     0.0,
+     2,
+     "Owner: Hi [name] here from iBilik"
+    ],
+    [
+     0.0,
+     1,
+     "Renter: hi boleh saya tahu bilik ni available lagi tak?"
+    ],
+    [
+     0.0,
+     0,
+     "Renter: Hi, I'm interested in USJ6 Medium Room | Near Da Men Mall | Easy Access to SS15, Sunway & PJ [listing link redacted]"
+    ],
+    [
+     -0.0002,
+     27,
+     "Renter: okay sure"
+    ],
+    [
+     -0.0002,
+     25,
+     "Renter: 11.45am right?"
+    ],
+    [
+     -0.0008,
+     31,
+     "Renter: ok wait"
+    ],
+    [
+     -0.0012,
+     30,
+     "Owner: Can send me screenshot like this?"
+    ],
+    [
+     -0.0027,
+     13,
+     "Owner: I'm available at either 11am or 2pm on 20/8."
+    ],
+    [
+     -0.003,
+     17,
+     "Owner: 29/9?"
+    ],
+    [
+     -0.0037,
+     32,
+     "Owner: Morning. Just a kind reminder, we have an appointment at 11.4am later ya"
+    ],
+    [
+     -0.0041,
+     28,
+     "Owner: Please check and sign the agreement ya"
+    ],
+    [
+     -0.0048,
+     22,
+     "Owner: Can we meet on 28/8 to settle balance payment and handover the keys?"
+    ],
+    [
+     -0.0058,
+     9,
+     "Renter: this cooking allow or not?"
+    ],
+    [
+     -0.006,
+     11,
+     "Renter: i plan to visit on 20/8, if you free on that date"
+    ],
+    [
+     -0.0067,
+     16,
+     "Renter: hi, can I move in earlier, on 29/9?"
+    ],
+    [
+     -0.0067,
+     10,
+     "Owner: Bring your own induction cooker and only light cooking is allowed ya"
+    ],
+    [
+     -0.0071,
+     12,
+     "Renter: cause im travelling from kelantan"
+    ],
+    [
+     -0.0079,
+     15,
+     "Owner: Go to: go.ibilik.com. Login using your registered mobile number and password. Complete the signing process. Please take a screenshot and send it to me after signing ya. Thank you"
+    ]
+   ]
+  },
+  "real_legit_production": {
+   "p": 0.9463,
+   "windows": [
+    {
+     "p": 0.6085,
+     "tokens": 479,
+     "starts": "Renter: 4 USJ6 Medium Room A | Near Da Men Mall il Renter: @",
+     "ends": "elantan, are you planning to view any other rooms around the"
+    },
+    {
+     "p": 0.9463,
+     "tokens": 478,
+     "starts": "Owner: & Limited Units Available — Secure Yours Today! Owner",
+     "ends": "nt at 11.4am later ya @ irae Renter: alright miss ,,,,,,, ye"
+    }
+   ],
+   "influence": [
+    [
+     0.5085,
+     22,
+     "Owner: Since you're travelling from Kelantan, are you planning to view any other rooms around the"
+    ],
+    [
+     0.3378,
+     27,
+     "Owner: This promotion is valid for the August move in only, and our rooms can reserve for up to 30 days only PAN"
+    ],
+    [
+     0.03,
+     21,
+     "Owner: I'm availabie at either 1am or 2pm on 20/8"
+    ],
+    [
+     0.0294,
+     11,
+     "Owner: Only F Minimum 12-Month Tenancy Required FF Early Termination May Incur a RM300 Penalty and Credit Reporting Action if Unpaid (ctos) Must Move-in Within August"
+    ],
+    [
+     0.0228,
+     24,
+     "Renter: hi, can { move in earlier, on 29/9?"
+    ],
+    [
+     0.0215,
+     42,
+     "Renter: alright miss ,,,,,,, ye"
+    ],
+    [
+     0.0206,
+     13,
+     "Owner: 1 Month Deposit: RM 600 & 1 Month Rental: RM 300 & Move-in Fee: RM 300 & Access Card Deposit: RM 100"
+    ],
+    [
+     0.0167,
+     15,
+     "Owner: A” Additional Info @ Minimum 12-Month Tenancy"
+    ],
+    [
+     0.0166,
+     19,
+     "Renter: iplan to visit on 20/8, if you free on that date"
+    ],
+    [
+     0.0154,
+     41,
+     "Owner: Morning il Just a kind reminder, we have an appointment at 11.4am later ya @ irae"
+    ],
+    [
+     0.0142,
+     18,
+     "Owner: Bring your own induction cooker and only light, cooking is allowed ya"
+    ],
+    [
+     0.0124,
+     14,
+     "Owner: A Monthly Rental: RM 600 - Total Move-in: RM 1300"
+    ],
+    [
+     0.0064,
+     30,
+     "Owner: Can move in earlier «coy. Can we meet on 28/8 to settle balance payment and handover the keys?"
+    ],
+    [
+     0.0061,
+     16,
+     "Owner: includes agreement fee, aircond servicing & room cleaning upon move- >” Utilities & Facilities $ Every room has its own electricity meter (prepaid top-up system). & Water included @ FREE Wii sores"
+    ],
+    [
+     0.0033,
+     17,
+     "Renter: this cooking allow or not? gone"
+    ],
+    [
+     0.0028,
+     25,
+     "Owner: 29/9? pang"
+    ],
+    [
+     0.0022,
+     20,
+     "Renter: cause im travelling from kelantan"
+    ],
+    [
+     0.002,
+     23,
+     "Owner: Goto: cm ® Login using your registered mobile number and password @ complete the signing process “® Please take a screenshot and send it to me after signing ya A Thank you @ Sana"
+    ],
+    [
+     0.0019,
+     12,
+     "Owner: & Limited Units Available — Secure Yours Today!"
+    ],
+    [
+     0.0014,
+     26,
+     "Owner: Only!"
+    ],
+    [
+     0.0006,
+     29,
+     "Renter: 29/8 miss"
+    ],
+    [
+     0.0005,
+     34,
+     "Owner: Yes MR sre"
+    ],
+    [
+     0.0002,
+     36,
+     "Owner: Hi & Agreement is ready 7"
+    ],
+    [
+     0.0002,
+     31,
+     "Renter: Can move in earlier v"
+    ],
+    [
+     0.0001,
+     38,
+     "Renter: okay already signed miss aun yy"
+    ],
+    [
+     0.0001,
+     35,
+     "Renter: Okay sure sens)"
+    ],
+    [
+     0.0,
+     39,
+     "Owner: Can send me screenshot like this? «sey"
+    ],
+    [
+     0.0,
+     32,
+     "Renter: can miss"
+    ],
+    [
+     0.0,
+     10,
+     "Owner: fa Terms & Conditions: F 1 Month Deposit Required 'F 50% OFF Applies to the 1st Month Rental"
+    ],
+    [
+     0.0,
+     9,
+     "Owner: $ 28 MERDEKA MONTH | BOOK NOW & ENJOY 50% OFF YOUR 1ST MONTH RENTAL & Limited Time Only! Bi 10 Aug"
+    ],
+    [
+     0.0,
+     8,
+     "Owner: [address]"
+    ],
+    [
+     0.0,
+     7,
+     "Renter: 9 28 Da | ug 05,2028 Ji ed Subang Jor Selangor paya"
+    ],
+    [
+     0.0,
+     6,
+     "Renter: have any picture or video? 4, 4"
+    ],
+    [
+     0.0,
+     5,
+     "Renter: can i take look?"
+    ],
+    [
+     0.0,
+     4,
+     "Owner: Hi & [name] here from iBikk @ ¥"
+    ],
+    [
+     0.0,
+     3,
+     "Renter: hi boleh saya tahu bilik ni available lagi tak?"
+    ],
+    [
+     0.0,
+     2,
+     "Renter: Hi, Im interested in USJ6 Medium Room ff | Near Da Men Mall gif | < Easy Access to $$15, Sunway & PJ"
+    ],
+    [
+     0.0,
+     1,
+     "Renter: @ ibilik.com i"
+    ],
+    [
+     0.0,
+     0,
+     "Renter: 4 USJ6 Medium Room A | Near Da Men Mall il"
+    ],
+    [
+     -0.0002,
+     33,
+     "Renter: right?"
+    ],
+    [
+     -0.0003,
+     40,
+     "Renter: Ok walt pga, yu"
+    ],
+    [
+     -0.0003,
+     28,
+     "Renter: Bh SOF page y"
+    ],
+    [
+     -0.0006,
+     37,
+     "Owner: Please check and sign the agreement ya"
+    ]
+   ]
+  },
+  "english_courier_scam": {
+   "p": 0.2696,
+   "windows": [
+    {
+     "p": 0.2696,
+     "tokens": 114,
+     "starts": "Renter: Is the unit at Mont Kiara still open? Owner: Yes, bu",
+     "ends": ": I'll send a video call later. Transfer before 9pm tonight."
+    }
+   ],
+   "influence": [
+    [
+     0.233,
+     3,
+     "Owner: I'm outstation. I can post the access card to you."
+    ],
+    [
+     0.2155,
+     7,
+     "Owner: I'll send a video call later. Transfer before 9pm tonight."
+    ],
+    [
+     0.1974,
+     2,
+     "Renter: I'd like to see it first."
+    ],
+    [
+     0.1851,
+     4,
+     "Renter: I'd prefer to meet in person."
+    ],
+    [
+     0.1721,
+     6,
+     "Renter: How do I know the unit exists?"
+    ],
+    [
+     0.13,
+     1,
+     "Owner: Yes, but I have three people interested."
+    ],
+    [
+     -0.005,
+     0,
+     "Renter: Is the unit at Mont Kiara still open?"
+    ],
+    [
+     -0.6681,
+     5,
+     "Owner: No need to meet. Pay one month rent and I'll mail the keys."
+    ]
+   ]
+  }
+ },
+ "F_calibration": {
+  "temperature": 0.1762,
+  "dev_accuracy": 1.0,
+  "dev_rows": 275,
+  "dev_median_abs_margin": 2.981,
+  "test_wrong_rows": 48,
+  "test_wrong_median_abs_margin": 2.336,
+  "test_right_median_abs_margin": 3.247
+ },
+ "pair_test_rows": [
+  {
+   "pair_id": "MP0408",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0371
+  },
+  {
+   "pair_id": "MP0408",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9175
+  },
+  {
+   "pair_id": "MP0408-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0366
+  },
+  {
+   "pair_id": "MP0408-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9466
+  },
+  {
+   "pair_id": "MP0408-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0408-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9232
+  },
+  {
+   "pair_id": "MP0409",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0409",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.0462
+  },
+  {
+   "pair_id": "MP0410",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0372
+  },
+  {
+   "pair_id": "MP0410",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9509
+  },
+  {
+   "pair_id": "MP0411",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0411",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.0895
+  },
+  {
+   "pair_id": "MP0411-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0411-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9101
+  },
+  {
+   "pair_id": "MP0411-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0368
+  },
+  {
+   "pair_id": "MP0411-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.0825
+  },
+  {
+   "pair_id": "MP0412",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0412",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.115
+  },
+  {
+   "pair_id": "MP0412-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0412-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9346
+  },
+  {
+   "pair_id": "MP0413",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0372
+  },
+  {
+   "pair_id": "MP0413",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9422
+  },
+  {
+   "pair_id": "MP0413-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0371
+  },
+  {
+   "pair_id": "MP0413-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.945
+  },
+  {
+   "pair_id": "MP0414",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0371
+  },
+  {
+   "pair_id": "MP0414",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.8115
+  },
+  {
+   "pair_id": "MP0414-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0414-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9091
+  },
+  {
+   "pair_id": "MP0415",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0415",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.951
+  },
+  {
+   "pair_id": "MP0415-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0368
+  },
+  {
+   "pair_id": "MP0415-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.0439
+  },
+  {
+   "pair_id": "MP0415-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0415-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9511
+  },
+  {
+   "pair_id": "MP0416",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0373
+  },
+  {
+   "pair_id": "MP0416",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9356
+  },
+  {
+   "pair_id": "MP0416-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0362
+  },
+  {
+   "pair_id": "MP0416-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.0834
+  },
+  {
+   "pair_id": "MP0416-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0373
+  },
+  {
+   "pair_id": "MP0416-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9436
+  },
+  {
+   "pair_id": "MP0417",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0379
+  },
+  {
+   "pair_id": "MP0417",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9342
+  },
+  {
+   "pair_id": "MP0417-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0379
+  },
+  {
+   "pair_id": "MP0417-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.931
+  },
+  {
+   "pair_id": "MP0418",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0418",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.1295
+  },
+  {
+   "pair_id": "MP0418-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0376
+  },
+  {
+   "pair_id": "MP0418-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.039
+  },
+  {
+   "pair_id": "MP0419",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0371
+  },
+  {
+   "pair_id": "MP0419",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.5241
+  },
+  {
+   "pair_id": "MP0419-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0383
+  },
+  {
+   "pair_id": "MP0419-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.0579
+  },
+  {
+   "pair_id": "MP0419-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0371
+  },
+  {
+   "pair_id": "MP0419-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.6829
+  },
+  {
+   "pair_id": "MP0420",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0372
+  },
+  {
+   "pair_id": "MP0420",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9475
+  },
+  {
+   "pair_id": "MP0420-F",
+   "kind": "fragment",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0420-F",
+   "kind": "fragment",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9474
+  },
+  {
+   "pair_id": "MP0421",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0421",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.1138
+  },
+  {
+   "pair_id": "MP0421-F",
+   "kind": "fragment",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0421-F",
+   "kind": "fragment",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9166
+  },
+  {
+   "pair_id": "MP0421-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0421-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.1164
+  },
+  {
+   "pair_id": "MP0422",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0367
+  },
+  {
+   "pair_id": "MP0422",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9479
+  },
+  {
+   "pair_id": "MP0423",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0365
+  },
+  {
+   "pair_id": "MP0423",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.0837
+  },
+  {
+   "pair_id": "MP0423-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0367
+  },
+  {
+   "pair_id": "MP0423-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.2109
+  },
+  {
+   "pair_id": "MP0424",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0424",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9104
+  },
+  {
+   "pair_id": "MP0424-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.04
+  },
+  {
+   "pair_id": "MP0424-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.0395
+  },
+  {
+   "pair_id": "MP0424-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0424-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9342
+  },
+  {
+   "pair_id": "MP0425",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0368
+  },
+  {
+   "pair_id": "MP0425",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.8411
+  },
+  {
+   "pair_id": "MP0425-F",
+   "kind": "fragment",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0372
+  },
+  {
+   "pair_id": "MP0425-F",
+   "kind": "fragment",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.8697
+  },
+  {
+   "pair_id": "MP0426",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0379
+  },
+  {
+   "pair_id": "MP0426",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.8949
+  },
+  {
+   "pair_id": "MP0426-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.042
+  },
+  {
+   "pair_id": "MP0426-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.2277
+  },
+  {
+   "pair_id": "MP0426-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0378
+  },
+  {
+   "pair_id": "MP0426-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9243
+  },
+  {
+   "pair_id": "MP0427",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0373
+  },
+  {
+   "pair_id": "MP0427",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9061
+  },
+  {
+   "pair_id": "MP0427-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0371
+  },
+  {
+   "pair_id": "MP0427-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9239
+  },
+  {
+   "pair_id": "MP0428",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0372
+  },
+  {
+   "pair_id": "MP0428",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.1509
+  },
+  {
+   "pair_id": "MP0429",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0429",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9396
+  },
+  {
+   "pair_id": "MP0430",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0430",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9495
+  },
+  {
+   "pair_id": "MP0430-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0373
+  },
+  {
+   "pair_id": "MP0430-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.3058
+  },
+  {
+   "pair_id": "MP0431",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0431",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.2637
+  },
+  {
+   "pair_id": "MP0431-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0431-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.3077
+  },
+  {
+   "pair_id": "MP0432",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0367
+  },
+  {
+   "pair_id": "MP0432",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.2868
+  },
+  {
+   "pair_id": "MP0432-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0366
+  },
+  {
+   "pair_id": "MP0432-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.5583
+  },
+  {
+   "pair_id": "MP0433",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0433",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.0969
+  },
+  {
+   "pair_id": "MP0434",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0371
+  },
+  {
+   "pair_id": "MP0434",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.6193
+  },
+  {
+   "pair_id": "MP0434-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0434-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.7923
+  },
+  {
+   "pair_id": "MP0435",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0389
+  },
+  {
+   "pair_id": "MP0435",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9512
+  },
+  {
+   "pair_id": "MP0435-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0391
+  },
+  {
+   "pair_id": "MP0435-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9513
+  },
+  {
+   "pair_id": "MP0436",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0436",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.7292
+  },
+  {
+   "pair_id": "MP0436-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0436-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.781
+  },
+  {
+   "pair_id": "MP0437",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0376
+  },
+  {
+   "pair_id": "MP0437",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.6178
+  },
+  {
+   "pair_id": "MP0437-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0375
+  },
+  {
+   "pair_id": "MP0437-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.5036
+  },
+  {
+   "pair_id": "MP0437-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0375
+  },
+  {
+   "pair_id": "MP0437-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.7883
+  },
+  {
+   "pair_id": "MP0438",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0368
+  },
+  {
+   "pair_id": "MP0438",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9441
+  },
+  {
+   "pair_id": "MP0438-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0367
+  },
+  {
+   "pair_id": "MP0438-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9312
+  },
+  {
+   "pair_id": "MP0439",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0439",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.8222
+  },
+  {
+   "pair_id": "MP0439-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0368
+  },
+  {
+   "pair_id": "MP0439-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.8794
+  },
+  {
+   "pair_id": "MP0440",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0440",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.0399
+  },
+  {
+   "pair_id": "MP0440-F",
+   "kind": "fragment",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0440-F",
+   "kind": "fragment",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.0555
+  },
+  {
+   "pair_id": "MP0441",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0371
+  },
+  {
+   "pair_id": "MP0441",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.6591
+  },
+  {
+   "pair_id": "MP0441-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0441-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9496
+  },
+  {
+   "pair_id": "MP0442",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0368
+  },
+  {
+   "pair_id": "MP0442",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9442
+  },
+  {
+   "pair_id": "MP0442-F",
+   "kind": "fragment",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0442-F",
+   "kind": "fragment",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9511
+  },
+  {
+   "pair_id": "MP0442-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0368
+  },
+  {
+   "pair_id": "MP0442-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9512
+  },
+  {
+   "pair_id": "MP0442-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0368
+  },
+  {
+   "pair_id": "MP0442-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9444
+  },
+  {
+   "pair_id": "MP0443",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0367
+  },
+  {
+   "pair_id": "MP0443",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.8889
+  },
+  {
+   "pair_id": "MP0443-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0368
+  },
+  {
+   "pair_id": "MP0443-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9486
+  },
+  {
+   "pair_id": "MP0443-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0366
+  },
+  {
+   "pair_id": "MP0443-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.8952
+  },
+  {
+   "pair_id": "MP0444",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0444",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.1582
+  },
+  {
+   "pair_id": "MP0444-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0393
+  },
+  {
+   "pair_id": "MP0444-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.0426
+  },
+  {
+   "pair_id": "MP0444-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0444-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.2788
+  },
+  {
+   "pair_id": "MP0445",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0372
+  },
+  {
+   "pair_id": "MP0445",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9474
+  },
+  {
+   "pair_id": "MP0445-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0368
+  },
+  {
+   "pair_id": "MP0445-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.8754
+  },
+  {
+   "pair_id": "MP0446",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0373
+  },
+  {
+   "pair_id": "MP0446",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.0658
+  },
+  {
+   "pair_id": "MP0446-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0361
+  },
+  {
+   "pair_id": "MP0446-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.0448
+  },
+  {
+   "pair_id": "MP0447",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0447",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9455
+  },
+  {
+   "pair_id": "MP0447-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0367
+  },
+  {
+   "pair_id": "MP0447-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.0509
+  },
+  {
+   "pair_id": "MP0448",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0366
+  },
+  {
+   "pair_id": "MP0448",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.898
+  },
+  {
+   "pair_id": "MP0449",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0366
+  },
+  {
+   "pair_id": "MP0449",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.0549
+  },
+  {
+   "pair_id": "MP0449-F",
+   "kind": "fragment",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0449-F",
+   "kind": "fragment",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.1704
+  },
+  {
+   "pair_id": "MP0449-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0449-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.3758
+  },
+  {
+   "pair_id": "MP0449-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0365
+  },
+  {
+   "pair_id": "MP0449-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.063
+  },
+  {
+   "pair_id": "MP0450",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0368
+  },
+  {
+   "pair_id": "MP0450",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.948
+  },
+  {
+   "pair_id": "MP0450-F",
+   "kind": "fragment",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0450-F",
+   "kind": "fragment",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9488
+  },
+  {
+   "pair_id": "MP0450-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0367
+  },
+  {
+   "pair_id": "MP0450-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9483
+  },
+  {
+   "pair_id": "MP0451",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0451",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.887
+  },
+  {
+   "pair_id": "MP0451-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0451-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9017
+  },
+  {
+   "pair_id": "MP0452",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0452",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.0419
+  },
+  {
+   "pair_id": "MP0452-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0367
+  },
+  {
+   "pair_id": "MP0452-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.0462
+  },
+  {
+   "pair_id": "MP0452-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0452-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.0419
+  },
+  {
+   "pair_id": "MP0453",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0371
+  },
+  {
+   "pair_id": "MP0453",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9451
+  },
+  {
+   "pair_id": "MP0453-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0379
+  },
+  {
+   "pair_id": "MP0453-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.2098
+  },
+  {
+   "pair_id": "MP0453-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0453-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9464
+  },
+  {
+   "pair_id": "MP0454",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0366
+  },
+  {
+   "pair_id": "MP0454",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9445
+  },
+  {
+   "pair_id": "MP0454-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0366
+  },
+  {
+   "pair_id": "MP0454-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.945
+  },
+  {
+   "pair_id": "MP0455",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0455",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9294
+  },
+  {
+   "pair_id": "MP0456",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0456",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9415
+  },
+  {
+   "pair_id": "MP0456-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0456-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.8812
+  },
+  {
+   "pair_id": "MP0456-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0368
+  },
+  {
+   "pair_id": "MP0456-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9425
+  },
+  {
+   "pair_id": "MP0457",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0373
+  },
+  {
+   "pair_id": "MP0457",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9228
+  },
+  {
+   "pair_id": "MP0457-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0372
+  },
+  {
+   "pair_id": "MP0457-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9419
+  },
+  {
+   "pair_id": "MP0458",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0458",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9498
+  },
+  {
+   "pair_id": "MP0458-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0382
+  },
+  {
+   "pair_id": "MP0458-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.0533
+  },
+  {
+   "pair_id": "MP0459",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0459",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.0523
+  },
+  {
+   "pair_id": "MP0460",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0460",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.8598
+  },
+  {
+   "pair_id": "MP0460-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0393
+  },
+  {
+   "pair_id": "MP0460-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.1181
+  },
+  {
+   "pair_id": "MP0460-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0460-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9151
+  },
+  {
+   "pair_id": "MP0461",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0367
+  },
+  {
+   "pair_id": "MP0461",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9397
+  },
+  {
+   "pair_id": "MP0462",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0462",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9473
+  },
+  {
+   "pair_id": "MP0462-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0462-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9475
+  },
+  {
+   "pair_id": "MP0463",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0375
+  },
+  {
+   "pair_id": "MP0463",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9343
+  },
+  {
+   "pair_id": "MP0463-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0463-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9449
+  },
+  {
+   "pair_id": "MP0464",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.037
+  },
+  {
+   "pair_id": "MP0464",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9476
+  },
+  {
+   "pair_id": "MP0465",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0376
+  },
+  {
+   "pair_id": "MP0465",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9482
+  },
+  {
+   "pair_id": "MP0465-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0415
+  },
+  {
+   "pair_id": "MP0465-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.0868
+  },
+  {
+   "pair_id": "MP0465-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0376
+  },
+  {
+   "pair_id": "MP0465-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9483
+  },
+  {
+   "pair_id": "MP0466",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0366
+  },
+  {
+   "pair_id": "MP0466",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9346
+  },
+  {
+   "pair_id": "MP0467",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0367
+  },
+  {
+   "pair_id": "MP0467",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.5944
+  },
+  {
+   "pair_id": "MP0467-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0362
+  },
+  {
+   "pair_id": "MP0467-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.1551
+  },
+  {
+   "pair_id": "MP0468",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0468",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9374
+  },
+  {
+   "pair_id": "MP0468-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0368
+  },
+  {
+   "pair_id": "MP0468-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9463
+  },
+  {
+   "pair_id": "MP0469",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0372
+  },
+  {
+   "pair_id": "MP0469",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9492
+  },
+  {
+   "pair_id": "MP0469-F",
+   "kind": "fragment",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0469-F",
+   "kind": "fragment",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.95
+  },
+  {
+   "pair_id": "MP0469-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0469-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9504
+  },
+  {
+   "pair_id": "MP0470",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0367
+  },
+  {
+   "pair_id": "MP0470",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9043
+  },
+  {
+   "pair_id": "MP0471",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0372
+  },
+  {
+   "pair_id": "MP0471",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.2647
+  },
+  {
+   "pair_id": "MP0471-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0367
+  },
+  {
+   "pair_id": "MP0471-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.9489
+  },
+  {
+   "pair_id": "MP0472",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0367
+  },
+  {
+   "pair_id": "MP0472",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9494
+  },
+  {
+   "pair_id": "MP0472-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0367
+  },
+  {
+   "pair_id": "MP0472-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.8618
+  },
+  {
+   "pair_id": "MP0473",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0473",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.1777
+  },
+  {
+   "pair_id": "MP0473-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0366
+  },
+  {
+   "pair_id": "MP0473-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.4664
+  },
+  {
+   "pair_id": "MP0473-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0369
+  },
+  {
+   "pair_id": "MP0473-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.2765
+  },
+  {
+   "pair_id": "MP0474",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "ms",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0474",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "ms",
+   "p": 0.0407
+  },
+  {
+   "pair_id": "MP0475",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0372
+  },
+  {
+   "pair_id": "MP0475",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.9498
+  },
+  {
+   "pair_id": "MP0475-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "en",
+   "p": 0.0368
+  },
+  {
+   "pair_id": "MP0475-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "en",
+   "p": 0.5789
+  },
+  {
+   "pair_id": "MP0476",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0372
+  },
+  {
+   "pair_id": "MP0476",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9493
+  },
+  {
+   "pair_id": "MP0476-F",
+   "kind": "fragment",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0476-F",
+   "kind": "fragment",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9504
+  },
+  {
+   "pair_id": "MP0476-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0372
+  },
+  {
+   "pair_id": "MP0476-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9496
+  },
+  {
+   "pair_id": "MP0477",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0373
+  },
+  {
+   "pair_id": "MP0477",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9351
+  },
+  {
+   "pair_id": "MP0477-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0372
+  },
+  {
+   "pair_id": "MP0477-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9437
+  },
+  {
+   "pair_id": "MP0478",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0375
+  },
+  {
+   "pair_id": "MP0478",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.943
+  },
+  {
+   "pair_id": "MP0478-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0502
+  },
+  {
+   "pair_id": "MP0478-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9511
+  },
+  {
+   "pair_id": "MP0478-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0374
+  },
+  {
+   "pair_id": "MP0478-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9442
+  },
+  {
+   "pair_id": "MP0479",
+   "kind": "full",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0372
+  },
+  {
+   "pair_id": "MP0479",
+   "kind": "full",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9352
+  },
+  {
+   "pair_id": "MP0479-P",
+   "kind": "prefix",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0385
+  },
+  {
+   "pair_id": "MP0479-C",
+   "kind": "core",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.0643
+  },
+  {
+   "pair_id": "MP0479-T",
+   "kind": "truncated",
+   "label": "LEGITIMATE",
+   "lang": "mix",
+   "p": 0.0372
+  },
+  {
+   "pair_id": "MP0479-T",
+   "kind": "truncated",
+   "label": "SCAM",
+   "lang": "mix",
+   "p": 0.9386
+  }
+ ]
+}

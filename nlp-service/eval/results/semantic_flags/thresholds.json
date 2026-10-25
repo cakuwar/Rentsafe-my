@@ -1,0 +1,104 @@
+{
+  "intfloat/multilingual-e5-base": {
+    "viewing_refused": {
+      "threshold": 0.9004,
+      "highest_legit_score": 0.8904,
+      "highest_legit_message": "rumah 2 tingkat, ada kelengkapan dapur dan aircond 2  biji, harga rm800 sebulan",
+      "dev_scam_conversations_flagged": 0
+    },
+    "pay_before_viewing": {
+      "threshold": 0.9149,
+      "highest_legit_score": 0.9049,
+      "highest_legit_message": "isnin datang view dulu, bagitau saya masa",
+      "dev_scam_conversations_flagged": 0
+    },
+    "booking_fee": {
+      "threshold": 0.9304,
+      "highest_legit_score": 0.9204,
+      "highest_legit_message": "you boleh book bilik tak ada furniture RM300, ada furniture RM350",
+      "dev_scam_conversations_flagged": 0
+    },
+    "keys_by_courier": {
+      "threshold": 0.9067,
+      "highest_legit_score": 0.8967,
+      "highest_legit_message": "payment nanti masa check in pun boleh",
+      "dev_scam_conversations_flagged": 0
+    },
+    "owner_away": {
+      "threshold": 0.8971,
+      "highest_legit_score": 0.8871,
+      "highest_legit_message": "next week datang tgk dulu, i bagi lokasi",
+      "dev_scam_conversations_flagged": 1
+    },
+    "pay_other_account": {
+      "threshold": 0.914,
+      "highest_legit_score": 0.904,
+      "highest_legit_message": "boleh, ni ic saya. nama sama dgn acc",
+      "dev_scam_conversations_flagged": 0
+    },
+    "deadline_urgency": {
+      "threshold": 0.9065,
+      "highest_legit_score": 0.8965,
+      "highest_legit_message": "ampa pikir cepat skit, kalau ok abg lock kt ampa ja. minggu lepas kena sidai ngan penyewa, kata nak tengok tunggu tak mai",
+      "dev_scam_conversations_flagged": 1
+    },
+    "competition": {
+      "threshold": 0.9065,
+      "highest_legit_score": 0.8965,
+      "highest_legit_message": "ampa pikir cepat skit, kalau ok abg lock kt ampa ja. minggu lepas kena sidai ngan penyewa, kata nak tengok tunggu tak mai",
+      "dev_scam_conversations_flagged": 3
+    },
+    "_any_tactic_dev_scam_flagged": "4 of 316"
+  },
+  "mesolitica/embedding-malaysian-mistral-64M-32k": {
+    "viewing_refused": {
+      "threshold": 0.9619,
+      "highest_legit_score": 0.9519,
+      "highest_legit_message": "noted, I'll standby the room for you",
+      "dev_scam_conversations_flagged": 0
+    },
+    "pay_before_viewing": {
+      "threshold": 0.9226,
+      "highest_legit_score": 0.9126,
+      "highest_legit_message": "you can pay the deposit and rent when you arrive",
+      "dev_scam_conversations_flagged": 0
+    },
+    "booking_fee": {
+      "threshold": 0.9437,
+      "highest_legit_score": 0.9337,
+      "highest_legit_message": "the room is RM500/month. deposit RM300 plus utility RM120",
+      "dev_scam_conversations_flagged": 10
+    },
+    "keys_by_courier": {
+      "threshold": 0.9453,
+      "highest_legit_score": 0.9353,
+      "highest_legit_message": "datang tengok dlu, saya bagi alamat",
+      "dev_scam_conversations_flagged": 0
+    },
+    "owner_away": {
+      "threshold": 0.9369,
+      "highest_legit_score": 0.9269,
+      "highest_legit_message": "the depo already includes the first month",
+      "dev_scam_conversations_flagged": 0
+    },
+    "pay_other_account": {
+      "threshold": 0.9297,
+      "highest_legit_score": 0.9197,
+      "highest_legit_message": "ble, ni ic sya, nama sama dgn acc",
+      "dev_scam_conversations_flagged": 0
+    },
+    "deadline_urgency": {
+      "threshold": 0.9444,
+      "highest_legit_score": 0.9344,
+      "highest_legit_message": "deposit tu dah termasuk buln pertama",
+      "dev_scam_conversations_flagged": 0
+    },
+    "competition": {
+      "threshold": 0.9035,
+      "highest_legit_score": 0.8935,
+      "highest_legit_message": "nak masuk berapa hb bagi tahu nanti",
+      "dev_scam_conversations_flagged": 1
+    },
+    "_any_tactic_dev_scam_flagged": "11 of 316"
+  }
+}

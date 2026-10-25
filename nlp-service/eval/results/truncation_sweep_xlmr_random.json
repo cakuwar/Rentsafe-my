@@ -1,0 +1,72 @@
+{
+  "model": "xlm-roberta-base",
+  "weights": "xlm-roberta-scam-random",
+  "unit": "messages (app.turns.split_messages)",
+  "subset": {
+    "conversations": 72,
+    "min_messages": 8,
+    "scam": 51,
+    "legitimate": 21
+  },
+  "baseline_always_scam": {
+    "accuracy": 0.7083,
+    "f1": 0.8293
+  },
+  "sweep": [
+    {
+      "messages": 1,
+      "accuracy": 0.3056,
+      "f1": 0.1379,
+      "beats_baseline": false
+    },
+    {
+      "messages": 2,
+      "accuracy": 0.3611,
+      "f1": 0.1786,
+      "beats_baseline": false
+    },
+    {
+      "messages": 3,
+      "accuracy": 0.4167,
+      "f1": 0.3,
+      "beats_baseline": false
+    },
+    {
+      "messages": 4,
+      "accuracy": 0.5972,
+      "f1": 0.6027,
+      "beats_baseline": false
+    },
+    {
+      "messages": 5,
+      "accuracy": 0.7083,
+      "f1": 0.7407,
+      "beats_baseline": false
+    },
+    {
+      "messages": 6,
+      "accuracy": 0.8333,
+      "f1": 0.8667,
+      "beats_baseline": true
+    },
+    {
+      "messages": 7,
+      "accuracy": 0.9306,
+      "f1": 0.9485,
+      "beats_baseline": true
+    },
+    {
+      "messages": 8,
+      "accuracy": 0.9722,
+      "f1": 0.98,
+      "beats_baseline": true
+    },
+    {
+      "messages": null,
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "beats_baseline": true
+    }
+  ],
+  "guard_threshold_messages": 6
+}

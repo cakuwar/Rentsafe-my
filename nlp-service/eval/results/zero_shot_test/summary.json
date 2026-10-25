@@ -1,0 +1,154 @@
+{
+  "thresholds": {
+    "run 1": 0.5,
+    "zero-shot": -0.051869319511413575
+  },
+  "hardware": {
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpus": 12,
+    "torch_threads": 8
+  },
+  "models": {
+    "run 1": {
+      "threshold": 0.5,
+      "val_accuracy": 0.9789,
+      "pairs_row_accuracy": 0.9722,
+      "pairs_pair_accuracy": 0.9444,
+      "real": [
+        {
+          "chat": "real scam chat (current OCR)",
+          "expect": "SCAM",
+          "score": 0.956,
+          "verdict": "SCAM",
+          "correct": true,
+          "windows": 1,
+          "seconds": 0.36
+        },
+        {
+          "chat": "real iBilik chat (current OCR)",
+          "expect": "LEGITIMATE",
+          "score": 0.3024,
+          "verdict": "LEGITIMATE",
+          "correct": true,
+          "windows": 2,
+          "seconds": 0.89
+        },
+        {
+          "chat": "real iBilik chat (pre-fix OCR)",
+          "expect": "LEGITIMATE",
+          "score": 0.8836,
+          "verdict": "SCAM",
+          "correct": false,
+          "windows": 2,
+          "seconds": 0.83
+        },
+        {
+          "chat": "real iBilik chat (hand transcript)",
+          "expect": "LEGITIMATE",
+          "score": 0.1406,
+          "verdict": "LEGITIMATE",
+          "correct": true,
+          "windows": 2,
+          "seconds": 0.81
+        },
+        {
+          "chat": "English courier scam (gate)",
+          "expect": "SCAM",
+          "score": 0.9386,
+          "verdict": "SCAM",
+          "correct": true,
+          "windows": 1,
+          "seconds": 0.15
+        }
+      ],
+      "cpu_seconds_per_chat": {
+        "median": 0.27,
+        "mean": 0.3,
+        "real_chats_mean": 0.61
+      }
+    },
+    "zero-shot": {
+      "threshold": -0.0519,
+      "val_accuracy": 0.6632,
+      "pairs_row_accuracy": 0.5,
+      "pairs_pair_accuracy": 0.0,
+      "real": [
+        {
+          "chat": "real scam chat (current OCR)",
+          "expect": "SCAM",
+          "score": -0.0012,
+          "verdict": "SCAM",
+          "correct": true,
+          "windows": 2,
+          "seconds": 31.56,
+          "S": 0.9978,
+          "S_hypothesis": "urgency",
+          "L": 0.9991,
+          "L_hypothesis": "viewing_arranged"
+        },
+        {
+          "chat": "real iBilik chat (current OCR)",
+          "expect": "LEGITIMATE",
+          "score": -0.0022,
+          "verdict": "SCAM",
+          "correct": false,
+          "windows": 2,
+          "seconds": 49.83,
+          "S": 0.9969,
+          "S_hypothesis": "payment_before_viewing",
+          "L": 0.9991,
+          "L_hypothesis": "agreement_via_platform"
+        },
+        {
+          "chat": "real iBilik chat (pre-fix OCR)",
+          "expect": "LEGITIMATE",
+          "score": -0.0018,
+          "verdict": "SCAM",
+          "correct": false,
+          "windows": 3,
+          "seconds": 71.33,
+          "S": 0.997,
+          "S_hypothesis": "payment_before_viewing",
+          "L": 0.9988,
+          "L_hypothesis": "viewing_arranged"
+        },
+        {
+          "chat": "real iBilik chat (hand transcript)",
+          "expect": "LEGITIMATE",
+          "score": -0.0016,
+          "verdict": "SCAM",
+          "correct": false,
+          "windows": 2,
+          "seconds": 45.76,
+          "S": 0.9978,
+          "S_hypothesis": "payment_before_viewing",
+          "L": 0.9995,
+          "L_hypothesis": "viewing_arranged"
+        },
+        {
+          "chat": "English courier scam (gate)",
+          "expect": "SCAM",
+          "score": 0.0016,
+          "verdict": "SCAM",
+          "correct": true,
+          "windows": 1,
+          "seconds": 4.17,
+          "S": 0.9998,
+          "S_hypothesis": "urgency",
+          "L": 0.9982,
+          "L_hypothesis": "viewing_arranged"
+        }
+      ],
+      "cpu_seconds_per_chat": {
+        "median": 4.06,
+        "mean": 5.96,
+        "real_chats_mean": 40.53
+      }
+    }
+  },
+  "decision": {
+    "pairs_criterion_met": false,
+    "ibilik_criterion_met": false,
+    "outcome": "DROP - does not clearly beat run 1"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "intfloat/multilingual-e5-base": {
+    "val_accuracy": 0.8421,
+    "val_macro_f1": 0.8037,
+    "pairs_row_accuracy": 0.7639,
+    "pairs_pair_accuracy": 0.5278,
+    "real": {
+      "real scam chat (development chat)": 0.5592,
+      "real iBilik chat (current OCR)": 0.5085,
+      "real iBilik chat (pre-fix OCR)": 0.5092,
+      "real iBilik chat (hand transcript)": 0.5012
+    },
+    "train_rows": 1311
+  },
+  "mesolitica/embedding-malaysian-mistral-64M-32k": {
+    "val_accuracy": 0.8316,
+    "val_macro_f1": 0.793,
+    "pairs_row_accuracy": 0.6319,
+    "pairs_pair_accuracy": 0.2917,
+    "real": {
+      "real scam chat (development chat)": 0.5984,
+      "real iBilik chat (current OCR)": 0.5261,
+      "real iBilik chat (pre-fix OCR)": 0.522,
+      "real iBilik chat (hand transcript)": 0.4914
+    },
+    "train_rows": 1311
+  }
+}

@@ -1,0 +1,432 @@
+{
+  "model": {
+    "path": "nlp-service/models/xlm-roberta-scam-v3-run1",
+    "base": "xlm-roberta-base",
+    "parameters_millions": 278,
+    "calibration_temperature": 0.7313,
+    "max_window_tokens": 512,
+    "decision_threshold": 0.5
+  },
+  "sets": {
+    "validation": {
+      "set": "validation",
+      "TP": 61,
+      "FN": 2,
+      "FP": 0,
+      "TN": 32,
+      "n": 95,
+      "accuracy": 0.9789,
+      "precision_scam": 1.0,
+      "recall_scam": 0.9683,
+      "specificity": 1.0,
+      "f1_scam": 0.9839,
+      "macro_f1": 0.9768,
+      "mcc": 0.9546,
+      "roc_auc": 0.9936,
+      "pr_auc": 0.9971,
+      "brier_raw": 0.0215,
+      "brier_served": 0.0209,
+      "ece_raw": 0.0395,
+      "ece_served": 0.0278,
+      "saturated_share_raw": 0.0,
+      "saturated_share_served": 0.3368,
+      "multi_window_rows": 0
+    },
+    "minimal_pairs": {
+      "set": "new-wording minimal pairs",
+      "TP": 68,
+      "FN": 4,
+      "FP": 0,
+      "TN": 72,
+      "n": 144,
+      "accuracy": 0.9722,
+      "precision_scam": 1.0,
+      "recall_scam": 0.9444,
+      "specificity": 1.0,
+      "f1_scam": 0.9714,
+      "macro_f1": 0.9722,
+      "mcc": 0.9459,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "brier_raw": 0.0265,
+      "brier_served": 0.0266,
+      "ece_raw": 0.0436,
+      "ece_served": 0.0373,
+      "saturated_share_raw": 0.0,
+      "saturated_share_served": 0.5,
+      "multi_window_rows": 0,
+      "pair_accuracy": 0.9444
+    },
+    "english_probes": {
+      "set": "English-only probes",
+      "TP": 5,
+      "FN": 0,
+      "FP": 0,
+      "TN": 5,
+      "n": 10,
+      "accuracy": 1.0,
+      "precision_scam": 1.0,
+      "recall_scam": 1.0,
+      "specificity": 1.0,
+      "f1_scam": 1.0,
+      "macro_f1": 1.0,
+      "mcc": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "brier_raw": 0.0016,
+      "brier_served": 0.0002,
+      "ece_raw": 0.0375,
+      "ece_served": 0.0121,
+      "saturated_share_raw": 0.0,
+      "saturated_share_served": 0.5,
+      "multi_window_rows": 0
+    },
+    "benign_short": {
+      "set": "benign short messages",
+      "TP": 0,
+      "FN": 0,
+      "FP": 0,
+      "TN": 8,
+      "n": 8,
+      "accuracy": 1.0,
+      "precision_scam": 0.0,
+      "recall_scam": 0.0,
+      "specificity": 1.0,
+      "f1_scam": 0.0,
+      "macro_f1": 0.5,
+      "mcc": 0.0,
+      "brier_raw": 0.0054,
+      "brier_served": 0.0013,
+      "ece_raw": 0.0605,
+      "ece_served": 0.0264,
+      "saturated_share_raw": 0.0,
+      "saturated_share_served": 0.375,
+      "multi_window_rows": 0
+    }
+  },
+  "majority_baseline": {
+    "validation_always_scam_accuracy": 0.6632,
+    "minimal_pairs_any_constant_accuracy": 0.5,
+    "minimal_pairs_any_constant_pair_accuracy": 0.0
+  },
+  "minimal_pairs_by_language": {
+    "en": {
+      "pairs": 23,
+      "row_accuracy": 1.0,
+      "pair_accuracy": 1.0,
+      "scams_missed": 0,
+      "false_alarms": 0
+    },
+    "mix": {
+      "pairs": 25,
+      "row_accuracy": 1.0,
+      "pair_accuracy": 1.0,
+      "scams_missed": 0,
+      "false_alarms": 0
+    },
+    "ms": {
+      "pairs": 24,
+      "row_accuracy": 0.9167,
+      "pair_accuracy": 0.8333,
+      "scams_missed": 4,
+      "false_alarms": 0
+    }
+  },
+  "misclassified": [
+    {
+      "set": "validation",
+      "label": "SCAM",
+      "p_raw": 0.0311,
+      "excerpt": "Renter: assalamualaikum, saya berminat dengan studio sewa area Ampang | Owner: rm600 sebulan, deposit sebulan rm300, utiliti rm100 | Renter: nak tengok rmh dlu "
+    },
+    {
+      "set": "validation",
+      "label": "SCAM",
+      "p_raw": 0.0283,
+      "excerpt": "Renter: Hi, interested in the studio at Subang. Is it takeen already? | Owner: Hi, my I know who's this? | Renter: is it possible to view before deciding? | Own"
+    },
+    {
+      "set": "minimal pairs",
+      "label": "SCAM",
+      "p_raw": 0.0687,
+      "excerpt": "Renter: salam tuan, rumah pangsa di Kepong masih boleh sewa? | Owner: masih available. tarikh masuk bila ye? | Renter: orang lain dalam rumah kerja apa? | Owner",
+      "pair_id": "MP0439",
+      "lang": "ms",
+      "differing_owner_lines": [
+        "tak sempat, saya duduk Sabah sekarang, kunci pun takde dengan saya.",
+        "deposit kena masuk hari ni juga, kalau tak saya bagi orang lain.",
+        "kena selesai sebelum tengah malam ni ya."
+      ]
+    },
+    {
+      "set": "minimal pairs",
+      "label": "SCAM",
+      "p_raw": 0.0472,
+      "excerpt": "Renter: hai, bilik single Nilai yang iklan tu available lagi tak? | Owner: ada lagi. nak masuk bila? | Owner: Syarat sewa: minimum 12 bulan, deposit 1 bulan + s",
+      "pair_id": "MP0440",
+      "lang": "ms",
+      "differing_owner_lines": [
+        "rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok.",
+        "ada, yuran tempahan RM800 kena bank-in malam ni untuk simpan unit.",
+        "kena selesai sebelum tengah malam ni ya.",
+        "akaun saya ada masalah, bank-in ke akaun kawan saya."
+      ]
+    },
+    {
+      "set": "minimal pairs",
+      "label": "SCAM",
+      "p_raw": 0.1799,
+      "excerpt": "Renter: hi, nak tanya apartment area Klang ada kosong lagi? | Owner: ada, belum ada orang ambil lagi | Owner: PROMOSI bulan ni: diskaun 50% sewa bulan pertama. ",
+      "pair_id": "MP0452",
+      "lang": "ms",
+      "differing_owner_lines": [
+        "rumah berkunci, penyewa lama belum keluar, tak boleh masuk tengok.",
+        "ada, yuran tempahan RM300 kena bank-in malam ni untuk simpan unit.",
+        "akaun saya ada masalah, bank-in ke akaun kawan saya.",
+        "kena selesai sebelum tengah malam ni ya."
+      ]
+    },
+    {
+      "set": "minimal pairs",
+      "label": "SCAM",
+      "p_raw": 0.0936,
+      "excerpt": "Renter: hai, rumah flat Bangi yang iklan tu available lagi tak? | Owner: masih available. tarikh masuk bila ye? | Renter: boleh jenguk unit dulu sebelum setuju?",
+      "pair_id": "MP0457",
+      "lang": "ms",
+      "differing_owner_lines": [
+        "tak sempat, saya duduk Sabah sekarang, kunci pun takde dengan saya.",
+        "deposit kena masuk hari ni juga, kalau tak saya bagi orang lain."
+      ]
+    }
+  ],
+  "real_conversations": [
+    {
+      "chat": "real scam chat (4 screenshots, OCR)",
+      "expect": "SCAM",
+      "p_raw": 0.956,
+      "p_served": 0.9853,
+      "verdict": "SCAM",
+      "correct": true,
+      "windows": 1,
+      "cpu_seconds": 0.74
+    },
+    {
+      "chat": "real legitimate iBilik chat (8 screenshots, OCR, current pipeline)",
+      "expect": "LEGITIMATE",
+      "p_raw": 0.3024,
+      "p_served": 0.2418,
+      "verdict": "LEGITIMATE",
+      "correct": true,
+      "windows": 2,
+      "cpu_seconds": 1.73
+    },
+    {
+      "chat": "same chat, OCR before the watermark fix",
+      "expect": "LEGITIMATE",
+      "p_raw": 0.8836,
+      "p_served": 0.9411,
+      "verdict": "SCAM",
+      "correct": false,
+      "windows": 2,
+      "cpu_seconds": 0.78
+    },
+    {
+      "chat": "same chat, hand transcript",
+      "expect": "LEGITIMATE",
+      "p_raw": 0.1406,
+      "p_served": 0.0776,
+      "verdict": "LEGITIMATE",
+      "correct": true,
+      "windows": 2,
+      "cpu_seconds": 0.8
+    }
+  ],
+  "cpu_seconds_per_conversation": {
+    "validation_median": 0.178,
+    "validation_mean": 0.306,
+    "real_chats_mean": 1.012,
+    "note": "CPU only, one conversation at a time, model already loaded"
+  },
+  "acceptance_gates_now": {
+    "real_legit_production": {
+      "expect": "LEGITIMATE",
+      "p_raw": 0.3024,
+      "p_served": 0.2418,
+      "passed": true
+    },
+    "real_legit_clean": {
+      "expect": "LEGITIMATE",
+      "p_raw": 0.1406,
+      "p_served": 0.0776,
+      "passed": true
+    },
+    "real_scam_production": {
+      "expect": "SCAM",
+      "p_raw": 0.956,
+      "p_served": 0.9853,
+      "passed": true
+    },
+    "shortcut_base": {
+      "expect": "LEGITIMATE",
+      "p_raw": 0.0258,
+      "p_served": 0.0069,
+      "passed": true
+    },
+    "shortcut_plus_prices": {
+      "expect": "LEGITIMATE",
+      "p_raw": 0.0273,
+      "p_served": 0.0075,
+      "passed": true
+    },
+    "shortcut_plus_prices_terms": {
+      "expect": "LEGITIMATE",
+      "p_raw": 0.0274,
+      "p_served": 0.0075,
+      "passed": true
+    },
+    "ablation_full_scam": {
+      "expect": "SCAM",
+      "p_raw": 0.954,
+      "p_served": 0.9844,
+      "passed": true
+    },
+    "ablation_mechanics_removed": {
+      "expect": "LEGITIMATE",
+      "p_raw": 0.5313,
+      "p_served": 0.5428,
+      "passed": false
+    },
+    "english_courier_scam": {
+      "expect": "SCAM",
+      "p_raw": 0.9386,
+      "p_served": 0.9765,
+      "passed": true
+    }
+  },
+  "acceptance_gates_now_passed": "8 of 9",
+  "short_input_sweep": {
+    "model": "xlm-roberta-base",
+    "weights": "xlm-roberta-scam-v3-run1",
+    "unit": "messages (app.turns.split_messages)",
+    "subset": {
+      "conversations": 72,
+      "min_messages": 8,
+      "scam": 51,
+      "legitimate": 21
+    },
+    "baseline_always_scam": {
+      "accuracy": 0.7083,
+      "f1": 0.8293
+    },
+    "sweep": [
+      {
+        "messages": 1,
+        "accuracy": 0.2917,
+        "f1": 0.0,
+        "beats_baseline": false
+      },
+      {
+        "messages": 2,
+        "accuracy": 0.3194,
+        "f1": 0.0755,
+        "beats_baseline": false
+      },
+      {
+        "messages": 3,
+        "accuracy": 0.375,
+        "f1": 0.2105,
+        "beats_baseline": false
+      },
+      {
+        "messages": 4,
+        "accuracy": 0.5417,
+        "f1": 0.5217,
+        "beats_baseline": false
+      },
+      {
+        "messages": 5,
+        "accuracy": 0.6667,
+        "f1": 0.6923,
+        "beats_baseline": false
+      },
+      {
+        "messages": 6,
+        "accuracy": 0.7917,
+        "f1": 0.8276,
+        "beats_baseline": true
+      },
+      {
+        "messages": 7,
+        "accuracy": 0.8889,
+        "f1": 0.9149,
+        "beats_baseline": true
+      },
+      {
+        "messages": 8,
+        "accuracy": 0.9028,
+        "f1": 0.9293,
+        "beats_baseline": true
+      },
+      {
+        "messages": null,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "beats_baseline": true
+      }
+    ],
+    "guard_threshold_messages": 6
+  },
+  "group_ablation": {
+    "full": 0.9536,
+    "mechanics_removed": 0.5313,
+    "mechanics_only": 0.9538,
+    "removed_lines": [
+      "Owner: Cannot open the unit sorry.",
+      "Owner: I'm outstation in Sabah now.",
+      "Owner: Kalau nak lock the room,",
+      "Owner: Lepas transfer saya pos kunci.",
+      "Owner: Ramai orang tengah tanya.",
+      "Owner: transfer deposit RM800 dulu."
+    ],
+    "verdict": "TEMPLATE-MATCHING: score stayed high without any scam mechanic"
+  },
+  "colab_printout": {
+    "validation_accuracy": 0.9789,
+    "validation_macro_f1": 0.9768,
+    "pair_accuracy": 0.9444,
+    "fragment_pairs": "1.0000",
+    "temperature": 0.731,
+    "pair_test_ece_raw_to_calibrated": [
+      0.0655,
+      0.0319
+    ],
+    "note": "Colab, on run 1's own minimal-pair test split (since regenerated); GPU scoring"
+  },
+  "training_data": {
+    "original_train": {
+      "rows": 379,
+      "SCAM": 253,
+      "LEGITIMATE": 126
+    },
+    "minimal_pairs_run1": {
+      "rows": 932,
+      "pairs": 408,
+      "fragment_pairs": 58
+    },
+    "train_used": {
+      "rows": 1223,
+      "scam": 675,
+      "legitimate": 548
+    },
+    "dev_used": {
+      "rows": 183,
+      "validation_rows": 95,
+      "held_out_pair_rows": 88,
+      "pair_groups": 40
+    },
+    "run1_test_split": {
+      "rows": 166,
+      "pairs": 72
+    }
+  }
+}

@@ -1,0 +1,1000 @@
+{
+  "status": "EXPERIMENTAL - not read by the service (eval/semantic_flags.py only)",
+  "built_by": "eval/build_semantic_bank.py",
+  "tactic_rules": {
+    "viewing_refused": [
+      "viewing_denial"
+    ],
+    "pay_before_viewing": [
+      "pay_before_viewing"
+    ],
+    "booking_fee": [
+      "upfront_payment"
+    ],
+    "keys_by_courier": [
+      "key_courier"
+    ],
+    "owner_away": [
+      "remote_owner"
+    ],
+    "pay_other_account": [
+      "third_party_account"
+    ],
+    "deadline_urgency": [
+      "deadline_pressure",
+      "rush_language"
+    ],
+    "competition": [
+      "competition_pressure"
+    ]
+  },
+  "near_duplicate_ratio": 0.8,
+  "rejected_as_near_duplicates": [],
+  "counts": {
+    "viewing_refused": 10,
+    "pay_before_viewing": 10,
+    "booking_fee": 9,
+    "keys_by_courier": 8,
+    "owner_away": 9,
+    "pay_other_account": 9,
+    "deadline_urgency": 12,
+    "competition": 11
+  },
+  "tactics": {
+    "viewing_refused": [
+      {
+        "text": "Maaf, rumah tu tak boleh tengok sekarang.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "viewing_denial"
+        ],
+        "closest_test_line": {
+          "ratio": 0.638,
+          "line": "maaf, tak boleh bela haiwan."
+        }
+      },
+      {
+        "text": "Tidak boleh lawat unit tu, maaf.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "viewing_denial"
+        ],
+        "closest_test_line": {
+          "ratio": 0.533,
+          "line": "maaf, tak boleh bela haiwan."
+        }
+      },
+      {
+        "text": "Tidak dapat masuk ke unit sehingga bulan depan.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "viewing_denial"
+        ],
+        "closest_test_line": {
+          "ratio": 0.454,
+          "line": "tak boleh, I duduk Sabah, keys pun takde dengan I."
+        }
+      },
+      {
+        "text": "Sorry, I cannot show you the unit.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "viewing_denial"
+        ],
+        "closest_test_line": {
+          "ratio": 0.557,
+          "line": "Yes, it's part of the rent."
+        }
+      },
+      {
+        "text": "Viewing is not possible at the moment.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "viewing_denial"
+        ],
+        "closest_test_line": {
+          "ratio": 0.523,
+          "line": "Yes, it's part of the rent."
+        }
+      },
+      {
+        "text": "No viewing for this unit, sorry.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "viewing_denial"
+        ],
+        "closest_test_line": {
+          "ratio": 0.476,
+          "line": "kena settle before midnight ya."
+        }
+      },
+      {
+        "text": "We cannot open the room for you.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "viewing_denial"
+        ],
+        "closest_test_line": {
+          "ratio": 0.441,
+          "line": "Yes, it's part of the rent."
+        }
+      },
+      {
+        "text": "Sorry bro, x boleh view dulu.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "viewing_denial"
+        ],
+        "closest_test_line": {
+          "ratio": 0.455,
+          "line": "Sorry, no pets."
+        }
+      },
+      {
+        "text": "Unit tu tk dpt viewing lagi ya.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "viewing_denial"
+        ],
+        "closest_test_line": {
+          "ratio": 0.491,
+          "line": "light cooking only ya."
+        }
+      },
+      {
+        "text": "viewing not allowed buat masa ni.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "viewing_denial"
+        ],
+        "closest_test_line": {
+          "ratio": 0.462,
+          "line": "Is cooking allowed?"
+        }
+      }
+    ],
+    "pay_before_viewing": [
+      {
+        "text": "Bayar dulu baru boleh tengok rumah.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "pay_before_viewing"
+        ],
+        "closest_test_line": {
+          "ratio": 0.517,
+          "line": "banyak, depan rumah je."
+        }
+      },
+      {
+        "text": "Kena transfer deposit sebelum lihat unit.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "pay_before_viewing"
+        ],
+        "closest_test_line": {
+          "ratio": 0.543,
+          "line": "kena selesai sebelum tengah malam ni ya."
+        }
+      },
+      {
+        "text": "Lepas transfer saya bagi masa untuk tengok.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "pay_before_viewing"
+        ],
+        "closest_test_line": {
+          "ratio": 0.535,
+          "line": "boleh je, petang Ahad saya ada kat sana, datang la tengok."
+        }
+      },
+      {
+        "text": "Transfer the deposit first, then you can view.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "pay_before_viewing"
+        ],
+        "closest_test_line": {
+          "ratio": 0.504,
+          "line": "takde yuran tempahan. deposit RM450 dibayar bila sign, lepas viewing."
+        }
+      },
+      {
+        "text": "You can see the room after you pay the booking.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "pay_before_viewing"
+        ],
+        "closest_test_line": {
+          "ratio": 0.48,
+          "line": "Is the room facing the road?"
+        }
+      },
+      {
+        "text": "Pay the deposit before viewing.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "pay_before_viewing"
+        ],
+        "closest_test_line": {
+          "ratio": 0.526,
+          "line": "takde holding fee. deposit RM450 bayar masa sign, after viewing."
+        }
+      },
+      {
+        "text": "bayar booking dulu then baru boleh view.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "pay_before_viewing"
+        ],
+        "closest_test_line": {
+          "ratio": 0.508,
+          "line": "banyak, depan rumah je."
+        }
+      },
+      {
+        "text": "lock dulu with deposit, then I bagi time viewing.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "pay_before_viewing"
+        ],
+        "closest_test_line": {
+          "ratio": 0.5,
+          "line": "No, it faces the back, quite quiet."
+        }
+      },
+      {
+        "text": "after you transfer, I'll arrange the key.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "pay_before_viewing"
+        ],
+        "closest_test_line": {
+          "ratio": 0.471,
+          "line": "Yes, it's part of the rent."
+        }
+      },
+      {
+        "text": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya",
+        "lang": "dev",
+        "source": "dev_scam_chat",
+        "rule": [
+          "pay_before_viewing"
+        ],
+        "closest_test_line": {
+          "ratio": 0.488,
+          "line": "jangan risau, kalau tak berkenan duit saya pulangkan semua."
+        }
+      }
+    ],
+    "booking_fee": [
+      {
+        "text": "Kena bayar booking RM300 untuk simpan bilik.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "upfront_payment"
+        ],
+        "closest_test_line": {
+          "ratio": 0.522,
+          "line": "boleh, bagi masa you free, I tunjuk semua bilik."
+        }
+      },
+      {
+        "text": "Deposit dulu untuk lock bilik ni.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "upfront_payment"
+        ],
+        "closest_test_line": {
+          "ratio": 0.483,
+          "line": "deposit kena masuk today, kalau tak I bagi orang lain."
+        }
+      },
+      {
+        "text": "Tempah dulu dengan RM200, baki bayar kemudian.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "upfront_payment"
+        ],
+        "closest_test_line": {
+          "ratio": 0.466,
+          "line": "takde yuran tempahan. deposit RM1200 dibayar bila sign, lepas viewing."
+        }
+      },
+      {
+        "text": "There is a booking fee of RM500 to hold the room.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "upfront_payment"
+        ],
+        "closest_test_line": {
+          "ratio": 0.466,
+          "line": "Hello, I saw your listing for the master room in Ipoh."
+        }
+      },
+      {
+        "text": "You need to reserve it with a small payment.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "upfront_payment"
+        ],
+        "closest_test_line": {
+          "ratio": 0.424,
+          "line": "Should be fine, let me confirm with the current tenant."
+        }
+      },
+      {
+        "text": "A reservation fee is required to lock the unit.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "upfront_payment"
+        ],
+        "closest_test_line": {
+          "ratio": 0.462,
+          "line": "Yes, a RM200 holding fee has to be banked in tonight to keep the unit."
+        }
+      },
+      {
+        "text": "booking RM250 dulu ya, baru saya simpan bilik.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "upfront_payment"
+        ],
+        "closest_test_line": {
+          "ratio": 0.484,
+          "line": "boleh, bagitahu masa, saya tunjukkan semua bilik."
+        }
+      },
+      {
+        "text": "kena bayar awal sikit untuk lock room.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "upfront_payment"
+        ],
+        "closest_test_line": {
+          "ratio": 0.507,
+          "line": "Yes, shared with the other rooms."
+        }
+      },
+      {
+        "text": "Boleh bg no akaun sy bayar booking rm500 skrg",
+        "lang": "dev",
+        "source": "dev_scam_chat",
+        "rule": [
+          "upfront_payment"
+        ],
+        "closest_test_line": {
+          "ratio": 0.462,
+          "line": "should be ok, nanti saya confirm."
+        }
+      }
+    ],
+    "keys_by_courier": [
+      {
+        "text": "Saya pos kunci ke alamat awak.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "key_courier"
+        ],
+        "closest_test_line": {
+          "ratio": 0.566,
+          "line": "kawasan ni selamat tak?"
+        }
+      },
+      {
+        "text": "Kunci akan dipos selepas bayaran diterima.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "key_courier"
+        ],
+        "closest_test_line": {
+          "ratio": 0.578,
+          "line": "kunci saya hantar guna Poslaju lepas duit masuk."
+        }
+      },
+      {
+        "text": "Nanti saya hantar kunci guna kurier.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "key_courier"
+        ],
+        "closest_test_line": {
+          "ratio": 0.524,
+          "line": "kunci saya hantar guna Poslaju lepas duit masuk."
+        }
+      },
+      {
+        "text": "I will post the keys to you.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "key_courier"
+        ],
+        "closest_test_line": {
+          "ratio": 0.481,
+          "line": "I'll send the keys by Poslaju once the money is in."
+        }
+      },
+      {
+        "text": "I can courier the keys to your office.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "key_courier"
+        ],
+        "closest_test_line": {
+          "ratio": 0.452,
+          "line": "Hello, I saw your listing for the medium room in Nilai."
+        }
+      },
+      {
+        "text": "I'll mail you the key once it's settled.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "key_courier"
+        ],
+        "closest_test_line": {
+          "ratio": 0.505,
+          "line": "I'll send the keys by Poslaju once the money is in."
+        }
+      },
+      {
+        "text": "Access card akan dipos, no need jumpa.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "key_courier"
+        ],
+        "closest_test_line": {
+          "ratio": 0.422,
+          "line": "keys dan access card I serah by hand on move-in day."
+        }
+      },
+      {
+        "text": "nanti I pos kunci ke you.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "key_courier"
+        ],
+        "closest_test_line": {
+          "ratio": 0.429,
+          "line": "It is, nobody has taken it yet."
+        }
+      }
+    ],
+    "owner_away": [
+      {
+        "text": "Saya di luar negara sekarang.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "remote_owner"
+        ],
+        "closest_test_line": {
+          "ratio": 0.508,
+          "line": "bayar guna DuitNow je, senang."
+        }
+      },
+      {
+        "text": "Maaf, saya outstation minggu ni.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "remote_owner"
+        ],
+        "closest_test_line": {
+          "ratio": 0.444,
+          "line": "boleh, bagitahu masa, saya tunjukkan semua bilik."
+        }
+      },
+      {
+        "text": "Saya tiada di Malaysia bulan ni.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "remote_owner"
+        ],
+        "closest_test_line": {
+          "ratio": 0.491,
+          "line": "ada aircond setiap bilik."
+        }
+      },
+      {
+        "text": "I'm overseas at the moment.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "remote_owner"
+        ],
+        "closest_test_line": {
+          "ratio": 0.481,
+          "line": "Yes, it's part of the rent."
+        }
+      },
+      {
+        "text": "I'm not in town until next month.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "remote_owner"
+        ],
+        "closest_test_line": {
+          "ratio": 0.509,
+          "line": "Minimum twelve months."
+        }
+      },
+      {
+        "text": "Currently I'm overseas for work.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "remote_owner"
+        ],
+        "closest_test_line": {
+          "ratio": 0.413,
+          "line": "Not really, I'm based in Sabah and nobody here has the keys."
+        }
+      },
+      {
+        "text": "sy kat luar negara, so tak dapat jumpa.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "remote_owner"
+        ],
+        "closest_test_line": {
+          "ratio": 0.465,
+          "line": "saya dari Kelantan, jauh tak dari terminal bas?"
+        }
+      },
+      {
+        "text": "I outstation ni, balik next month.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "remote_owner"
+        ],
+        "closest_test_line": {
+          "ratio": 0.464,
+          "line": "Minimum twelve months."
+        }
+      },
+      {
+        "text": "I tiada di sini, kerja luar negara.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "remote_owner"
+        ],
+        "closest_test_line": {
+          "ratio": 0.523,
+          "line": "ya masih ada. kerja area mana?"
+        }
+      }
+    ],
+    "pay_other_account": [
+      {
+        "text": "Bank in ke akaun adik saya ya.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "third_party_account"
+        ],
+        "closest_test_line": {
+          "ratio": 0.561,
+          "line": "akaun saya ada masalah, bank-in ke akaun kawan saya."
+        }
+      },
+      {
+        "text": "Sila bayar ke akaun atas nama orang lain.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "third_party_account"
+        ],
+        "closest_test_line": {
+          "ratio": 0.473,
+          "line": "akaun saya ada masalah, bank-in ke akaun kawan saya."
+        }
+      },
+      {
+        "text": "Nama akaun lain, itu akaun abang saya.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "third_party_account"
+        ],
+        "closest_test_line": {
+          "ratio": 0.467,
+          "line": "akaun saya ada masalah, bank-in ke akaun kawan saya."
+        }
+      },
+      {
+        "text": "Please transfer to my agent instead.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "third_party_account"
+        ],
+        "closest_test_line": {
+          "ratio": 0.52,
+          "line": "My account has an issue, bank in to my friend's account instead."
+        }
+      },
+      {
+        "text": "Transfer to my friend, he handles the collection.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "third_party_account"
+        ],
+        "closest_test_line": {
+          "ratio": 0.425,
+          "line": "My account has an issue, bank in to my friend's account instead."
+        }
+      },
+      {
+        "text": "Payment goes to the company account.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "third_party_account"
+        ],
+        "closest_test_line": {
+          "ratio": 0.427,
+          "line": "Plenty, right in front of the building."
+        }
+      },
+      {
+        "text": "you bank in ke akaun isteri I ya.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "third_party_account"
+        ],
+        "closest_test_line": {
+          "ratio": 0.518,
+          "line": "akaun saya ada masalah, bank-in ke akaun kawan saya."
+        }
+      },
+      {
+        "text": "transfer to boss punya akaun ok.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "third_party_account"
+        ],
+        "closest_test_line": {
+          "ratio": 0.467,
+          "line": "maaf, tak boleh bela haiwan."
+        }
+      },
+      {
+        "text": "akaun syarikat, bukan akaun I.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "third_party_account"
+        ],
+        "closest_test_line": {
+          "ratio": 0.561,
+          "line": "akaun saya ada masalah, bank-in ke akaun kawan saya."
+        }
+      }
+    ],
+    "deadline_urgency": [
+      {
+        "text": "Bayar sebelum 8 malam ini ya.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "deadline_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.696,
+          "line": "kena selesai sebelum tengah malam ni ya."
+        }
+      },
+      {
+        "text": "Kena transfer hari ini juga.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "deadline_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.508,
+          "line": "kena settle before midnight ya."
+        }
+      },
+      {
+        "text": "Jangan lambat, bilik ni laju.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "rush_language"
+        ],
+        "closest_test_line": {
+          "ratio": 0.517,
+          "line": "ada, share dengan bilik lain."
+        }
+      },
+      {
+        "text": "Please transfer before 6pm today.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "deadline_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.438,
+          "line": "kena settle before midnight ya."
+        }
+      },
+      {
+        "text": "Transfer within 2 hours or I release the room.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "deadline_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.43,
+          "line": "Yes, shared with the other rooms."
+        }
+      },
+      {
+        "text": "It's urgent, please hurry.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "rush_language"
+        ],
+        "closest_test_line": {
+          "ratio": 0.465,
+          "line": "Sure, let me know"
+        }
+      },
+      {
+        "text": "booking kena settle tonight ok.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "deadline_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.645,
+          "line": "kena settle before midnight ya."
+        }
+      },
+      {
+        "text": "cepat sikit ya, lock by 9pm.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "deadline_pressure",
+          "rush_language"
+        ],
+        "closest_test_line": {
+          "ratio": 0.407,
+          "line": "around 20 minit naik Grab."
+        }
+      },
+      {
+        "text": "urgent bro, bayar sekarang juga.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "deadline_pressure",
+          "rush_language"
+        ],
+        "closest_test_line": {
+          "ratio": 0.449,
+          "line": "boleh rasanya, saya confirm dengan penyewa sekarang dulu."
+        }
+      },
+      {
+        "text": "Boleh en insyallah .setakat ni kalau nak book sebelum 10pm ya cuma selagi blum confirm Masih terbuka mana yg dulu je.gambar umah terbaru luar Dan dalam cuma brg brg dim gamabr penyewa skg yg punya",
+        "lang": "dev",
+        "source": "dev_scam_chat",
+        "rule": [
+          "deadline_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.308,
+          "line": "boleh rasanya, saya confirm dengan penyewa sekarang dulu."
+        }
+      },
+      {
+        "text": "Boleh tuan .jgn lamabt je sebab wssp non stop masuk",
+        "lang": "dev",
+        "source": "dev_scam_chat",
+        "rule": [
+          "rush_language"
+        ],
+        "closest_test_line": {
+          "ratio": 0.404,
+          "line": "boleh jenguk unit dulu sebelum setuju?"
+        }
+      },
+      {
+        "text": "En saya lock 10 pm insyallah",
+        "lang": "dev",
+        "source": "dev_scam_chat",
+        "rule": [
+          "deadline_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.423,
+          "line": "Yes it is. When are you looking to move in?"
+        }
+      }
+    ],
+    "competition": [
+      {
+        "text": "Ramai orang tengah tanya pasal bilik ni.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "competition_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.539,
+          "line": "salam, nak tanya pasal the bilik single in Cheras"
+        }
+      },
+      {
+        "text": "Ada yang lain minat juga.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "competition_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.537,
+          "line": "ada 3 orang lagi nak, first pay first get."
+        }
+      },
+      {
+        "text": "Siapa cepat dia dapat.",
+        "lang": "ms",
+        "source": "layer1_rule",
+        "rule": [
+          "competition_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.444,
+          "line": "banyak, depan rumah je."
+        }
+      },
+      {
+        "text": "Many people are asking about this unit.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "competition_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.522,
+          "line": "Alright, let me think about it"
+        }
+      },
+      {
+        "text": "Many others are interested, first come first serve.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "competition_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.542,
+          "line": "Hi there, I'm interested in the terrace house at Sentul."
+        }
+      },
+      {
+        "text": "It's first come first serve.",
+        "lang": "en",
+        "source": "layer1_rule",
+        "rule": [
+          "competition_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.509,
+          "line": "Yes, it's part of the rent."
+        }
+      },
+      {
+        "text": "wssp non stop masuk pasal unit ni.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "competition_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.491,
+          "line": "boleh masuk awal sikit?"
+        }
+      },
+      {
+        "text": "ramai minat, mana yang dulu dapat.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "competition_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.476,
+          "line": "lima minit jalan kaki ke LRT."
+        }
+      },
+      {
+        "text": "ada yang tanya jgk, so decide cepat.",
+        "lang": "mix",
+        "source": "layer1_rule",
+        "rule": [
+          "competition_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.513,
+          "line": "ada 3 orang lagi nak, first pay first get."
+        }
+      },
+      {
+        "text": "Boleh en insyallah .setakat ni kalau nak book sebelum 10pm ya cuma selagi blum confirm Masih terbuka mana yg dulu je.gambar umah terbaru luar Dan dalam cuma brg brg dim gamabr penyewa skg yg punya",
+        "lang": "dev",
+        "source": "dev_scam_chat",
+        "rule": [
+          "competition_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.308,
+          "line": "boleh rasanya, saya confirm dengan penyewa sekarang dulu."
+        }
+      },
+      {
+        "text": "Boleh tuan .jgn lamabt je sebab wssp non stop masuk",
+        "lang": "dev",
+        "source": "dev_scam_chat",
+        "rule": [
+          "competition_pressure"
+        ],
+        "closest_test_line": {
+          "ratio": 0.404,
+          "line": "boleh jenguk unit dulu sebelum setuju?"
+        }
+      }
+    ]
+  },
+  "sha256": "695d7aa13f5c6e71eb55028fb857de5b8dd21bfe8bfa59ccc64c6cb4694bcfe1"
+}

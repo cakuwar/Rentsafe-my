@@ -1,0 +1,93 @@
+{
+  "model": "retrain run 1 (not accepted)",
+  "gates": {
+    "real_legit_production": {
+      "expect": "LEGITIMATE",
+      "offset_windows": 0.7811,
+      "message_windows": 0.8836
+    },
+    "real_legit_clean": {
+      "expect": "LEGITIMATE",
+      "offset_windows": 0.1413,
+      "message_windows": 0.1406
+    },
+    "real_scam_production": {
+      "expect": "SCAM",
+      "offset_windows": 0.956,
+      "message_windows": 0.956
+    },
+    "shortcut_base": {
+      "expect": "LEGITIMATE",
+      "offset_windows": 0.0258,
+      "message_windows": 0.0258
+    },
+    "shortcut_plus_prices": {
+      "expect": "LEGITIMATE",
+      "offset_windows": 0.0273,
+      "message_windows": 0.0273
+    },
+    "shortcut_plus_prices_terms": {
+      "expect": "LEGITIMATE",
+      "offset_windows": 0.0274,
+      "message_windows": 0.0274
+    },
+    "ablation_full_scam": {
+      "expect": "SCAM",
+      "offset_windows": 0.954,
+      "message_windows": 0.954
+    },
+    "ablation_mechanics_removed": {
+      "expect": "LEGITIMATE",
+      "offset_windows": 0.5313,
+      "message_windows": 0.5313
+    },
+    "english_courier_scam": {
+      "expect": "SCAM",
+      "offset_windows": 0.9386,
+      "message_windows": 0.9386
+    }
+  },
+  "run2_test_by_kind": {
+    "core": {
+      "rows": 34,
+      "row_accuracy": 0.4706,
+      "by_label": {
+        "SCAM": 0.4706
+      }
+    },
+    "fragment": {
+      "rows": 18,
+      "row_accuracy": 0.9444,
+      "by_label": {
+        "LEGITIMATE": 1.0,
+        "SCAM": 0.8889
+      },
+      "pair_accuracy": 0.8889
+    },
+    "full": {
+      "rows": 144,
+      "row_accuracy": 0.9722,
+      "by_label": {
+        "LEGITIMATE": 1.0,
+        "SCAM": 0.9444
+      },
+      "pair_accuracy": 0.9444
+    },
+    "prefix": {
+      "rows": 34,
+      "row_accuracy": 0.9412,
+      "by_label": {
+        "LEGITIMATE": 0.9412
+      }
+    },
+    "truncated": {
+      "rows": 82,
+      "row_accuracy": 0.9634,
+      "by_label": {
+        "LEGITIMATE": 1.0,
+        "SCAM": 0.9268
+      },
+      "pair_accuracy": 0.9268
+    }
+  }
+}

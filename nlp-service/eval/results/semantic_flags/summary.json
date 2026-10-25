@@ -1,0 +1,86 @@
+{
+  "layer1_alone": {
+    "scam_twins": 72,
+    "scam_twins_caught": 32,
+    "scam_twins_missed": 40,
+    "needed_to_adopt": 20,
+    "legit_twins": 72,
+    "legit_twins_flagged": 0,
+    "real_red_flags": {
+      "real scam chat (development chat)": [
+        "pay_before_viewing",
+        "upfront_payment",
+        "deadline_pressure",
+        "competition_pressure",
+        "agreement_irregularity",
+        "personal_details_request",
+        "refund_promise",
+        "rush_language"
+      ],
+      "real iBilik chat (current OCR)": [],
+      "real iBilik chat (pre-fix OCR)": [],
+      "real iBilik chat (hand transcript)": []
+    }
+  },
+  "models": {
+    "intfloat/multilingual-e5-base": {
+      "scam_twins_caught_layer1_plus_semantic": 47,
+      "layer1_missed_caught_by_semantic": 15,
+      "legit_twins_flagged_layer1_plus_semantic": 6,
+      "legit_twins_flagged_by_semantic": 6,
+      "real_semantic_flags": {
+        "real scam chat (development chat)": 9,
+        "real iBilik chat (current OCR)": 0,
+        "real iBilik chat (pre-fix OCR)": 0,
+        "real iBilik chat (hand transcript)": 0
+      },
+      "cpu_seconds_per_chat": {
+        "median": 0.221,
+        "mean": 0.338
+      }
+    },
+    "mesolitica/embedding-malaysian-mistral-64M-32k": {
+      "scam_twins_caught_layer1_plus_semantic": 40,
+      "layer1_missed_caught_by_semantic": 8,
+      "legit_twins_flagged_layer1_plus_semantic": 35,
+      "legit_twins_flagged_by_semantic": 35,
+      "real_semantic_flags": {
+        "real scam chat (development chat)": 7,
+        "real iBilik chat (current OCR)": 0,
+        "real iBilik chat (pre-fix OCR)": 0,
+        "real iBilik chat (hand transcript)": 1
+      },
+      "cpu_seconds_per_chat": {
+        "median": 0.143,
+        "mean": 0.176
+      }
+    }
+  },
+  "chosen_model": "intfloat/multilingual-e5-base",
+  "decisions": {
+    "intfloat/multilingual-e5-base": {
+      "checks": {
+        "a_catches_half_of_layer1_misses": false,
+        "b_no_extra_legit_twins": false,
+        "c_no_flag_on_real_ibilik": true
+      },
+      "would_adopt": false
+    },
+    "mesolitica/embedding-malaysian-mistral-64M-32k": {
+      "checks": {
+        "a_catches_half_of_layer1_misses": false,
+        "b_no_extra_legit_twins": false,
+        "c_no_flag_on_real_ibilik": false
+      },
+      "would_adopt": false
+    }
+  },
+  "outcome": "DROP",
+  "run1_reference": {
+    "val_accuracy": 0.9789,
+    "val_macro_f1": 0.9768,
+    "pairs_row_accuracy": 0.9722,
+    "pairs_pair_accuracy": 0.9444,
+    "source": "eval/results/zero_shot_test/summary.json, behaviour_checks.json"
+  }
+}

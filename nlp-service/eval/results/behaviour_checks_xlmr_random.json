@@ -1,0 +1,64 @@
+{
+  "model": "xlm-roberta-base",
+  "weights": "xlm-roberta-scam-random",
+  "group_ablation": {
+    "full": 0.9997,
+    "mechanics_removed": 0.9995,
+    "mechanics_only": 0.9997,
+    "removed_lines": [
+      "Owner: Cannot open the unit sorry.",
+      "Owner: I'm outstation in Sabah now.",
+      "Owner: Kalau nak lock the room,",
+      "Owner: Lepas transfer saya pos kunci.",
+      "Owner: Ramai orang tengah tanya.",
+      "Owner: transfer deposit RM800 dulu."
+    ],
+    "verdict": "TEMPLATE-MATCHING: score stayed high without any scam mechanic"
+  },
+  "english_only": {
+    "note": "AUTHOR-WRITTEN probes, not collected data",
+    "scam_scores": [
+      0.9996,
+      0.9996,
+      0.9997,
+      0.9993,
+      0.0282
+    ],
+    "legit_scores": [
+      0.0006,
+      0.0005,
+      0.0008,
+      0.0058,
+      0.0007
+    ],
+    "scams_caught": 4,
+    "legit_cleared": 5
+  },
+  "benign_short": {
+    "scores": [
+      0.9984,
+      0.0008,
+      0.0187,
+      0.6604,
+      0.1716,
+      0.0013,
+      0.1289,
+      0.2599
+    ],
+    "flagged": 2,
+    "total": 8
+  },
+  "validation_metrics": {
+    "accuracy": 0.9895,
+    "precision": 1.0,
+    "recall": 0.9841,
+    "binary_f1": 0.992,
+    "macro_f1": 0.9883,
+    "mcc": 0.9769
+  },
+  "section_71_template_check": {
+    "max_5gram_overlap": 0.0161,
+    "closest_source_group": "L08",
+    "echoes_training": false
+  }
+}

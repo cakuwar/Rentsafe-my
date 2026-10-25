@@ -1,0 +1,204 @@
+{
+  "model": "xlm-roberta-scam-v3-run1",
+  "sets": {
+    "random/train": {
+      "summary": {
+        "SCAM": {
+          "conversations": 253,
+          "no_red_flags": 25,
+          "no_red_flags_bands_before": {
+            "HIGH": 24,
+            "LOW": 1
+          },
+          "no_red_flags_bands_after": {
+            "MODERATE": 24,
+            "LOW": 1
+          },
+          "band_changes": {
+            "HIGH -> MODERATE": 24
+          },
+          "dropped_below_moderate_by_cap": 0,
+          "bands_after": {
+            "HIGH": 228,
+            "MODERATE": 24,
+            "LOW": 1
+          }
+        },
+        "LEGITIMATE": {
+          "conversations": 126,
+          "no_red_flags": 113,
+          "no_red_flags_bands_before": {
+            "LOW": 112,
+            "UNKNOWN": 1
+          },
+          "no_red_flags_bands_after": {
+            "LOW": 112,
+            "UNKNOWN": 1
+          },
+          "band_changes": {},
+          "dropped_below_moderate_by_cap": 0,
+          "bands_after": {
+            "LOW": 124,
+            "UNKNOWN": 2
+          }
+        }
+      }
+    },
+    "random/val": {
+      "summary": {
+        "SCAM": {
+          "conversations": 63,
+          "no_red_flags": 8,
+          "no_red_flags_bands_before": {
+            "HIGH": 8
+          },
+          "no_red_flags_bands_after": {
+            "MODERATE": 8
+          },
+          "band_changes": {
+            "HIGH -> MODERATE": 8
+          },
+          "dropped_below_moderate_by_cap": 0,
+          "bands_after": {
+            "HIGH": 53,
+            "MODERATE": 8,
+            "UNKNOWN": 2
+          }
+        },
+        "LEGITIMATE": {
+          "conversations": 32,
+          "no_red_flags": 28,
+          "no_red_flags_bands_before": {
+            "LOW": 25,
+            "UNKNOWN": 3
+          },
+          "no_red_flags_bands_after": {
+            "LOW": 25,
+            "UNKNOWN": 3
+          },
+          "band_changes": {},
+          "dropped_below_moderate_by_cap": 0,
+          "bands_after": {
+            "LOW": 28,
+            "UNKNOWN": 4
+          }
+        }
+      }
+    },
+    "minimal_pairs_test (held-out wording)": {
+      "summary": {
+        "SCAM": {
+          "conversations": 72,
+          "no_red_flags": 40,
+          "no_red_flags_bands_before": {
+            "HIGH": 36,
+            "LOW": 2,
+            "MODERATE": 2
+          },
+          "no_red_flags_bands_after": {
+            "MODERATE": 38,
+            "LOW": 2
+          },
+          "band_changes": {
+            "HIGH -> MODERATE": 36
+          },
+          "dropped_below_moderate_by_cap": 0,
+          "bands_after": {
+            "MODERATE": 38,
+            "HIGH": 30,
+            "LOW": 4
+          }
+        },
+        "LEGITIMATE": {
+          "conversations": 72,
+          "no_red_flags": 72,
+          "no_red_flags_bands_before": {
+            "LOW": 72
+          },
+          "no_red_flags_bands_after": {
+            "LOW": 72
+          },
+          "band_changes": {},
+          "dropped_below_moderate_by_cap": 0,
+          "bands_after": {
+            "LOW": 72
+          }
+        }
+      }
+    },
+    "real conversations": {
+      "summary": {
+        "SCAM": {
+          "conversations": 1,
+          "no_red_flags": 0,
+          "no_red_flags_bands_before": {},
+          "no_red_flags_bands_after": {},
+          "band_changes": {},
+          "dropped_below_moderate_by_cap": 0,
+          "bands_after": {
+            "HIGH": 1
+          }
+        },
+        "LEGITIMATE": {
+          "conversations": 2,
+          "no_red_flags": 2,
+          "no_red_flags_bands_before": {
+            "LOW": 2
+          },
+          "no_red_flags_bands_after": {
+            "LOW": 2
+          },
+          "band_changes": {},
+          "dropped_below_moderate_by_cap": 0,
+          "bands_after": {
+            "LOW": 2
+          }
+        }
+      },
+      "each": [
+        {
+          "name": "real_scam_production",
+          "p": 0.9853,
+          "red_flags": 8,
+          "before": {
+            "total": 59,
+            "band": "HIGH"
+          },
+          "after": {
+            "total": 59,
+            "band": "HIGH",
+            "bandCap": null
+          }
+        },
+        {
+          "name": "real_legit_production",
+          "p": 0.2418,
+          "red_flags": 0,
+          "before": {
+            "total": 15,
+            "band": "LOW"
+          },
+          "after": {
+            "total": 15,
+            "band": "LOW",
+            "bandCap": null
+          }
+        },
+        {
+          "name": "real_legit_clean",
+          "p": 0.0776,
+          "red_flags": 0,
+          "before": {
+            "total": 5,
+            "band": "LOW"
+          },
+          "after": {
+            "total": 5,
+            "band": "LOW",
+            "bandCap": null
+          }
+        }
+      ]
+    }
+  }
+}

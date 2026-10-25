@@ -1,0 +1,61 @@
+{
+  "model": "xlm-roberta-base",
+  "base_p_scam": 0.0006,
+  "variants": [
+    {
+      "variant": "base (plain legit, 8 msgs)",
+      "messages": 8,
+      "tokens": 108,
+      "p_scam": 0.0006
+    },
+    {
+      "variant": "+ itemised prices",
+      "messages": 9,
+      "tokens": 148,
+      "p_scam": 0.9492
+    },
+    {
+      "variant": "+ terms & penalties",
+      "messages": 9,
+      "tokens": 145,
+      "p_scam": 0.005
+    },
+    {
+      "variant": "+ promo / 'limited units'",
+      "messages": 9,
+      "tokens": 136,
+      "p_scam": 0.0009
+    },
+    {
+      "variant": "+ neutral chatter (length only)",
+      "messages": 16,
+      "tokens": 189,
+      "p_scam": 0.0008
+    },
+    {
+      "variant": "+ prices + terms",
+      "messages": 10,
+      "tokens": 185,
+      "p_scam": 0.9992
+    },
+    {
+      "variant": "+ prices + terms + promo",
+      "messages": 11,
+      "tokens": 213,
+      "p_scam": 0.9994
+    },
+    {
+      "variant": "+ everything",
+      "messages": 19,
+      "tokens": 294,
+      "p_scam": 0.9848
+    },
+    {
+      "variant": "promo + prices + terms ALONE",
+      "messages": 3,
+      "tokens": 105,
+      "p_scam": 0.9996
+    }
+  ],
+  "verdict": "CONFIRMED: money/terms language flips a legitimate conversation to SCAM; length alone does not."
+}

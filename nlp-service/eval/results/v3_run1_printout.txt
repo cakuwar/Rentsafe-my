@@ -1,0 +1,45 @@
+train_colab_v3.ipynb — run 1, Colab T4, 2026-09-27. Verbatim printout of
+sections 6 and 7 as sent by the author. Verdict: NOT ACCEPTED.
+Data: colab_upload_v3.zip packed 2026-09-27T22:48:44 (held-out-family pairs).
+
+VALIDATION
+  accuracy         0.9789
+  macro_f1         0.9768
+  mcc              0.9546
+  saturated_share  0.0000
+  ece              0.0395
+  brier            0.0215
+
+MINIMAL PAIRS (unseen, 72 pairs)
+  row accuracy   0.9722
+  pair accuracy  0.9444   (both twins right)
+  fragment pairs 1.0000   (11 pairs cut mid-conversation; reported, not gated)
+
+CALIBRATION  temperature 0.731
+  pair-test ECE    raw 0.0655  ->  calibrated 0.0319   (out of sample)
+  pair-test Brier  raw 0.0187  ->  calibrated 0.0190
+
+GATES                          expect     p(scam)  calibrated  result
+  real_legit_production        LEGITIMATE  0.7811      0.8506  FAIL
+  real_legit_clean             LEGITIMATE  0.1418      0.0786  PASS
+  real_scam_production         SCAM        0.9559      0.9853  PASS
+  shortcut_base                LEGITIMATE  0.0258      0.0069  PASS
+  shortcut_plus_prices         LEGITIMATE  0.0272      0.0075  PASS
+  shortcut_plus_prices_terms   LEGITIMATE  0.0274      0.0075  PASS
+  ablation_full_scam           SCAM        0.9539      0.9844  PASS
+  ablation_mechanics_removed   LEGITIMATE  0.5219      0.5299  FAIL
+  english_courier_scam         SCAM        0.9385      0.9765  PASS
+
+  PASS  A1 val macro-F1 >= 0.90
+  PASS  A2 pair accuracy >= 0.85
+  PASS  A7 saturated share < 0.50
+  FAIL  gate real_legit_production
+  PASS  gate real_scam_production
+  PASS  gate shortcut_plus_prices
+  PASS  gate shortcut_plus_prices_terms
+  FAIL  gate ablation_mechanics_removed
+
+NOT ACCEPTED - do not deploy.
+
+Warning also printed (harmless, fixed in the notebook afterwards):
+  fit_temperature: "Converting a tensor with requires_grad=True to a scalar"

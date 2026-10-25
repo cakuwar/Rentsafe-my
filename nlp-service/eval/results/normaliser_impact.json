@@ -1,0 +1,238 @@
+{
+  "before": {
+    "scam_flagged_pct": 89.6,
+    "legit_flagged_pct": 10.8,
+    "scam_flagged": 283,
+    "legit_flagged": 17,
+    "totals": {
+      "SCAM": 316,
+      "LEGITIMATE": 158
+    },
+    "per_rule": {
+      "pay_before_viewing": {
+        "SCAM": 153,
+        "LEGITIMATE": 0
+      },
+      "viewing_fee": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "otp_tac_request": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "third_party_account": {
+        "SCAM": 74,
+        "LEGITIMATE": 0
+      },
+      "crypto_or_remittance": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "key_courier": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "viewing_denial": {
+        "SCAM": 0,
+        "LEGITIMATE": 1
+      },
+      "verification_refusal": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "upfront_payment": {
+        "SCAM": 247,
+        "LEGITIMATE": 13
+      },
+      "personal_account": {
+        "SCAM": 27,
+        "LEGITIMATE": 1
+      },
+      "non_bank_channel": {
+        "SCAM": 1,
+        "LEGITIMATE": 0
+      },
+      "deadline_pressure": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "competition_pressure": {
+        "SCAM": 9,
+        "LEGITIMATE": 0
+      },
+      "video_only_viewing": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "remote_owner": {
+        "SCAM": 15,
+        "LEGITIMATE": 0
+      },
+      "meeting_avoidance": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "proxy_collector": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "selfie_with_ic": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "agreement_irregularity": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "refund_promise": {
+        "SCAM": 80,
+        "LEGITIMATE": 0
+      },
+      "rush_language": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "social_proof_payment": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "too_good_text": {
+        "SCAM": 20,
+        "LEGITIMATE": 0
+      },
+      "off_platform": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "personal_details_request": {
+        "SCAM": 61,
+        "LEGITIMATE": 0
+      },
+      "proof_of_payment_request": {
+        "SCAM": 88,
+        "LEGITIMATE": 4
+      }
+    }
+  },
+  "after": {
+    "scam_flagged_pct": 89.6,
+    "legit_flagged_pct": 10.8,
+    "scam_flagged": 283,
+    "legit_flagged": 17,
+    "totals": {
+      "SCAM": 316,
+      "LEGITIMATE": 158
+    },
+    "per_rule": {
+      "pay_before_viewing": {
+        "SCAM": 153,
+        "LEGITIMATE": 0
+      },
+      "viewing_fee": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "otp_tac_request": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "third_party_account": {
+        "SCAM": 74,
+        "LEGITIMATE": 0
+      },
+      "crypto_or_remittance": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "key_courier": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "viewing_denial": {
+        "SCAM": 0,
+        "LEGITIMATE": 1
+      },
+      "verification_refusal": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "upfront_payment": {
+        "SCAM": 247,
+        "LEGITIMATE": 13
+      },
+      "personal_account": {
+        "SCAM": 27,
+        "LEGITIMATE": 1
+      },
+      "non_bank_channel": {
+        "SCAM": 1,
+        "LEGITIMATE": 0
+      },
+      "deadline_pressure": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "competition_pressure": {
+        "SCAM": 9,
+        "LEGITIMATE": 0
+      },
+      "video_only_viewing": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "remote_owner": {
+        "SCAM": 15,
+        "LEGITIMATE": 0
+      },
+      "meeting_avoidance": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "proxy_collector": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "selfie_with_ic": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "agreement_irregularity": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "refund_promise": {
+        "SCAM": 80,
+        "LEGITIMATE": 0
+      },
+      "rush_language": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "social_proof_payment": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "too_good_text": {
+        "SCAM": 20,
+        "LEGITIMATE": 0
+      },
+      "off_platform": {
+        "SCAM": 0,
+        "LEGITIMATE": 0
+      },
+      "personal_details_request": {
+        "SCAM": 61,
+        "LEGITIMATE": 0
+      },
+      "proof_of_payment_request": {
+        "SCAM": 88,
+        "LEGITIMATE": 4
+      }
+    }
+  },
+  "homographs_removed": {
+    "come": "comel",
+    "no": "nombor"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "tokenizer": "C:\\Users\\U S E R\\Documents\\fyp\\rentsafe-my\\nlp-service\\models\\xlm-roberta-scam-random",
+  "old_max_length": 256,
+  "window": 512,
+  "stride": 256,
+  "splits": {
+    "random/train": {
+      "rows": 379,
+      "median": 131,
+      "p95": 201,
+      "max": 241,
+      "over_256": 0,
+      "over_512": 0
+    },
+    "random/val": {
+      "rows": 95,
+      "median": 130,
+      "p95": 198,
+      "max": 227,
+      "over_256": 0,
+      "over_512": 0
+    },
+    "augmented/minimal_pairs_train": {
+      "rows": 1772,
+      "median": 176,
+      "p95": 350,
+      "max": 419,
+      "over_256": 445,
+      "over_512": 0
+    }
+  },
+  "real": {
+    "real_legit_production": {
+      "tokens": 733,
+      "seen_at_256_pct": 34.9,
+      "windows_now": 2
+    },
+    "real_legit_clean": {
+      "tokens": 655,
+      "seen_at_256_pct": 39.1,
+      "windows_now": 2
+    },
+    "real_scam_production": {
+      "tokens": 411,
+      "seen_at_256_pct": 62.3,
+      "windows_now": 1
+    }
+  }
+}

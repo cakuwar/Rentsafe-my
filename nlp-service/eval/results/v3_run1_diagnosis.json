@@ -1,0 +1,433 @@
+{
+ "_note": "Retrain run 1, training/colab_diagnose_gates.py, token-offset windows. p rounded to 4 dp. influence = p(full) - p(without that line).",
+ "real_legit_production": {
+  "p": 0.7811,
+  "influence": [
+   [
+    0.6898,
+    12,
+    "Owner: & Limited Units Available — Secure Yours Today!"
+   ],
+   [
+    0.6689,
+    11,
+    "Owner: Only F Minimum 12-Month Tenancy Required FF Early Termination May Incur a RM300 Penalty and Credit Reporting Action if Unpaid (ctos) Must Move-in Within August"
+   ],
+   [
+    0.6179,
+    14,
+    "Owner: A Monthly Rental: RM 600 - Total Move-in: RM 1300"
+   ],
+   [
+    0.6054,
+    22,
+    "Owner: Since you're travelling from Kelantan, are you planning to view any other rooms around the"
+   ],
+   [
+    0.6041,
+    5,
+    "Renter: can i take look?"
+   ],
+   [
+    0.603,
+    16,
+    "Owner: includes agreement fee, aircond servicing & room cleaning upon move- >” Utilities & Facilities $ Every room has its own electricity meter (prepaid top-up system). & Water included @ FREE Wii sores"
+   ],
+   [
+    0.6011,
+    9,
+    "Owner: $ 28 MERDEKA MONTH | BOOK NOW & ENJOY 50% OFF YOUR 1ST MONTH RENTAL & Limited Time Only! Bi 10 Aug"
+   ],
+   [
+    0.5969,
+    15,
+    "Owner: A” Additional Info @ Minimum 12-Month Tenancy"
+   ],
+   [
+    0.5936,
+    8,
+    "Owner: [address]"
+   ],
+   [
+    0.5916,
+    13,
+    "Owner: 1 Month Deposit: RM 600 & 1 Month Rental: RM 300 & Move-in Fee: RM 300 & Access Card Deposit: RM 100"
+   ],
+   [
+    0.5685,
+    17,
+    "Renter: this cooking allow or not? gone"
+   ],
+   [
+    0.563,
+    7,
+    "Renter: 9 28 Da | ug 05,2028 Ji ed Subang Jor Selangor paya"
+   ],
+   [
+    0.5546,
+    20,
+    "Renter: cause im travelling from kelantan"
+   ],
+   [
+    0.5542,
+    1,
+    "Renter: @ ibilik.com i"
+   ],
+   [
+    0.5489,
+    10,
+    "Owner: fa Terms & Conditions: F 1 Month Deposit Required 'F 50% OFF Applies to the 1st Month Rental"
+   ],
+   [
+    0.5436,
+    6,
+    "Renter: have any picture or video? 4, 4"
+   ],
+   [
+    0.5399,
+    2,
+    "Renter: Hi, Im interested in USJ6 Medium Room ff | Near Da Men Mall gif | < Easy Access to $$15, Sunway & PJ"
+   ],
+   [
+    0.5266,
+    18,
+    "Owner: Bring your own induction cooker and only light, cooking is allowed ya"
+   ],
+   [
+    0.512,
+    0,
+    "Renter: 4 USJ6 Medium Room A | Near Da Men Mall il"
+   ],
+   [
+    0.5078,
+    19,
+    "Renter: iplan to visit on 20/8, if you free on that date"
+   ],
+   [
+    0.4981,
+    21,
+    "Owner: I'm availabie at either 1am or 2pm on 20/8"
+   ],
+   [
+    0.4865,
+    4,
+    "Owner: Hi & [name] here from iBikk @ ¥"
+   ],
+   [
+    0.4484,
+    3,
+    "Renter: hi boleh saya tahu bilik ni available lagi tak?"
+   ],
+   [
+    0.0,
+    42,
+    "Renter: alright miss ,,,,,,, ye"
+   ],
+   [
+    0.0,
+    41,
+    "Owner: Morning il Just a kind reminder, we have an appointment at 11.4am later ya @ irae"
+   ],
+   [
+    0.0,
+    40,
+    "Renter: Ok walt pga, yu"
+   ],
+   [
+    0.0,
+    39,
+    "Owner: Can send me screenshot like this? «sey"
+   ],
+   [
+    0.0,
+    38,
+    "Renter: okay already signed miss aun yy"
+   ],
+   [
+    0.0,
+    37,
+    "Owner: Please check and sign the agreement ya"
+   ],
+   [
+    0.0,
+    36,
+    "Owner: Hi & Agreement is ready 7"
+   ],
+   [
+    0.0,
+    35,
+    "Renter: Okay sure sens)"
+   ],
+   [
+    0.0,
+    34,
+    "Owner: Yes MR sre"
+   ],
+   [
+    0.0,
+    33,
+    "Renter: right?"
+   ],
+   [
+    0.0,
+    32,
+    "Renter: can miss"
+   ],
+   [
+    0.0,
+    31,
+    "Renter: Can move in earlier v"
+   ],
+   [
+    0.0,
+    30,
+    "Owner: Can move in earlier «coy. Can we meet on 28/8 to settle balance payment and handover the keys?"
+   ],
+   [
+    0.0,
+    29,
+    "Renter: 29/8 miss"
+   ],
+   [
+    0.0,
+    28,
+    "Renter: Bh SOF page y"
+   ],
+   [
+    0.0,
+    27,
+    "Owner: This promotion is valid for the August move in only, and our rooms can reserve for up to 30 days only PAN"
+   ],
+   [
+    0.0,
+    26,
+    "Owner: Only!"
+   ],
+   [
+    0.0,
+    25,
+    "Owner: 29/9? pang"
+   ],
+   [
+    0.0,
+    24,
+    "Renter: hi, can { move in earlier, on 29/9?"
+   ],
+   [
+    -0.1145,
+    23,
+    "Owner: Goto: cm ® Login using your registered mobile number and password @ complete the signing process “® Please take a screenshot and send it to me after signing ya A Thank you @ Sana"
+   ]
+  ]
+ },
+ "real_legit_clean": {
+  "p": 0.1418,
+  "influence": [
+   [
+    0.0772,
+    6,
+    "Owner: MERDEKA MONTH | BOOK NOW & ENJOY 50% OFF YOUR 1ST MONTH RENTAL. Limited Time Only! 10 Aug 2026 - 31 Aug 2026. Terms & Conditions: 1 Month Deposit Required. 50% OFF Applies to the 1st Month Rental Only. Minimum 12-Month Tenancy Required. Early Termination May Incur a RM300 Penalty and Credit Reporting Action if Unpaid (CTOS). Must Move-In Within August 2026. Limited Units Available - Secure Yours Today!"
+   ],
+   [
+    0.0018,
+    10,
+    "Owner: Bring your own induction cooker and only light cooking is allowed ya"
+   ],
+   [
+    0.0006,
+    11,
+    "Renter: i plan to visit on 20/8, if you free on that date"
+   ],
+   [
+    0.0,
+    34,
+    ""
+   ],
+   [
+    0.0,
+    33,
+    "Renter: alright miss"
+   ],
+   [
+    0.0,
+    31,
+    "Renter: ok wait"
+   ],
+   [
+    0.0,
+    30,
+    "Owner: Can send me screenshot like this?"
+   ],
+   [
+    0.0,
+    29,
+    "Renter: okay already signed miss"
+   ],
+   [
+    0.0,
+    27,
+    "Renter: okay sure"
+   ],
+   [
+    0.0,
+    26,
+    "Owner: Yes"
+   ],
+   [
+    0.0,
+    25,
+    "Renter: 11.45am right?"
+   ],
+   [
+    0.0,
+    24,
+    "Renter: can miss"
+   ],
+   [
+    0.0,
+    23,
+    "Renter: alright noted"
+   ],
+   [
+    0.0,
+    22,
+    "Owner: Can we meet on 28/8 to settle balance payment and handover the keys?"
+   ],
+   [
+    0.0,
+    21,
+    "Owner: Can move in earlier"
+   ],
+   [
+    0.0,
+    20,
+    "Renter: 29/8 miss"
+   ],
+   [
+    0.0,
+    19,
+    "Renter: eh sorry"
+   ],
+   [
+    -0.0001,
+    18,
+    "Owner: This promotion is valid for the August move in only, and our rooms can reserve for up to 30 days only"
+   ],
+   [
+    -0.0011,
+    12,
+    "Renter: cause im travelling from kelantan"
+   ],
+   [
+    -0.0038,
+    9,
+    "Renter: this cooking allow or not?"
+   ],
+   [
+    -0.004,
+    4,
+    "Renter: have any picture or video?"
+   ],
+   [
+    -0.0072,
+    2,
+    "Owner: Hi [name] here from iBilik"
+   ],
+   [
+    -0.009,
+    28,
+    "Owner: Please check and sign the agreement ya"
+   ],
+   [
+    -0.0094,
+    7,
+    "Owner: Move-in Breakdown: 1 Month Deposit: RM 600. 1 Month Rental: RM 300. Move-in Fee: RM 300. Access Card Deposit: RM 100. Monthly Rental: RM 600. Total Move-in: RM 1300"
+   ],
+   [
+    -0.011,
+    32,
+    "Owner: Morning. Just a kind reminder, we have an appointment at 11.4am later ya"
+   ],
+   [
+    -0.0131,
+    17,
+    "Owner: 29/9?"
+   ],
+   [
+    -0.0198,
+    3,
+    "Renter: can i take look?"
+   ],
+   [
+    -0.0225,
+    16,
+    "Renter: hi, can I move in earlier, on 29/9?"
+   ],
+   [
+    -0.0276,
+    13,
+    "Owner: I'm available at either 11am or 2pm on 20/8."
+   ],
+   [
+    -0.05,
+    0,
+    "Renter: Hi, I'm interested in USJ6 Medium Room | Near Da Men Mall | Easy Access to SS15, Sunway & PJ [listing link redacted]"
+   ],
+   [
+    -0.0581,
+    14,
+    "Owner: Since you're travelling from Kelantan, are you planning to view any other rooms around the area as well?"
+   ],
+   [
+    -0.0652,
+    1,
+    "Renter: hi boleh saya tahu bilik ni available lagi tak?"
+   ],
+   [
+    -0.0987,
+    5,
+    "Owner: [room photos and video] [address redacted] ROOM [number redacted]"
+   ],
+   [
+    -0.2391,
+    8,
+    "Owner: Additional Info: Minimum 12-Month Tenancy. Move-in fee includes agreement fee, aircond servicing & room cleaning upon move-out. Utilities & Facilities: Every room has its own electricity meter (prepaid top-up system). Water included. FREE WiFi"
+   ],
+   [
+    -0.6667,
+    15,
+    "Owner: Go to: go.ibilik.com. Login using your registered mobile number and password. Complete the signing process. Please take a screenshot and send it to me after signing ya. Thank you"
+   ]
+  ]
+ },
+ "ablation_mechanics_removed": {
+  "p": 0.5219,
+  "influence": [
+   [
+    0.4917,
+    3,
+    "Renter: Boleh pergi viewing dulu tak?"
+   ],
+   [
+    0.3784,
+    4,
+    "Renter: Can I see it first?"
+   ],
+   [
+    0.1853,
+    1,
+    "Owner: Yes it is. Nak masuk bila ya?"
+   ],
+   [
+    -0.0798,
+    0,
+    "Renter: Hi, is the room still available?"
+   ],
+   [
+    -0.2641,
+    2,
+    "Renter: Early next month."
+   ]
+  ]
+ }
+}

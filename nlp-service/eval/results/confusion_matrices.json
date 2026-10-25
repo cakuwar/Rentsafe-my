@@ -1,0 +1,441 @@
+{
+  "positive_class": "SCAM",
+  "threshold": 0.5,
+  "models": {
+    "XLM-R original": {
+      "validation (random/val)": {
+        "TP": 62,
+        "FN": 1,
+        "FP": 0,
+        "TN": 32,
+        "n": 95,
+        "accuracy": 0.9895,
+        "precision_scam": 1.0,
+        "recall_scam": 0.9841,
+        "specificity": 1.0,
+        "f1_scam": 0.992,
+        "macro_f1": 0.9883,
+        "mcc": 0.9769
+      },
+      "new-wording minimal pairs (test, full)": {
+        "TP": 36,
+        "FN": 36,
+        "FP": 44,
+        "TN": 28,
+        "n": 144,
+        "accuracy": 0.4444,
+        "precision_scam": 0.45,
+        "recall_scam": 0.5,
+        "specificity": 0.3889,
+        "f1_scam": 0.4737,
+        "macro_f1": 0.4427,
+        "mcc": -0.1118,
+        "pair_accuracy": 0.0694
+      },
+      "English-only probes": {
+        "TP": 4,
+        "FN": 1,
+        "FP": 0,
+        "TN": 5,
+        "n": 10,
+        "accuracy": 0.9,
+        "precision_scam": 1.0,
+        "recall_scam": 0.8,
+        "specificity": 1.0,
+        "f1_scam": 0.8889,
+        "macro_f1": 0.899,
+        "mcc": 0.8165
+      },
+      "benign short messages": {
+        "TP": 0,
+        "FN": 0,
+        "FP": 2,
+        "TN": 6,
+        "n": 8,
+        "accuracy": 0.75,
+        "precision_scam": 0.0,
+        "recall_scam": 0.0,
+        "specificity": 0.75,
+        "f1_scam": 0.0,
+        "macro_f1": 0.4286,
+        "mcc": 0.0
+      },
+      "_seconds": 72.1
+    },
+    "ELECTRA v2": {
+      "validation (random/val)": {
+        "TP": 63,
+        "FN": 0,
+        "FP": 0,
+        "TN": 32,
+        "n": 95,
+        "accuracy": 1.0,
+        "precision_scam": 1.0,
+        "recall_scam": 1.0,
+        "specificity": 1.0,
+        "f1_scam": 1.0,
+        "macro_f1": 1.0,
+        "mcc": 1.0
+      },
+      "new-wording minimal pairs (test, full)": {
+        "TP": 41,
+        "FN": 31,
+        "FP": 34,
+        "TN": 38,
+        "n": 144,
+        "accuracy": 0.5486,
+        "precision_scam": 0.5467,
+        "recall_scam": 0.5694,
+        "specificity": 0.5278,
+        "f1_scam": 0.5578,
+        "macro_f1": 0.5484,
+        "mcc": 0.0973,
+        "pair_accuracy": 0.0972
+      },
+      "English-only probes": {
+        "TP": 5,
+        "FN": 0,
+        "FP": 3,
+        "TN": 2,
+        "n": 10,
+        "accuracy": 0.7,
+        "precision_scam": 0.625,
+        "recall_scam": 1.0,
+        "specificity": 0.4,
+        "f1_scam": 0.7692,
+        "macro_f1": 0.6703,
+        "mcc": 0.5
+      },
+      "benign short messages": {
+        "TP": 0,
+        "FN": 0,
+        "FP": 1,
+        "TN": 7,
+        "n": 8,
+        "accuracy": 0.875,
+        "precision_scam": 0.0,
+        "recall_scam": 0.0,
+        "specificity": 0.875,
+        "f1_scam": 0.0,
+        "macro_f1": 0.4667,
+        "mcc": 0.0
+      },
+      "_seconds": 68.8
+    },
+    "XLM-R run 1 (deployed)": {
+      "validation (random/val)": {
+        "TP": 61,
+        "FN": 2,
+        "FP": 0,
+        "TN": 32,
+        "n": 95,
+        "accuracy": 0.9789,
+        "precision_scam": 1.0,
+        "recall_scam": 0.9683,
+        "specificity": 1.0,
+        "f1_scam": 0.9839,
+        "macro_f1": 0.9768,
+        "mcc": 0.9546
+      },
+      "new-wording minimal pairs (test, full)": {
+        "TP": 68,
+        "FN": 4,
+        "FP": 0,
+        "TN": 72,
+        "n": 144,
+        "accuracy": 0.9722,
+        "precision_scam": 1.0,
+        "recall_scam": 0.9444,
+        "specificity": 1.0,
+        "f1_scam": 0.9714,
+        "macro_f1": 0.9722,
+        "mcc": 0.9459,
+        "pair_accuracy": 0.9444
+      },
+      "English-only probes": {
+        "TP": 5,
+        "FN": 0,
+        "FP": 0,
+        "TN": 5,
+        "n": 10,
+        "accuracy": 1.0,
+        "precision_scam": 1.0,
+        "recall_scam": 1.0,
+        "specificity": 1.0,
+        "f1_scam": 1.0,
+        "macro_f1": 1.0,
+        "mcc": 1.0
+      },
+      "benign short messages": {
+        "TP": 0,
+        "FN": 0,
+        "FP": 0,
+        "TN": 8,
+        "n": 8,
+        "accuracy": 1.0,
+        "precision_scam": 0.0,
+        "recall_scam": 0.0,
+        "specificity": 1.0,
+        "f1_scam": 0.0,
+        "macro_f1": 0.5,
+        "mcc": 0.0
+      },
+      "_seconds": 59.8
+    },
+    "XLM-R run 2 (not kept)": {
+      "new-wording minimal pairs (test, full)": {
+        "TP": 53,
+        "FN": 19,
+        "FP": 0,
+        "TN": 72,
+        "n": 144,
+        "accuracy": 0.8681,
+        "precision_scam": 1.0,
+        "recall_scam": 0.7361,
+        "specificity": 1.0,
+        "f1_scam": 0.848,
+        "macro_f1": 0.8657,
+        "mcc": 0.7632,
+        "pair_accuracy": 0.7361
+      },
+      "validation (random/val)": {
+        "TP": 63,
+        "FN": 0,
+        "FP": 0,
+        "TN": 32,
+        "n": 95,
+        "accuracy": 1.0,
+        "precision_scam": 1.0,
+        "recall_scam": 1.0,
+        "specificity": 1.0,
+        "f1_scam": 1.0,
+        "macro_f1": 1.0,
+        "mcc": 1.0,
+        "note": "from the Colab printout: accuracy 1.0000 on these 95 rows"
+      }
+    },
+    "zero-shot mDeBERTa (rejected)": {
+      "validation (random/val)": {
+        "TP": 63,
+        "FN": 0,
+        "FP": 32,
+        "TN": 0,
+        "n": 95,
+        "accuracy": 0.6632,
+        "precision_scam": 0.6632,
+        "recall_scam": 1.0,
+        "specificity": 0.0,
+        "f1_scam": 0.7975,
+        "macro_f1": 0.3987,
+        "mcc": 0.0
+      },
+      "new-wording minimal pairs (test, full)": {
+        "TP": 72,
+        "FN": 0,
+        "FP": 72,
+        "TN": 0,
+        "n": 144,
+        "accuracy": 0.5,
+        "precision_scam": 0.5,
+        "recall_scam": 1.0,
+        "specificity": 0.0,
+        "f1_scam": 0.6667,
+        "macro_f1": 0.3333,
+        "mcc": 0.0,
+        "pair_accuracy": 0.0
+      }
+    }
+  },
+  "layer1": {
+    "train (random/train)": {
+      "TP": 228,
+      "FN": 25,
+      "FP": 13,
+      "TN": 113,
+      "n": 379,
+      "accuracy": 0.8997,
+      "precision_scam": 0.9461,
+      "recall_scam": 0.9012,
+      "specificity": 0.8968,
+      "f1_scam": 0.9231,
+      "macro_f1": 0.8896,
+      "mcc": 0.7813
+    },
+    "validation (random/val)": {
+      "TP": 55,
+      "FN": 8,
+      "FP": 4,
+      "TN": 28,
+      "n": 95,
+      "accuracy": 0.8737,
+      "precision_scam": 0.9322,
+      "recall_scam": 0.873,
+      "specificity": 0.875,
+      "f1_scam": 0.9016,
+      "macro_f1": 0.8626,
+      "mcc": 0.7288
+    },
+    "new-wording minimal pairs (test, full)": {
+      "TP": 32,
+      "FN": 40,
+      "FP": 0,
+      "TN": 72,
+      "n": 144,
+      "accuracy": 0.7222,
+      "precision_scam": 1.0,
+      "recall_scam": 0.4444,
+      "specificity": 1.0,
+      "f1_scam": 0.6154,
+      "macro_f1": 0.699,
+      "mcc": 0.5345,
+      "pair_accuracy": 0.4444
+    },
+    "English-only probes": {
+      "TP": 5,
+      "FN": 0,
+      "FP": 0,
+      "TN": 5,
+      "n": 10,
+      "accuracy": 1.0,
+      "precision_scam": 1.0,
+      "recall_scam": 1.0,
+      "specificity": 1.0,
+      "f1_scam": 1.0,
+      "macro_f1": 1.0,
+      "mcc": 1.0
+    },
+    "benign short messages": {
+      "TP": 0,
+      "FN": 0,
+      "FP": 0,
+      "TN": 8,
+      "n": 8,
+      "accuracy": 1.0,
+      "precision_scam": 0.0,
+      "recall_scam": 0.0,
+      "specificity": 1.0,
+      "f1_scam": 0.0,
+      "macro_f1": 0.5,
+      "mcc": 0.0
+    }
+  },
+  "real_chats": {
+    "XLM-R original": [
+      {
+        "chat": "real scam chat, OCR",
+        "expect": "SCAM",
+        "p_scam": 0.9998,
+        "correct": true
+      },
+      {
+        "chat": "real iBilik legit chat, OCR (current)",
+        "expect": "LEGITIMATE",
+        "p_scam": 0.9997,
+        "correct": false
+      },
+      {
+        "chat": "real iBilik legit chat, OCR (before watermark fix)",
+        "expect": "LEGITIMATE",
+        "p_scam": 0.9997,
+        "correct": false
+      },
+      {
+        "chat": "real iBilik legit chat, hand transcript",
+        "expect": "LEGITIMATE",
+        "p_scam": 0.9996,
+        "correct": false
+      },
+      {
+        "chat": "English courier scam (author-written)",
+        "expect": "SCAM",
+        "p_scam": 0.0282,
+        "correct": false
+      }
+    ],
+    "ELECTRA v2": [
+      {
+        "chat": "real scam chat, OCR",
+        "expect": "SCAM",
+        "p_scam": 0.9432,
+        "correct": true
+      },
+      {
+        "chat": "real iBilik legit chat, OCR (current)",
+        "expect": "LEGITIMATE",
+        "p_scam": 0.99,
+        "correct": false
+      },
+      {
+        "chat": "real iBilik legit chat, OCR (before watermark fix)",
+        "expect": "LEGITIMATE",
+        "p_scam": 0.9865,
+        "correct": false
+      },
+      {
+        "chat": "real iBilik legit chat, hand transcript",
+        "expect": "LEGITIMATE",
+        "p_scam": 0.9953,
+        "correct": false
+      },
+      {
+        "chat": "English courier scam (author-written)",
+        "expect": "SCAM",
+        "p_scam": 0.9962,
+        "correct": true
+      }
+    ],
+    "XLM-R run 1 (deployed)": [
+      {
+        "chat": "real scam chat, OCR",
+        "expect": "SCAM",
+        "p_scam": 0.956,
+        "correct": true
+      },
+      {
+        "chat": "real iBilik legit chat, OCR (current)",
+        "expect": "LEGITIMATE",
+        "p_scam": 0.3024,
+        "correct": true
+      },
+      {
+        "chat": "real iBilik legit chat, OCR (before watermark fix)",
+        "expect": "LEGITIMATE",
+        "p_scam": 0.8836,
+        "correct": false
+      },
+      {
+        "chat": "real iBilik legit chat, hand transcript",
+        "expect": "LEGITIMATE",
+        "p_scam": 0.1406,
+        "correct": true
+      },
+      {
+        "chat": "English courier scam (author-written)",
+        "expect": "SCAM",
+        "p_scam": 0.9386,
+        "correct": true
+      }
+    ]
+  },
+  "sizes": {
+    "validation (random/val)": {
+      "rows": 95,
+      "SCAM": 63,
+      "LEGITIMATE": 32
+    },
+    "new-wording minimal pairs (test, full)": {
+      "rows": 144,
+      "LEGITIMATE": 72,
+      "SCAM": 72
+    },
+    "English-only probes": {
+      "rows": 10,
+      "SCAM": 5,
+      "LEGITIMATE": 5
+    },
+    "benign short messages": {
+      "rows": 8,
+      "LEGITIMATE": 8
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "source": "data/samples/scam_p1..p4.jpg (real WhatsApp rental scam)",
+  "note": "OCR text only. The images are not in the repo, and the account holder's name and any phone/IC/account numbers are redacted. This is NOT held-out data: its text was read while writing layer 1's rules.",
+  "pages_in_chronological_order": true,
+  "hand_count_bubbles": 26,
+  "hand_count_text_messages": 25,
+  "hand_count_per_page": [
+    9,
+    11,
+    3,
+    3
+  ],
+  "hand_count_per_page_note": "page 4's 3 includes one image bubble (a QR code)",
+  "counting_rules": [
+    "one bubble is one message",
+    "a quoted reply is one message; the quoted text does not count again",
+    "messages repeated at a page seam count once",
+    "a multi-line bubble is one message"
+  ]
+}

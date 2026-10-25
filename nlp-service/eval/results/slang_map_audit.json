@@ -1,0 +1,47 @@
+{
+  "entries": 610,
+  "collisions": [
+    {
+      "short_form": "no",
+      "normalised_form": "nombor",
+      "category": "DISCOURSE_GENERAL",
+      "source": "img4;img11",
+      "also_english": false
+    },
+    {
+      "short_form": "book",
+      "normalised_form": "tempah",
+      "category": "LOANWORD_EN",
+      "source": "img5;img9",
+      "also_english": false
+    },
+    {
+      "short_form": "owner",
+      "normalised_form": "pemilik",
+      "category": "LOANWORD_EN",
+      "source": "img5",
+      "also_english": false
+    },
+    {
+      "short_form": "full",
+      "normalised_form": "penuh",
+      "category": "LOANWORD_EN",
+      "source": "img5",
+      "also_english": false
+    },
+    {
+      "short_form": "chat",
+      "normalised_form": "sihat",
+      "category": "AMBIGUOUS",
+      "source": "CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-",
+      "also_english": false
+    },
+    {
+      "short_form": "come",
+      "normalised_form": "comel",
+      "category": "DISCOURSE_GENERAL",
+      "source": "CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-",
+      "also_english": false
+    }
+  ]
+}

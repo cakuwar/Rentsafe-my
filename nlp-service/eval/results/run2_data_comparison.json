@@ -1,0 +1,115 @@
+{
+  "run1_rebuild": {
+    "train_rows": 932,
+    "test_rows": 166
+  },
+  "run1": {
+    "rows": 932,
+    "distinct_mechanic_sentences": 115,
+    "mean_repeats_per_sentence": 27.7,
+    "legit_rows_without_any_mechanic": 0
+  },
+  "run2": {
+    "rows": 1772,
+    "distinct_mechanic_sentences": 114,
+    "mean_repeats_per_sentence": 43.0,
+    "legit_rows_without_any_mechanic": 200
+  },
+  "run2_cores": {
+    "rows": 200,
+    "only_viewing_refusal": 166,
+    "share": 0.83
+  },
+  "reserve": {
+    "run1_pairs": {
+      "rows": 132,
+      "by_label": {
+        "SCAM": 132
+      },
+      "run2_core_rows": 0
+    },
+    "run2_pairs": {
+      "rows": 251,
+      "by_label": {
+        "SCAM": 251
+      },
+      "run2_core_rows": 58
+    },
+    "original_corpus": {
+      "rows": 56,
+      "by_label": {
+        "SCAM": 56
+      },
+      "run2_core_rows": 0
+    }
+  },
+  "run2_misses": {
+    "missed_scam_twins_by_language": {
+      "en": "2/23",
+      "mix": "5/25",
+      "ms": "12/24"
+    },
+    "words_never_in_training": [
+      [
+        "berkunci",
+        11
+      ],
+      [
+        "tempahan",
+        8
+      ],
+      [
+        "masalah",
+        8
+      ],
+      [
+        "sabah",
+        7
+      ],
+      [
+        "poslaju",
+        7
+      ],
+      [
+        "holding",
+        6
+      ],
+      [
+        "midnight",
+        4
+      ],
+      [
+        "selesai",
+        3
+      ],
+      [
+        "duitnow",
+        2
+      ],
+      [
+        "banked",
+        2
+      ],
+      [
+        "gets",
+        2
+      ],
+      [
+        "pays",
+        2
+      ],
+      [
+        "others",
+        2
+      ],
+      [
+        "whoever",
+        2
+      ],
+      [
+        "three",
+        2
+      ]
+    ]
+  }
+}

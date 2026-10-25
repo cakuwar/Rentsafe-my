@@ -1,0 +1,45 @@
+train_colab_v3.ipynb — run 2, Colab T4, 2026-09-27/28. Verbatim sections 6-7 as
+sent by the author. Verdict: NOT ACCEPTED. Data: prefix/core/truncated rows added
+after run 1; message-aligned windows. Diagnosis: v3_run2_diagnosis.json.
+
+VALIDATION
+  accuracy         1.0000
+  macro_f1         1.0000
+  mcc              1.0000
+  saturated_share  0.0000
+  ece              0.0461
+  brier            0.0022
+
+MINIMAL PAIRS (unseen, 72 pairs)
+  row accuracy   0.8681
+  pair accuracy  0.7361   (both twins right)
+  fragment pairs 0.7778   (9 pairs cut mid-conversation; reported, not gated)
+  truncated pairs 0.8049  (cut before the goodbye; reported)
+  prefix rows    1.0000   (34 rows, no scam behaviour -> LEGITIMATE; reported, not gated)
+  core   rows    0.4412   (34 rows, same length with a scam line -> SCAM; reported, not gated)
+
+CALIBRATION  temperature 0.176
+  pair-test ECE    raw 0.1509  ->  calibrated 0.1572   (out of sample)
+  pair-test Brier  raw 0.1253  ->  calibrated 0.1530
+
+GATES                          expect     p(scam)  calibrated  result
+  real_legit_production        LEGITIMATE  0.9463      1.0000  FAIL
+  real_legit_clean             LEGITIMATE  0.9374      1.0000  FAIL
+  real_scam_production         SCAM        0.9515      1.0000  PASS
+  shortcut_base                LEGITIMATE  0.0365      0.0000  PASS
+  shortcut_plus_prices         LEGITIMATE  0.0366      0.0000  PASS
+  shortcut_plus_prices_terms   LEGITIMATE  0.0366      0.0000  PASS
+  ablation_full_scam           SCAM        0.9510      1.0000  PASS
+  ablation_mechanics_removed   LEGITIMATE  0.0452      0.0000  PASS
+  english_courier_scam         SCAM        0.2696      0.0035  FAIL
+
+  PASS  A1 val macro-F1 >= 0.90
+  FAIL  A2 pair accuracy >= 0.85
+  PASS  A7 saturated share < 0.50
+  FAIL  gate real_legit_production
+  PASS  gate real_scam_production
+  PASS  gate shortcut_plus_prices
+  PASS  gate shortcut_plus_prices_terms
+  PASS  gate ablation_mechanics_removed
+
+NOT ACCEPTED - do not deploy.

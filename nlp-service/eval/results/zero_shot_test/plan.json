@@ -1,0 +1,62 @@
+{
+  "fixed": "2026-09-28, before any scoring",
+  "zero_shot_model": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+  "compared_with": "deployed run 1 (models/xlm-roberta-scam-v3-run1), raw probability, threshold 0.5",
+  "hypotheses": {
+    "scam": {
+      "payment_before_viewing": [
+        "The owner asks for money before the renter can view the unit.",
+        "Pemilik meminta wang sebelum penyewa dapat melihat rumah."
+      ],
+      "keys_by_courier": [
+        "The owner offers to send the keys by post or courier.",
+        "Pemilik menawarkan untuk menghantar kunci melalui pos atau kurier."
+      ],
+      "owner_unavailable": [
+        "The owner says they are away and cannot show the unit.",
+        "Pemilik berkata dia berada di luar kawasan dan tidak dapat menunjukkan rumah."
+      ],
+      "pay_someone_else": [
+        "The owner asks the renter to pay into another person's bank account.",
+        "Pemilik meminta penyewa membayar ke akaun bank orang lain."
+      ],
+      "urgency": [
+        "The owner pressures the renter to pay quickly before someone else takes the unit.",
+        "Pemilik mendesak penyewa membayar segera sebelum orang lain mengambil rumah itu."
+      ]
+    },
+    "legitimate": {
+      "viewing_arranged": [
+        "The renter and the owner arrange a time to view the unit.",
+        "Penyewa dan pemilik menetapkan masa untuk melihat rumah."
+      ],
+      "agreement_via_platform": [
+        "The tenancy agreement is signed through a rental platform or agency.",
+        "Perjanjian sewa ditandatangani melalui platform atau agensi sewaan."
+      ],
+      "keys_in_person": [
+        "The keys are handed over in person.",
+        "Kunci diserahkan secara bersemuka."
+      ]
+    }
+  },
+  "entailment": "P(entailment) = softmax over the [entailment, contradiction] logits (neutral dropped) - the standard multi-label zero-shot recipe",
+  "windows": "app.layer2.classifier._message_windows with the zero-shot tokenizer, sized so window + longest hypothesis + 3 special tokens fit 512",
+  "chat_score": "S - L. S = highest P(entailment) of any scam hypothesis in any window; L = the same for legitimacy hypotheses. SCAM if S - L >= threshold.",
+  "threshold": "chosen on data/processed/random/val.csv only: of the midpoints between adjacent sorted scores, the one with the highest accuracy; ties -> nearest 0",
+  "evaluated_on": [
+    "random/val.csv (threshold chosen here: in-sample for the zero-shot model; run 1 used it for early stopping)",
+    "minimal_pairs_test.csv, full conversations only (new wording, 72 pairs)",
+    "real scam chat, current OCR text (training/gates.json)",
+    "real iBilik legitimate chat, current OCR text (training/gates.json)",
+    "real iBilik legitimate chat, pre-fix OCR text (training/gates_2026-09-27.json)",
+    "real iBilik legitimate chat, hand transcript (for information)",
+    "english_courier_scam gate"
+  ],
+  "clearly_beats": {
+    "pairs": "zero-shot pair accuracy >= run-1 pair accuracy + 0.05 (at least 4 more of 72 pairs right)",
+    "ibilik": "zero-shot calls the real iBilik chat LEGITIMATE on BOTH the current and the pre-fix OCR text (run 1 is right on the first only by a window-boundary margin, and wrong on the second)",
+    "rule": "both must hold, else drop"
+  },
+  "disclosure": "Before these hypotheses were written, one load-check pair was scored ('Owner: transfer the deposit first, then I will post you the keys.' vs 'The owner asks for payment before the renter can view the unit.': entailment 0.0146, neutral 0.9848, contradiction 0.0007). Nothing here was changed because of it."
+}

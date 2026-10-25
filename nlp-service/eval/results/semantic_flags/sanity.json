@@ -1,0 +1,57 @@
+{
+  "pairs": [
+    {
+      "a": "byr dlu baru blh tgk",
+      "b": "pay first before viewing",
+      "expected": "should match",
+      "e5": 0.7586,
+      "mesolitica": 0.7955
+    },
+    {
+      "a": "rumah berkunci, tak boleh masuk tengok",
+      "b": "the unit is locked, no viewing",
+      "expected": "should match",
+      "e5": 0.8574,
+      "mesolitica": 0.614
+    },
+    {
+      "a": "I hantar keys by Poslaju",
+      "b": "kunci saya pos",
+      "expected": "should match",
+      "e5": 0.8777,
+      "mesolitica": 0.684
+    },
+    {
+      "a": "jangan bayar sebelum tengok",
+      "b": "bayar dulu sebelum tengok",
+      "expected": "should NOT match",
+      "e5": 0.969,
+      "mesolitica": 0.8915
+    },
+    {
+      "a": "boleh viewing dulu?",
+      "b": "bayar dulu baru viewing",
+      "expected": "should NOT match",
+      "e5": 0.8991,
+      "mesolitica": 0.5383
+    }
+  ],
+  "timing": {
+    "intfloat/multilingual-e5-base": {
+      "load_seconds": 20.4,
+      "params_millions": 278,
+      "real_scam_production_seconds": 1.784,
+      "real_scam_production_messages": 29,
+      "real_legit_production_seconds": 1.824,
+      "real_legit_production_messages": 42
+    },
+    "mesolitica/embedding-malaysian-mistral-64M-32k": {
+      "load_seconds": 3.0,
+      "params_millions": 48,
+      "real_scam_production_seconds": 0.465,
+      "real_scam_production_messages": 29,
+      "real_legit_production_seconds": 0.542,
+      "real_legit_production_messages": 42
+    }
+  }
+}

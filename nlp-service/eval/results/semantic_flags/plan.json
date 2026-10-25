@@ -1,0 +1,32 @@
+{
+  "fixed": "2026-09-30, before any scoring on the evaluation sets",
+  "candidates": [
+    "intfloat/multilingual-e5-base",
+    "mesolitica/embedding-malaysian-mistral-64M-32k"
+  ],
+  "bank": {
+    "file": "app/layer1/semantic_tactics.json",
+    "sha256": "32f82a3f58bcc25b02385630482f1b693c547323953d558f5769ee71a61b1aa9",
+    "built_by": "eval/build_semantic_bank.py (layer 1 rules + development scam chat only)"
+  },
+  "messages": "a labelled line ('Owner: ' / 'Renter: ') plus its unlabelled continuation lines; only Owner messages are matched",
+  "similarity": "cosine between L2-normalised embeddings; a message's score for a tactic is its highest similarity to any of that tactic's examples",
+  "threshold": "per tactic and model: the highest score that tactic reaches on any Owner message of a LEGITIMATE conversation in data/processed/random train+val, plus 0.01 - i.e. no false alarm on that data by construction",
+  "semantic_flag": "a conversation carries tactic k if any Owner message scores >= threshold_k",
+  "layer1": "app.layer1.red_flags.analyse(normalise(full text)) - as /classify runs it",
+  "evaluation": {
+    "pairs": "data/processed/augmented/minimal_pairs_test.csv, full conversations (72 pairs, wording never in training)",
+    "real": [
+      "real scam chat (development chat; the bank was drawn from it - not independent)",
+      "real iBilik chat: current OCR, pre-fix OCR, hand transcript"
+    ]
+  },
+  "model_choice": "on the minimal-pair results with layer 1 + semantic: (1) fewer legitimate twins flagged, (2) more of the layer-1-missed scam twins caught, (3) less CPU time. The author asked for the choice to use these results, which makes the chosen model's numbers slightly optimistic (a choice between two).",
+  "adopt_if_all": {
+    "a": "the semantic flags catch >= ceil(half) of the scam twins layer 1 misses",
+    "b": "legitimate twins flagged by layer 1 + semantic <= those flagged by layer 1 alone",
+    "c": "no semantic flag on any version of the real iBilik chat"
+  },
+  "baseline": "conversation vector = mean of all its message embeddings (both speakers); sklearn LogisticRegression(C=1.0, class_weight='balanced', max_iter=2000); trained on random/train.csv + run 1's minimal_pairs_train (rebuilt exactly by eval/run2_data_comparison.py), the data run 1 was trained on; threshold 0.5; scored on random/val.csv and the minimal-pair test full conversations",
+  "cpu_time": "per chat, with the embedding cache emptied first: embed its Owner messages and compare with the bank"
+}

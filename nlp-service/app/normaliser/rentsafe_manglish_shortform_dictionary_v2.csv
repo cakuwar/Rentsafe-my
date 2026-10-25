@@ -1,0 +1,611 @@
+short_form,normalised_form,category,dialect_register,source_tier,source_detail,ambiguous,notes
+2mnit,2 minit,TIME_DATE,,user_provided,img1,N,Digit '2' + vowel-dropped 'minit' (minute)
+byr,bayar,PAYMENT,,user_provided,img1;img2;img5;img6;img10,N,Extremely common; vowel-dropped
+spttnya,sepatutnya,DISCOURSE_GENERAL,,user_provided,img1,N,Heavy vowel-dropping
+xleh,tak boleh,NEGATION,,user_provided,img1,N,'x' prefix = tak/tidak + boleh
+xda,tiada,NEGATION,,user_provided,img1,N,Variant: xde also common elsewhere
+xder,tiada,NEGATION,,user_provided,img2,N,Variant spelling of xda/xde
+tkde,tiada,NEGATION,,user_provided,img4,N,Variant: tak + de
+takde,tiada,NEGATION,,user_provided,img10,N,Fuller spelling of tkde/xde
+x,tak / tidak,NEGATION,,user_provided,img1,N,Digit-letter substitution rule; context-dependent (tak vs tidak)
+aggremnt,agreement,DOMAIN_RENTAL_SPELLING,,user_provided,img1;img2,N,English loanword misspelling; kept in English for tenancy agreement
+aggrement,agreement,DOMAIN_RENTAL_SPELLING,,user_provided,img2,N,Alternate misspelling of 'agreement'
+mmg,memang,DISCOURSE_GENERAL,,user_provided,img1,N,
+dh,dah,DISCOURSE_GENERAL,,user_provided,img1;img4;img12,N,Very common; variant 'da' also seen
+da,dah,DISCOURSE_GENERAL,,user_provided,img10,N,Shorter variant of 'dh'/'dah'
+skrg,sekarang,DISCOURSE_GENERAL,,user_provided,img1;img4;img6,N,
+skrng,sekarang,DISCOURSE_GENERAL,,user_provided,img6,N,Variant spelling of skrg
+swkarang,sekarang,TYPO_SPELLING,,user_provided,img9,N,"Likely typo (extra w, dropped e)"
+bkn,bukan,NEGATION,,user_provided,img1,N,
+nk,nak,DISCOURSE_GENERAL,,user_provided,img2;img4;img10,N,One of the most common shortforms
+mslh,masalah,DISCOURSE_GENERAL,,user_provided,img2,N,
+mnyewa,menyewa,DOMAIN_RENTAL,,user_provided,img2,N,Missing 'e'; rental-specific verb 'to rent'
+mcm,macam,DISCOURSE_GENERAL,,user_provided,img2,N,
+sy,saya,PRONOUN_ADDRESS,,user_provided,img2,N,
+sye,saya,PRONOUN_ADDRESS,,user_provided,img4;img5;img6,N,Common informal spelling variant of 'saya'
+nnti,nanti,DISCOURSE_GENERAL,,user_provided,img2;img11,N,
+klau,kalau,DISCOURSE_GENERAL,,user_provided,img2,N,
+dtg,datang,DISCOURSE_GENERAL,,user_provided,img2,N,
+dpt,dapat,DISCOURSE_GENERAL,,user_provided,img2,N,
+dkt,dekat,DISCOURSE_GENERAL,,user_provided,img4,N,
+tf,transfer,PAYMENT,,user_provided,img4,N,
+acc,akaun,PAYMENT,,user_provided,img4;img11,N,English loanword 'account'
+u,awak / you,PRONOUN_ADDRESS,English-loan,user_provided,img4,Y,English 'you' used as pronoun; map to 'awak' or keep as-is depending on desired output register
+bgi,bagi,DISCOURSE_GENERAL,,user_provided,img4,N,
+no,nombor,AMBIGUOUS,,user_provided,img4;img11,Y,"English homograph: the English word means something else entirely, so automatic replacement corrupts code-switched text. Needs context-aware handling. See eval/slang_map_audit.py."
+no ac / no acc,nombor akaun,PAYMENT,,user_provided,img4;img11,N,Compound shortform for 'account number'
+knp,kenapa,DISCOURSE_GENERAL,,user_provided,img4;img12,N,
+awk,awak,PRONOUN_ADDRESS,,user_provided,img4;img5;img6,N,
+jdi,jadi,DISCOURSE_GENERAL,,user_provided,img4,N,
+ape,apa,DISCOURSE_GENERAL,,user_provided,img4,N,
+kene,kena,DISCOURSE_GENERAL,,user_provided,img4;img6,N,
+sbb,sebab,DISCOURSE_GENERAL,,user_provided,img5,N,
+kta,kita,PRONOUN_ADDRESS,,user_provided,img5;img6,N,
+depo,deposit,PAYMENT,,user_provided,img1;img5;img6;img11,N,
+je,saja,DISCOURSE_GENERAL,,user_provided,img5,N,
+ja,saja,DISCOURSE_GENERAL,,user_provided,img10,N,Variant of 'je'
+bole,boleh,DISCOURSE_GENERAL,,user_provided,img5,N,Missing 'h'
+buleh,boleh,TYPO_SPELLING,,user_provided,img10;img12,N,Vowel-substitution typo
+utk,untuk,DISCOURSE_GENERAL,,user_provided,img5;img11,N,
+tpi,tapi,DISCOURSE_GENERAL,,user_provided,img6,N,
+tk,tak,NEGATION,,user_provided,img6;img10;img12,N,
+ckp,cakap,DISCOURSE_GENERAL,,user_provided,img6,N,
+kat,di,DISCOURSE_GENERAL,,user_provided,img6,N,Already widely standard informal preposition
+kt,kat,DISCOURSE_GENERAL,,user_provided,img10,N,Further-shortened form of 'kat'
+dlu,dulu,DISCOURSE_GENERAL,,user_provided,img6,N,Vowel-dropped 'dulu' (before/first)
+tinggl,tinggal,TYPO_SPELLING,,user_provided,img6,N,Missing vowel
+cht,chat (uncertain),AMBIGUOUS,,user_provided,img6,Y,'Pening Sye cht' — meaning unclear from context; possibly 'chat' or a truncated word. Do not assume.
+kpd,kepada,DISCOURSE_GENERAL,,user_provided,img9,N,
+dgn,dengan,DISCOURSE_GENERAL,,user_provided,img9,N,
+mau,nak / mahu,DISCOURSE_GENERAL,Indonesian-influenced/casual,user_provided,img9,N,Informal variant of 'nak'
+okok,ok ok,DISCOURSE_GENERAL,,user_provided,img9,N,Reduplicated agreement filler; may be left as-is
+bilih,bilik,TYPO_SPELLING,,user_provided,img9,N,Letter substitution typo for 'bilik' (room)
+brape,berapa,DISCOURSE_GENERAL,,user_provided,img10,N,
+bayaq,bayar,DIALECT_REGIONAL,East-coast (Trg/Kel),user_provided,img10,N,Word-final 'r' realised as 'q'
+keluaq,keluar,DIALECT_REGIONAL,East-coast (Trg/Kel),user_provided,img10,N,Same 'q' dialect pattern as bayaq
+juai,jual,DIALECT_REGIONAL,possible dialect/typo,user_provided,img10,Y,Likely 'jual' (to sell) but not fully certain — flagged for confirmation
+bagitau,beritahu,DISCOURSE_GENERAL,,user_provided,img10,N,
+plak,pula,DISCOURSE_GENERAL,,user_provided,img10,N,
+ambik,ambil,DISCOURSE_GENERAL,,user_provided,img10,N,
+elok2,elok-elok,REDUPLICATION,,user_provided,img10,N,Digit '2' suffix = word reduplication (example instance)
+macamtu,macam tu,DISCOURSE_GENERAL,,user_provided,img10,N,"Contraction, no space"
+ampa,awak / kamu,DIALECT_REGIONAL,East-coast (Terengganu),user_provided,img10,N,Second-person pronoun
+org,orang,DISCOURSE_GENERAL,,user_provided,img10;img12,N,
+kul,pukul,TIME_DATE,,user_provided,img10,N,"Used before a time, e.g. 'kul 9' = pukul 9 (9 o'clock)"
+ngan,dengan,DISCOURSE_GENERAL,,user_provided,img10,N,
+pon,pun,DISCOURSE_GENERAL,,user_provided,img10;img12,N,
+duk,duduk,DISCOURSE_GENERAL,,user_provided,img10,N,
+skit,sikit,DISCOURSE_GENERAL,,user_provided,img10,N,
+mai2,mari-mari,REDUPLICATION,dialect+reduplication,user_provided,img10,N,Dialect 'mai' (mari) + reduplication
+pastu,lepas tu,DISCOURSE_GENERAL,,user_provided,img10,N,Contraction
+hb,hari bulan,TIME_DATE,,user_provided,img10;img11,N,"Calendar date, e.g. '17hb' = 17th of the month"
+jap,sekejap,DISCOURSE_GENERAL,,user_provided,img10,N,'a moment'
+lgi,lagi,DISCOURSE_GENERAL,,user_provided,img10,N,
+pi,pergi,DISCOURSE_GENERAL,,user_provided,img10,N,
+ka,ke / kah,DIALECT_REGIONAL,East-coast,user_provided,img10,N,Question particle variant
+jugak,juga,DIALECT_REGIONAL,casual/dialect-influenced,user_provided,img10,N,
+pasal,sebab,DISCOURSE_GENERAL,,user_provided,img10,N,Colloquial for 'because/regarding'
+abg,abang,PRONOUN_ADDRESS,,user_provided,img10,N,Informal address term (mister/older brother)
+bang,abang,PRONOUN_ADDRESS,,user_provided,img12,N,Further-shortened variant of 'abg'
+kak,kakak,PRONOUN_ADDRESS,,user_provided,img11,N,Informal address term (miss/older sister)
+sidai,uncertain,AMBIGUOUS,,user_provided,img10,Y,'kena sidai ngan penyewa' — meaning unclear; may be regional slang. Do not assume translation.
+upt,uncertain,AMBIGUOUS,,user_provided,img10,Y,'upt balik brape' — meaning/expansion unclear from context.
+ponpuan,perempuan,TYPO_SPELLING,,user_provided,img10,N,Letter-dropped typo for 'perempuan' (woman)
+leceh,troublesome (informal),DISCOURSE_GENERAL,,user_provided,img10,N,"Common colloquial adjective; included for coverage, not strictly a shortform"
+cmner,macam mana,DISCOURSE_GENERAL,,user_provided,img11,N,Also written 'camner'
+camne,macam mana,DISCOURSE_GENERAL,,user_provided,img12,N,Variant spelling of 'cmner'
+ststus,status,TYPO_SPELLING,,user_provided,img11,N,Typo (extra 't')
+mbb,Maybank,PAYMENT,,user_provided,img11,N,Bank name abbreviation (Malayan Banking Berhad)
+yer,ya,DISCOURSE_GENERAL,,user_provided,img11,N,Softened particle form of 'ya'
+tkasih,terima kasih,DISCOURSE_GENERAL,,user_provided,img11,N,
+diorang,dia orang,PRONOUN_ADDRESS,,user_provided,img12,N,Colloquial for 'they/them'
+brg2,barang-barang,REDUPLICATION,,user_provided,img12,N,Digit '2' reduplication
+comfirm,confirm,TYPO_SPELLING,,user_provided,img12,N,
+awai,uncertain,AMBIGUOUS,,user_provided,img12,Y,'try comfirm awai' — meaning unclear; possibly 'awal' (early) but not confirmed. Do not assume.
+yg,yang,DISCOURSE_GENERAL,,user_provided,img12,N,Very high-frequency shortform
+giro,GIRO (bank transfer),PAYMENT_DOMAIN_TERM,,user_provided,img4,N,"Not a typo — refers to Interbank GIRO transfer system; domain term, may not require normalisation"
+book,tempah,LOANWORD_EN,,user_provided,img5;img9,N,English loanword used as verb 'to book/reserve'; commonly left untranslated in Manglish
+hold,tahan,LOANWORD_EN,,user_provided,img5,N,English loanword 'to hold/reserve'
+owner,pemilik,LOANWORD_EN,,user_provided,img5,N,
+full,penuh,LOANWORD_EN,,user_provided,img5,N,e.g. 'nama full' = full name
+bos,boss,PRONOUN_ADDRESS,English-loan,user_provided,img9,N,Informal address term for a landlord/seller/agent
+1/2,uncertain,AMBIGUOUS,,user_provided,img5,Y,"Appears twice as standalone 'Oh 1/2?' — could reference a date, an option number, or context cut off earlier in the thread. Do not assume."
+"[reduplication: trailing """"]",word-word (reduplicated),REDUPLICATION_RULE,,user_provided,img4,N,"RULE: a trailing ditto-mark/double-quote after a word (e.g. tiba""""tiba, Lain""""la) indicates the word is repeated, equivalent to 'word-word'. Distinct from the digit-2 rule below."
+[reduplication: trailing 2],word-word (reduplicated),REDUPLICATION_RULE,,user_provided,img10;img12,N,"RULE: a trailing '2' after a word indicates reduplication, e.g. brg2=barang-barang, kawan2=kawan-kawan, elok2=elok-elok, Buleh2=boleh-boleh."
+abeh,habis,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+abes,habis,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+abih,habis,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ade,ada,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ader,ada,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ado,ada,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hado,ada,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+adk,adik,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+adek,adik,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+adeq,adik,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+adlh,adalah,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+agk,agak,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ajer,sahaja,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'je/ja', already captured from screenshots"
+shj,sahaja,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'je/ja', already captured from screenshots"
+jek,sahaja,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'je/ja', already captured from screenshots"
+jer,sahaja,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'je/ja', already captured from screenshots"
+jerk,sahaja,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'je/ja', already captured from screenshots"
+saje,sahaja,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'je/ja', already captured from screenshots"
+ak,aku,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ako,aku,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+aq,aku,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+akk,kakak,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+akn,akan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+amek,ambil,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'ambik', already captured"
+hambek,ambil,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'ambik', already captured"
+ank,anak,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+antar,hantar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ap,apa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+aper,apa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hapa,apa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+haper,apa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+apasal,apa pasal,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+apesal,apa pasal,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+apahal,apa hal,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+apehal,apa hal,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+apetah,apa entah,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+arap,harap,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ari,hari,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+aritu,hari itu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+asalkn,asalkan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+aslkn,asalkan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+asik,asyik,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+asl,asal,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ati,hati,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ats,atas,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+awat,kenapa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Colloquial variant of 'knp'
+awt,kenapa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Colloquial variant of 'knp'
+awl,awal,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ayer,air,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ayh,ayah,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ayt,ayat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bgitau,bagi tahu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'bagitau', already captured"
+bgtu,bagi tahu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'bagitau', already captured"
+bgtaw,bagi tahu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'bagitau', already captured"
+bitau,bagi tahu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'bagitau', already captured"
+bapak,bapa,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bape,berapa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'brape', already captured"
+baper,berapa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'brape', already captured"
+brp,berapa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'brape', already captured"
+bpe,berapa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'brape', already captured"
+braper,berapa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'brape', already captured"
+bby,baby,LOANWORD_EN,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bc,baca,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bca,baca,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bdak,budak,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+dak,budak,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bdn,badan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+brd,bandar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bndar,bandar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bdoh,bodoh,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bodo,bodoh,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+beno,benar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+benor,benar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bnr,benar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bbeno,benar-benar,REDUPLICATION,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bebeno,benar-benar,REDUPLICATION,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bebenor,benar-benar,REDUPLICATION,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+benti,berhenti,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+besaq,besar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,'besaq' shares the East-coast final-r-as-q pattern seen in 'bayaq'/'keluaq'
+beso,besar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,'besaq' shares the East-coast final-r-as-q pattern seen in 'bayaq'/'keluaq'
+besor,besar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,'besaq' shares the East-coast final-r-as-q pattern seen in 'bayaq'/'keluaq'
+bese,biasa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+biase,biasa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+betoi,betul,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+betol,betul,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+betui,betul,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bg,bagi,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Shorter variant of 'bgi', already captured"
+bgai,bagai,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bgini,begini,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+gini,begini,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bgitu,begitu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+gitu,begitu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bgkus,bungkus,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bgn (sense 1),bangun,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,"Source lists 'bgn' with TWO different meanings ('bangun'=to wake/stand, and 'bahan'=material) depending on context. Do not auto-map."
+bgn (sense 2),bahan,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,Second listed meaning of 'bgn' — see sense 1 note. Context required to disambiguate.
+bgs,bagus,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bgus,bagus,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bgsa,bangsa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bngsa,bangsa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bgun,bangun,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bhasa,bahasa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bhs,bahasa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bhse,bahasa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bhgn,bahagian,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bia,biar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,'biaq' shares the East-coast q-for-r pattern
+biaq,biar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,'biaq' shares the East-coast q-for-r pattern
+bile,bila,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bla,bila,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ble,bila,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bj,baju,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bju,baju,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bjet,bajet,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bjya,berjaya,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bk,buka,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bka,buka,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bkak,buka,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bkk,buka,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+blah,pergi,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+blaja,belajar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+blja,belajar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bljar,belajar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bljr,belajar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+blanja,belanja,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+blnj,belanja,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bleh,boleh,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'bole/buleh', already captured"
+blh,boleh,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'bole/buleh', already captured"
+bley,boleh,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'bole/buleh', already captured"
+blek,balik,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+blik,balik,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+blk,balik,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+blkg,belakang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+blkng,belakang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+blm,belum,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+blom,belum,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+blum,belum,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bln,bulan,TIME_DATE,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bls,balas,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bnd,benda,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bnde,benda,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bndg,banding,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bntu,bantu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bnyk,banyak,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+byk,banyak,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+byak,banyak,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+borg,borang,DOMAIN_RENTAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Relevant: rental application 'borang'/forms
+borng,borang,DOMAIN_RENTAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Relevant: rental application 'borang'/forms
+br,baru,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+brg,barang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Singular form of already-captured 'brg2'
+brlku,berlaku,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bru,baru,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bsr,besar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bsar,besar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bt,buat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+wat,buat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+wt,buat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+btl,betul,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+btpe,buat apa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+watpe,buat apa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+wtpe,buat apa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bw,bawa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bwa,bawa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bwak,bawa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+bwh,bawah,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+camni,macam ni,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cmnie,macam ni,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cbe,cuba,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ce,cuba,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cer,cuba,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cbok,sibuk,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cdgn,cadangan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cdgan,cadangan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cdgkn,cadangkan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cdgkan,cadangkan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+chat,sihat,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,"In Malay SMS slang 'chat' = 'sihat' (healthy). CONFLICTS with the English loanword 'chat' (to converse), which is extremely common in rental WhatsApp threads. Do not auto-normalise — high risk of mistranslation without context."
+cite,cerita,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+citer,cerita,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+crita,cerita,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+crite,cerita,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+crta,cerita,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cter,cerita,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cket,sikit,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'skit', already captured"
+ckit,sikit,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'skit', already captured"
+ckap,cakap,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'ckp', already captured"
+ckup,cukup / cekup,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,Source lists two possible expansions; context-dependent
+cm,macam,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cmburu,cemburu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cme,cuma,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cmpur,campur,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cmtu,camtu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cna,sana,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cni,sini,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cnta,cinta,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cntik,cantik,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cntk,cantik,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+come,comel,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,"English homograph: the English word means something else entirely, so automatic replacement corrupts code-switched text. Needs context-aware handling. See eval/slang_map_audit.py."
+comei,comel,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cpt,cepat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cr,cara,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cri,cari,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+crik,cari,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cth,contoh,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+cntoh,contoh,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ctu,situ,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+stu,situ,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+d,di,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ddk,duduk,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'duk', already captured"
+dduk,duduk,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'duk', already captured"
+de,ada,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+dea,dia,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+die,dia,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+dier,dia,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+dek (sense 1),adik,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,Source lists 'dek' with two meanings: 'adik' (younger sibling) or 'oleh' (by). Do not auto-map.
+dek (sense 2),oleh,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,Second listed meaning of 'dek' — see sense 1 note.
+deq,adik,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+dik,adik,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+derg,dia orang,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'diorang', already captured"
+dorg,dia orang,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'diorang', already captured"
+dorng,dia orang,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'diorang', already captured"
+dgr,dengar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+dgar,dengar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+dkat,dekat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'dkt', already captured"
+dl,dahulu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'dlu', already captured"
+dlm,dalam,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+dlam,dalam,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+dn,dan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+dpat,dapat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+dpn,depan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+dpan,depan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+dr,dari,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+dari,dari,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+drpd,daripada,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ekceli,actually,LOANWORD_EN,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Phonetic spelling of English 'actually'
+fhm,faham,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+fkir,fikir,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+pk,fikir,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+fmly,family,LOANWORD_EN,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+g,pergi / bagi,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,Source lists two meanings for standalone 'g'; context required
+gado,gaduh,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+gdh,gaduh,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+gak,juga,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+giler,gila,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+gle,gila,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+gler,gila,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+gmba,gambar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Relevant: rental listing photos
+gmbar,gambar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Relevant: rental listing photos
+gmbor,gambar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Relevant: rental listing photos
+gmbr,gambar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Relevant: rental listing photos
+gna,guna,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+gne,guna,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hbgn,hubungan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hbs,habis,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hdp,hadap,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hdup,hidup,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hepi,happy,LOANWORD_EN,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+heran,hairan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hg,hang (kau),DIALECT_REGIONAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Northern Malaysian (Kedah/Penang) dialect pronoun
+hgpa,hangpa (kau orang),DIALECT_REGIONAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Northern Malaysian dialect plural pronoun
+hjg,hujung,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hlg,halang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hmpa,hampa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hmpir,hampir,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hntr,hantar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hny,hanya,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hnya,hanya,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hnye,hanya,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hosp,hospital,LOANWORD_EN,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+spital,hospital,LOANWORD_EN,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hrga,harga,PAYMENT,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Relevant: rental price discussion
+hri,hari,TIME_DATE,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hrp,harap,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hrap,harap,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hutg,hutang,PAYMENT,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+hutng,hutang,PAYMENT,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+igt,ingat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+jeles,jealous,LOANWORD_EN,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+jgn,jangan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+jln,jalan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+jmp,jumpa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+jmpa,jumpa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+jnis,jenis,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+jnji,janji,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+jwb,jawab,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+jawab,jawab,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+jwpn,jawapan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+jwtn,jawatan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+k,okay,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+kabo,khabar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+kate,kata,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+kawen,kahwin,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+kawin,kahwin,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+kcik,kecil,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Relevant: room/unit size
+kecik,kecil,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Relevant: room/unit size
+kechik,kecil,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Relevant: room/unit size
+kcuali,kecuali,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+kdg2,kadang-kadang,REDUPLICATION,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+kekadang,kadang-kadang,REDUPLICATION,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+keja,kerja,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+keje,kerja,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+kejer,kerja,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+kje,kerja,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+krja,kerja,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+kg,kampung,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+kite,kita,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'kta', already captured"
+kte,kita,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'kta', already captured"
+kjaan,kerajaan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+krjaan,kerajaan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+klu,kalau,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'klau', already captured"
+knl,kenal,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ko,kau,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+korg,kau orang,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+krn,kerana,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ktorg,kita orang,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+kuar,keluar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+kwn,kawan,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+kwsn,kawasan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Relevant: area/neighbourhood
+lbh,lebih,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+lbih,lebih,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+lgpun,lagipun,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+lgsg,langsung,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Source text was garbled here ('lasagna langsung') — 'langsung' is the plausible intended word; treat with slightly lower confidence
+lmbt,lambat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+lme,lama,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+lncr,lancar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+lyn,layan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mbe,member,LOANWORD_EN,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mcmni,macam ini,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mcmnie,macam ini,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mcmtu,macam itu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mcmtue,macam itu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+men,main,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mende,benda,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mggu,minggu,TIME_DATE,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mgkin,mungkin,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mgkn,mungkin,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mkn,makan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mksd,maksud,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mmng,memang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'mmg', already captured"
+mmpu,mampu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mn,mana,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mne,mana,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mnx,minta,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mintak,minta,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mtk,minta,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+mrk,mereka,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+msk,masuk / masak,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,Source lists two meanings: 'masuk' (enter/move in — highly relevant to rental move-in dates) or 'masak' (cook). Context required.
+msti,mesti,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ne,mana,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ngn,dengan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'ngan', already captured"
+ni,ini,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+nie,ini,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+nih,ini,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+nmpk,nampak,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+nmpak,nampak,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+nnt,nanti,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'nnti', already captured"
+ntah,entah,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tah,entah,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+nye,punya,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+olh,oleh,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+p,pergi,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+pd,pada,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+pdhal,padahal,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+pebenda,apa benda,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+pg,pagi,TIME_DATE,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+pgi,pagi,TIME_DATE,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+pggl,panggil,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+pjg,panjang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+pnjg,panjang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+plg,paling,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+plk,pelik,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"NOTE: distinct from 'plak'=pula, already captured — easy to confuse"
+pn,pun,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'pon', already captured"
+pndai,pandai,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+pnh (sense 1),penuh,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,Source lists 'pnh' with two meanings: 'penuh' (full — relevant to 'nama penuh'/full name forms) or 'pernah' (ever/before). Context required.
+pnh (sense 2),pernah,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,Second listed meaning of 'pnh' — see sense 1 note.
+prnah,pernah,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+pntg,penting,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+pnting,penting,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+pnye,punya,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ppuan,perempuan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Standard short form; matches the typo 'ponpuan' already captured from screenshots
+psl,fasal,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Distinct token from 'pasal'=sebab, already captured — both mean roughly 'regarding/because' colloquially"
+ptg,petang,TIME_DATE,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ptt,patut,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+pyh,payah,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+retis,artis,LOANWORD_EN,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+rkn,rakan,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+rkyat,rakyat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+rkyt,rakyat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+rmai,ramai,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+rmh,rumah,DOMAIN_RENTAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,High-value rental-domain term: 'house'
+rs,rasa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+rsa,rasa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+rse,rasa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sape,siapa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sbg,sebagai,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sbr,sabar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+scr,secara,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sdar,sedar,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sdp,sedap,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sdr (sense 1),sedar,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,Source lists two meanings: 'sedar' (aware) or 'saudara' (relative/sir). Context required.
+sdr (sense 2),saudara,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,Second listed meaning of 'sdr' — see sense 1 note.
+sg,sungai,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sgala,segala,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sggh,singgah,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sggp,sanggup,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+snggup,sanggup,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sgguh,sungguh,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sgka,sangka,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sgt,sangat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+shbt,sahabat,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+skg,sekarang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'skrg', already captured"
+skang,sekarang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'skrg', already captured"
+skunk,sekarang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'skrg', already captured"
+sknx,sekarang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variants of 'skrg', already captured"
+skrang,sekarang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'skrng', already captured"
+ske,suka,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+suke,suka,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sklh,sekolah,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+slh,salah,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sllu,selalu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+slmt,selamat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+slamat,selamat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sme,sama,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+smlm,semalam,TIME_DATE,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+smp,sampai,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+smpai,sampai,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+smpi,sampai,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sndiri,sendiri,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sne,sana,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sng,senang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sorg,seorang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+spt,seperti,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+spy,supaya,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ssh,susah,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+sume,semua,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+syg,sayang,PRONOUN_ADDRESS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tau,tahu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+taw,tahu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tawu,tahu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tdo,tidur,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tido,tidur,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tggi,tinggi,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tnggi,tinggi,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tggjwb,tanggungjawab,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tggl,tinggal,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Matches typo 'tinggl' already captured; canonical shortform
+tgu,tunggu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tggu,tunggu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tgh,tengah,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tgk,tengok,DOMAIN_RENTAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,High-value rental-domain term: 'to view/look at' (viewing the property) — central to the 'xblh tgk' scam pattern already in the project's regex layer
+tgok,tengok,DOMAIN_RENTAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,High-value rental-domain term: 'to view/look at' (viewing the property) — central to the 'xblh tgk' scam pattern already in the project's regex layer
+tngk,tengok,DOMAIN_RENTAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,High-value rental-domain term: 'to view/look at' (viewing the property) — central to the 'xblh tgk' scam pattern already in the project's regex layer
+tgn,tangan,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+thn (sense 1),tahan,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,Source lists two meanings: 'tahan' (to endure/hold) or 'tahun' (year). Context required.
+thn (sense 2),tahun,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,Second listed meaning of 'thn' — see sense 1 note.
+tkt,tingkat,DOMAIN_RENTAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Relevant: floor/storey of a building
+tkut,takut,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tlg,tolong,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tmbah,tambah,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tmbh,tambah,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tmpat,tempat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tmpt,tempat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tntg,tentang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ttg,tentang,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tp,tapi,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"Variant of 'tpi', already captured"
+tpt,tepat,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+trs,terus,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+trus,terus,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+ttp (sense 1),tetap,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,"Source lists 'ttp' as both 'tetap' (remain/fixed) and, with 'ttpi', as short for 'tetapi' (but). Context required."
+ttpi,tetapi,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Fuller form of the 'ttp'-as-'but' sense
+tu,itu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+tue,itu,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+uol,you all,LOANWORD_EN,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+uols,you all,LOANWORD_EN,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+uolls,you all,LOANWORD_EN,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+wlu,walau,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+wlpn,walaupun,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+wlpun,walaupun,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+wpun,walaupun,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+wslm,Wa'alaikumsalam,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Greeting response; distinguish from 'salam'/'akum' variants
+2 (standalone),itu,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,"Source lists standalone digit '2' as short for 'itu' in some usages. CONFLICTS with the much more common reduplication-suffix meaning of '2' (see REDUPLICATION_RULE row). Low confidence — flagged, not auto-applied."
+6be,nombor,AMBIGUOUS,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),Y,Listed in source with low confidence / unclear derivation. Possible transcription artefact. Use with caution; not verified against real usage.
+xkn,tak akan,NEGATION,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Variant of tkde/xda negation family
+xkan,tak akan,NEGATION,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Variant of tkde/xda negation family
+takkan,tak akan,NEGATION,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,Variant of tkde/xda negation family
+xmau,tak mahu,NEGATION,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+xnk,tak nak,NEGATION,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+xnak,tak nak,NEGATION,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+taknak,tak nak,NEGATION,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+xpe,tak apa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+xper,tak apa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+takpe,tak apa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+takper,tak apa,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+zmn,zaman,DISCOURSE_GENERAL,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,
+[prefix] b-/br-,ber- (prefix),MORPHOLOGY_RULE,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"RULE: dropped 'er' in the 'ber-' prefix, e.g. bbual=berbual"
+[prefix] d-,di- (prefix),MORPHOLOGY_RULE,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"RULE: dropped 'i' in the 'di-' prefix, e.g. djual=dijual"
+[prefix] k-,ke- (prefix),MORPHOLOGY_RULE,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"RULE: dropped 'e' in the 'ke-' prefix, e.g. kbaikan=kebaikan"
+[prefix] m-,me-/mem-/meng- (prefix),MORPHOLOGY_RULE,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"RULE: dropped vowel in the 'me-' family of prefixes, e.g. mbantu=membantu"
+[prefix] p-,pe-/per-/peng- (prefix),MORPHOLOGY_RULE,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"RULE: dropped vowel in the 'pe-' family of prefixes, e.g. pkerja=pekerja"
+[prefix] t-,ter- (prefix),MORPHOLOGY_RULE,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"RULE: dropped 'er' in the 'ter-' prefix, e.g. tkejut=terkejut"
+[suffix] -n,-an (suffix),MORPHOLOGY_RULE,,web_sourced,CILISOS Malay SMS shortform glossary (cilisos.my/bahasa-sms-shortforms-glossary),N,"RULE: dropped 'a' in the '-an' suffix, e.g. bhgn=bahagian"

@@ -1,0 +1,136 @@
+{
+  "intfloat/multilingual-e5-base": {
+    "real scam chat (development chat)": [
+      {
+        "tactic": "deadline_urgency",
+        "similarity": 1.0,
+        "threshold": 0.9065,
+        "message": "Boleh en insyallah .setakat ni kalau nak book sebelum 10pm ya cuma selagi blum confirm Masih terbuka mana yg dulu je.gambar umah terbaru luar Dan dalam cuma brg brg dim gamabr penyewa skg yg punya",
+        "matched_example": "Boleh en insyallah .setakat ni kalau nak book sebelum 10pm ya cuma selagi blum confirm Masih terbuka mana yg dulu je.gambar umah terbaru luar Dan dalam cuma brg brg dim gamabr penyewa skg yg punya"
+      },
+      {
+        "tactic": "competition",
+        "similarity": 1.0,
+        "threshold": 0.9065,
+        "message": "Boleh en insyallah .setakat ni kalau nak book sebelum 10pm ya cuma selagi blum confirm Masih terbuka mana yg dulu je.gambar umah terbaru luar Dan dalam cuma brg brg dim gamabr penyewa skg yg punya",
+        "matched_example": "Boleh en insyallah .setakat ni kalau nak book sebelum 10pm ya cuma selagi blum confirm Masih terbuka mana yg dulu je.gambar umah terbaru luar Dan dalam cuma brg brg dim gamabr penyewa skg yg punya"
+      },
+      {
+        "tactic": "deadline_urgency",
+        "similarity": 1.0,
+        "threshold": 0.9065,
+        "message": "Boleh tuan .jgn lamabt je sebab wssp non stop masuk",
+        "matched_example": "Boleh tuan .jgn lamabt je sebab wssp non stop masuk"
+      },
+      {
+        "tactic": "competition",
+        "similarity": 1.0,
+        "threshold": 0.9065,
+        "message": "Boleh tuan .jgn lamabt je sebab wssp non stop masuk",
+        "matched_example": "Boleh tuan .jgn lamabt je sebab wssp non stop masuk"
+      },
+      {
+        "tactic": "deadline_urgency",
+        "similarity": 1.0,
+        "threshold": 0.9065,
+        "message": "En saya lock 10 pm insyallah",
+        "matched_example": "En saya lock 10 pm insyallah"
+      },
+      {
+        "tactic": "pay_before_viewing",
+        "similarity": 1.0,
+        "threshold": 0.9149,
+        "message": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya",
+        "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+      },
+      {
+        "tactic": "deadline_urgency",
+        "similarity": 0.9087,
+        "threshold": 0.9065,
+        "message": "Sebelum 9pm setakat skg ni .tak pasti kalau ada ya laqi awal .jadi wssp balik",
+        "matched_example": "Boleh en insyallah .setakat ni kalau nak book sebelum 10pm ya cuma selagi blum confirm Masih terbuka mana yg dulu je.gambar umah terbaru luar Dan dalam cuma brg brg dim gamabr penyewa skg yg punya"
+      },
+      {
+        "tactic": "competition",
+        "similarity": 0.9087,
+        "threshold": 0.9065,
+        "message": "Sebelum 9pm setakat skg ni .tak pasti kalau ada ya laqi awal .jadi wssp balik",
+        "matched_example": "Boleh en insyallah .setakat ni kalau nak book sebelum 10pm ya cuma selagi blum confirm Masih terbuka mana yg dulu je.gambar umah terbaru luar Dan dalam cuma brg brg dim gamabr penyewa skg yg punya"
+      },
+      {
+        "tactic": "booking_fee",
+        "similarity": 1.0,
+        "threshold": 0.9304,
+        "message": "Boleh bg no akaun sy bayar booking rm500 skrg",
+        "matched_example": "Boleh bg no akaun sy bayar booking rm500 skrg"
+      }
+    ],
+    "real iBilik chat (current OCR)": [],
+    "real iBilik chat (pre-fix OCR)": [],
+    "real iBilik chat (hand transcript)": []
+  },
+  "mesolitica/embedding-malaysian-mistral-64M-32k": {
+    "real scam chat (development chat)": [
+      {
+        "tactic": "deadline_urgency",
+        "similarity": 1.0,
+        "threshold": 0.9444,
+        "message": "Boleh en insyallah .setakat ni kalau nak book sebelum 10pm ya cuma selagi blum confirm Masih terbuka mana yg dulu je.gambar umah terbaru luar Dan dalam cuma brg brg dim gamabr penyewa skg yg punya",
+        "matched_example": "Boleh en insyallah .setakat ni kalau nak book sebelum 10pm ya cuma selagi blum confirm Masih terbuka mana yg dulu je.gambar umah terbaru luar Dan dalam cuma brg brg dim gamabr penyewa skg yg punya"
+      },
+      {
+        "tactic": "competition",
+        "similarity": 1.0,
+        "threshold": 0.9035,
+        "message": "Boleh en insyallah .setakat ni kalau nak book sebelum 10pm ya cuma selagi blum confirm Masih terbuka mana yg dulu je.gambar umah terbaru luar Dan dalam cuma brg brg dim gamabr penyewa skg yg punya",
+        "matched_example": "Boleh en insyallah .setakat ni kalau nak book sebelum 10pm ya cuma selagi blum confirm Masih terbuka mana yg dulu je.gambar umah terbaru luar Dan dalam cuma brg brg dim gamabr penyewa skg yg punya"
+      },
+      {
+        "tactic": "deadline_urgency",
+        "similarity": 1.0,
+        "threshold": 0.9444,
+        "message": "Boleh tuan .jgn lamabt je sebab wssp non stop masuk",
+        "matched_example": "Boleh tuan .jgn lamabt je sebab wssp non stop masuk"
+      },
+      {
+        "tactic": "competition",
+        "similarity": 1.0,
+        "threshold": 0.9035,
+        "message": "Boleh tuan .jgn lamabt je sebab wssp non stop masuk",
+        "matched_example": "Boleh tuan .jgn lamabt je sebab wssp non stop masuk"
+      },
+      {
+        "tactic": "deadline_urgency",
+        "similarity": 1.0,
+        "threshold": 0.9444,
+        "message": "En saya lock 10 pm insyallah",
+        "matched_example": "En saya lock 10 pm insyallah"
+      },
+      {
+        "tactic": "pay_before_viewing",
+        "similarity": 1.0,
+        "threshold": 0.9226,
+        "message": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya",
+        "matched_example": "Yup .Dan kalau tgk umah tak sesuai saya refund balik sepenuh nya"
+      },
+      {
+        "tactic": "booking_fee",
+        "similarity": 1.0,
+        "threshold": 0.9437,
+        "message": "Boleh bg no akaun sy bayar booking rm500 skrg",
+        "matched_example": "Boleh bg no akaun sy bayar booking rm500 skrg"
+      }
+    ],
+    "real iBilik chat (current OCR)": [],
+    "real iBilik chat (pre-fix OCR)": [],
+    "real iBilik chat (hand transcript)": [
+      {
+        "tactic": "competition",
+        "similarity": 0.9221,
+        "threshold": 0.9035,
+        "message": "Can move in earlier",
+        "matched_example": "It's first come first serve."
+      }
+    ]
+  }
+}

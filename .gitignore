@@ -1,0 +1,57 @@
+# --- Node ---
+node_modules/
+npm-debug.log*
+yarn-error.log*
+dist/
+build/
+.vite/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# --- ML models / weights (too large for git) ---
+nlp-service/models/*
+!nlp-service/models/.gitkeep
+
+# --- Env & secrets ---
+.env
+.env.local
+*/.env
+!.env.example
+!*/.env.example
+
+# --- Data (keep folder structure, ignore heavy/raw content) ---
+data/raw/**/*
+data/processed/*
+!**/.gitkeep
+
+# --- Editor / OS ---
+.DS_Store
+Thumbs.db
+.idea/
+*.log
+
+# --- Docker ---
+postgres-data/
+redis-data/
+
+# --- Real screenshots and anything derived from them (personal data) ---
+# The screenshots, the private redaction list, and raw OCR outputs stay local.
+# Redacted derivatives that ARE tracked (via nlp-service/training/redaction.py):
+# tests/fixtures/real_scam_p*.txt, training/gates.json, eval/results/*.json,
+# docs/BLIND_TEST_DIAGNOSIS.md. tests/test_redaction.py checks them.
+data/samples/*
+!data/samples/README.md
+data/test_real/*
+!data/test_real/README.md
+nlp-service/eval/results/blind_legit/
+
+# Colab upload bundle, rebuilt by nlp-service/training/pack_for_colab.py
+nlp-service/colab_upload_v3.zip
