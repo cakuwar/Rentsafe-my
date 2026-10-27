@@ -15,7 +15,7 @@ Three-tier web architecture with a separate Python NLP microservice.
  │   ├─ osint.service      ──► Serper.dev  (+ Redis cache)      │
  │   ├─ price.service      ──► PostgreSQL price_baseline        │
  │   ├─ scoring.service    (deterministic 60/25/15 aggregate)   │
- │   └─ llm.service        ──► Anthropic Claude Haiku           │
+ │   └─ llm.service        ──► Gemini (or Claude) narrative     │
  └───────┬───────────────────────────┬─────────────────────────┘
          │ internal REST             │
  ┌───────▼──────────────┐    ┌───────▼──────────┐   ┌──────────┐
@@ -33,7 +33,9 @@ Three-tier web architecture with a separate Python NLP microservice.
 2. Backend parses metadata, then fires **three concurrent** calls:
    NLP classify, OSINT search, price-anomaly lookup.
 3. `scoring.service` combines the three normalised confidences into a 0–100 score.
-4. `llm.service` asks Claude Haiku to explain the **already-computed** score.
+4. `llm.service` asks the LLM (Gemini by default, the OSINT judge's model) to
+   explain the **already-computed** result in BM and EN, then checks the text
+   against it: another band or a number not in the result and it is dropped.
 5. Result persisted to `listings`, returned to the frontend.
 
 ## Why the score/explanation split

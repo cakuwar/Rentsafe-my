@@ -29,7 +29,7 @@ The score combines three independent signals:
                 |  (backend, port 4000)   |       |  + Redis (cache) |
                 +-----+-------------+-----+       +------------------+
                       |             |
-       internal REST  |             |  Serper.dev  +  Anthropic (Claude Haiku)
+       internal REST  |             |  Serper.dev  +  Gemini (judge + narrative)
                       v             v
           +------------------------+
           |  Python 3.11 + FastAPI  |  NLP service (port 8000)
@@ -44,7 +44,7 @@ The score combines three independent signals:
 - **Backend:** Node.js, Express, pg, ioredis, BullMQ
 - **NLP service:** Python 3.11, FastAPI, PyTorch, HuggingFace Transformers, Tesseract + Pillow
 - **Data:** PostgreSQL 15, Redis
-- **External:** Serper.dev (OSINT), Anthropic API (narrative)
+- **External:** Serper.dev (OSINT), Google Gemini (OSINT judge + narrative; Anthropic Claude supported as an alternative)
 - **Deploy:** Vercel (frontend), Railway (backend + NLP + DB)
 
 ## Getting started

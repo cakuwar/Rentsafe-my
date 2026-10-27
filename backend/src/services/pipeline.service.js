@@ -34,7 +34,8 @@ async function attempt(name, work) {
  *      NLP call is the slow one, so waiting on it serially would dominate
  *   3. combine them into a deterministic score. The LLM has seen nothing at
  *      this point: it explains the score, it does not set it
- *   4. generate the narrative FROM the computed score and the layer-1 evidence
+ *   4. generate the narrative FROM the finished result: the score is set by
+ *      then, and the narrative is checked against it (llm.service.js)
  *   5. persist, without letting a DB failure break the response
  *
  * Each signal is attempted independently, so an unimplemented or failing
@@ -85,10 +86,6 @@ export async function runAnalysisPipeline({
     osint,
   });
 
-  const narrative = await attempt("llm", () =>
-    generateNarrative({ scoring, meta: metadata, nlp, osint, price, language }),
-  );
-
   const result = {
     listingId,
     sourceType,
@@ -113,7 +110,8 @@ export async function runAnalysisPipeline({
     // explain a score the evidence does not support.
     message: scoring.message ?? support.message,
     evidenceSupport: support.evidenceSupport,
-    narrative: narrative ?? null,
+    // Filled in below, once the rest of the result exists.
+    narrative: null,
     metadata,
     evidence: {
       redFlags: nlp?.redFlags ?? [],
@@ -124,6 +122,8 @@ export async function runAnalysisPipeline({
       price: price ?? null,
     },
   };
+
+  result.narrative = (await attempt("llm", () => generateNarrative(result))) ?? null;
 
   await attempt("persist", () => insertListing(result));
   return result;

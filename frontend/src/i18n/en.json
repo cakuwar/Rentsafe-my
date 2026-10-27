@@ -203,6 +203,7 @@
   },
   "explain": {
     "title": "What this means",
+    "aiNote": "Written by AI from the result above, after the score was calculated. It cannot change the score.",
     "carriesBefore": "This listing carries ",
     "carriesBand": "{{band}} scam risk",
     "carriesAfter": ". ",

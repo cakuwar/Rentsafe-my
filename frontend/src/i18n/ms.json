@@ -203,6 +203,7 @@
   },
   "explain": {
     "title": "Maksudnya",
+    "aiNote": "Ditulis oleh AI berdasarkan keputusan di atas, selepas skor dikira. Ia tidak boleh mengubah skor.",
     "carriesBefore": "Iklan ini membawa ",
     "carriesBand": "risiko penipuan {{band}}",
     "carriesAfter": ". ",

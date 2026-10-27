@@ -17,9 +17,11 @@ cp nlp-service/.env.example nlp-service/.env
 cp frontend/.env.example frontend/.env
 ```
 
-Fill in `SERPER_API_KEY` (free at serper.dev) and `ANTHROPIC_API_KEY`.
-These are only needed for the OSINT and narrative modules (FYP2) — the NLP and
-price modules run without them.
+Fill in `SERPER_API_KEY` (free at serper.dev), `GEMINI_API_KEY` and
+`GEMINI_MODEL` (Google AI Studio). Gemini runs both the OSINT judge and the
+result narrative; set `NARRATIVE_PROVIDER=anthropic` and `ANTHROPIC_API_KEY`
+to write the narrative with Claude instead. These are only needed for OSINT
+and the narrative — the NLP and price modules run without them.
 
 ## 2. Database + Redis
 

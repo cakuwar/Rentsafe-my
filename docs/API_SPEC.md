@@ -903,6 +903,39 @@ coverage and input finding, not a measure of detection.
 - **Input incomplete:** every one is `missing_input`. The chats state a rent
   but no usable area, or no room type for a room.
 
+### Narrative — `narrative`
+A plain-language explanation of the finished result, in both languages,
+written by an LLM after the score is set (`backend/src/services/llm.service.js`,
+prompt in `backend/src/prompts/narrative.prompt.js`):
+
+```json
+"narrative": {
+  "en": "This listing carries high risk. Money was requested up front. ...",
+  "ms": "Iklan ini mempunyai risiko tinggi. Wang diminta terlebih dahulu. ...",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "promptVersion": "v2"
+}
+```
+
+`null` when it is off, the call failed, or the text failed the check below;
+the frontend then builds its explanation from the result's own fields.
+
+- **What the model sees:** only system-made facts — band, score, components,
+  red-flag labels and advice from the lexicon, price figures, OSINT counts and
+  source domains. Never the chat, a snippet, a search result's text, a name or
+  a phone number (the OSINT judge's rule).
+- **The check:** a text is dropped when it names a band other than
+  `riskBand` (or, when capped, `bandCap.uncappedBand`), writes a number that is
+  not in the facts, or is empty or over 1,200 characters.
+- **Provider:** the OSINT judge's (`LLM_VERIFIER_PROVIDER`, `GEMINI_MODEL` /
+  `ANTHROPIC_MODEL`) unless `NARRATIVE_PROVIDER` names another;
+  `LLM_NARRATIVE=false` turns it off. 15 s budget, one retry after a 5xx,
+  cached 7 days under `narrative:<prompt version>:<provider>:<model>:<SHA-256 of the facts>`.
+- **Backfilled:** results saved before the narrative existed can be given one
+  with `backend/scripts/narrate_results.js`, which writes only `narrative` and
+  adds `backfilled: true`.
+
 ### `GET /listings/:id`
 Fetch a stored analysis row by `listingId`.
 
