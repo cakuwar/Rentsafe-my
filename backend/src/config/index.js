@@ -49,6 +49,11 @@ export const config = {
   // model ID from Google AI Studio rather than trust a guessed one.
   llmVerifierProvider: (process.env.LLM_VERIFIER_PROVIDER ?? "").trim().toLowerCase() || "gemini",
   osintLlmVerify: boolFromEnv("OSINT_LLM_VERIFY"),
+  // Result narrative (services/llm.service.js). Same provider and model as the
+  // judge unless NARRATIVE_PROVIDER names another; LLM_NARRATIVE=false turns
+  // it off, and the frontend then builds the explanation from the result.
+  narrativeProvider: (process.env.NARRATIVE_PROVIDER ?? "").trim().toLowerCase() || null,
+  llmNarrative: boolFromEnv("LLM_NARRATIVE"),
   geminiApiKey: process.env.GEMINI_API_KEY,
   geminiModel: process.env.GEMINI_MODEL?.trim() || undefined,
   anthropicApiKey: process.env.ANTHROPIC_API_KEY,

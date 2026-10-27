@@ -1,13 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { asSentence, bandOf, formatRM, pick, stratumLabel } from "../lib/present.js";
 
-// DECISION (author, 2026-10-15) — "What this means". The backend's LLM
-// narrative (llm.service.js generateNarrative) is still a TODO, so `narrative`
-// is null today. Until it exists, the explanation is assembled here from the
-// result itself: the band's advice, then up to three reasons — layer 1's red
-// flags (label + its own advice), and a scored OSINT hit and price anomaly
-// when there are any. Nothing is invented: every reason is a field in the
-// response. When the backend sends a narrative, it is shown instead.
+// DECISION (author, 2026-10-15) — "What this means". When the backend sends
+// no LLM narrative (llm.service.js: no key, a failed call, or a text its check
+// rejected), the explanation is assembled here from the result itself: the
+// band's advice, then up to three reasons — layer 1's red flags (label + its
+// own advice), and a scored OSINT hit and price anomaly when there are any.
+// Nothing is invented: every reason is a field in the response. When the
+// backend sends a narrative ({ en, ms }), it is shown instead, labelled as
+// written by AI.
 // The NSRC box appears only for HIGH and CRITICAL, as the design's copy says.
 function buildReasons(t, result, ms) {
   const evidence = result.evidence ?? {};
@@ -59,11 +60,14 @@ export default function NarrativeCard({ result }) {
     <section className="mt-6 rounded-[18px] bg-gradient-to-b from-navy to-navy-deep p-[26px] text-white shadow-explain">
       <div className="mb-3.5 font-serif text-[21px] font-bold">{t("explain.title")}</div>
       {narrative ? (
-        narrative
-          .split(/\n{2,}/)
-          .map((paragraph, i) => (
-            <p key={i} className="mb-4 mt-0 text-[15px] leading-[1.6] text-white/85">{paragraph}</p>
-          ))
+        <>
+          {narrative
+            .split(/\n{2,}/)
+            .map((paragraph, i) => (
+              <p key={i} className="mb-4 mt-0 text-[15px] leading-[1.6] text-white/85">{paragraph}</p>
+            ))}
+          <p className="mb-4 mt-0 text-xs leading-[1.5] text-white/55">{t("explain.aiNote")}</p>
+        </>
       ) : (
         <>
           {band !== "UNKNOWN" && (

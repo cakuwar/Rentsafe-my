@@ -147,6 +147,9 @@ beforeEach(() => {
     serperDailyLimit: 80,
     osintCacheSecret: "test-secret",
     osintLlmVerify: null,
+    // The pipeline's own narrative call would be the last request these tests
+    // read; it has its own privacy test in narrative.test.js.
+    llmNarrative: false,
     geminiApiKey: KEYS.gemini,
     geminiModel: "gemini-model-from-ai-studio",
     anthropicApiKey: KEYS.anthropic,
