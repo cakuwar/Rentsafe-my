@@ -34,4 +34,22 @@
   .rs-back {
     @apply mb-[18px] cursor-pointer border-none bg-transparent p-0 text-sm font-semibold text-gray-500;
   }
+
+  /* Guide and About: cards, small section labels, headings, dividers. */
+  .rs-panel {
+    @apply rounded-[18px] border border-navy/[.07] bg-white shadow-panel;
+  }
+  .rs-kicker {
+    @apply text-[11.5px] font-bold uppercase tracking-[1.4px] text-teal;
+  }
+  .rs-h2 {
+    @apply m-0 font-serif text-[28px] font-bold leading-[1.2] tracking-[-.4px] text-navy;
+  }
+  .rs-divider {
+    @apply my-14 h-px bg-gradient-to-r from-transparent via-navy/[.15] to-transparent;
+  }
+  /* In-page targets sit below the sticky top bar when scrolled to. */
+  .rs-anchor {
+    @apply scroll-mt-24;
+  }
 }

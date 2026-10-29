@@ -8,18 +8,17 @@ import GuidePage from "./pages/GuidePage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 
 // The design switches screens in memory; here each is a route so the browser's
-// back button works. The Guide is a dark page with its own bar and footer.
+// back button works. Every page shares the light top bar and footer.
 export default function App() {
   const { pathname } = useLocation();
-  const isGuide = pathname === "/guide";
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
   return (
-    <div className={isGuide ? "min-h-screen" : "min-h-screen bg-cream font-sans text-navy"}>
-      {!isGuide && <Navbar />}
+    <div className="min-h-screen bg-cream font-sans text-navy">
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/analyse" element={<AnalysePage />} />
@@ -27,7 +26,7 @@ export default function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-      {!isGuide && <Footer />}
+      <Footer />
     </div>
   );
 }
