@@ -21,6 +21,7 @@ Positive class = **SCAM** throughout.
 | Calibration | whether a probability means what it says | ECE 0.040 → 0.028 after temperature scaling (validation) |
 | Short input | accuracy when few messages are visible | beats the trivial baseline from **6 messages**; below that the service reports "insufficient context" |
 | Speed | CPU, one conversation | median 0.18 s; long real chats ≈ 1 s |
+| Risk-band thresholds (§4.10) | whether the 0–100 score's cuts catch scams without false alarms | at ≥ 25: recall 1.000 / 0.944 / 1.000 (validation / pairs / blind test), false alarms 0 / 0 / 2 of 5; the 75 cut has never been reached |
 
 **Status.** Run 1 did **not** meet all of its pre-registered acceptance criteria
 when trained (two of nine gates failed, §4.7). It is deployed as an **interim**
@@ -239,6 +240,53 @@ a time: median **0.18 s** per validation conversation (mean 0.31 s); mean
 **1.0 s** for the long real chats (two windows). Model file 1.1 GB; inference
 needs about 1.1 GB of RAM.
 
+### 4.10 Risk-band thresholds (ROC)
+
+This section checks the backend's **risk score**, not the model on its own. The
+score is NLP 60 + OSINT 25 + price 15, banded LOW 0–24 · MODERATE 25–49 · HIGH
+50–74 · CRITICAL 75–100. A score that falls exactly on a threshold goes to the
+higher band (`docs/API_SPEC.md`, "Bands and the boundary rule").
+`eval/band_thresholds.py` treats each threshold *t* as the rule "score ≥ *t* is
+flagged" and computes recall and false-alarm rate for every *t* from 0 to 101.
+Intervals are Wilson 95%.
+
+Sets:
+- **Validation and new-wording pairs.** NLP only, so the score cannot exceed
+  60. Scores come from the backend's own scoring code (`aggregateScore` and the
+  band cap), using the model above. Six validation conversations the service
+  does not score (`insufficient_context`) are excluded; they include the two
+  missed scams of §4.8.
+- **Blind test.** 15 cases (10 scam / 5 legitimate), full pipeline (NLP +
+  OSINT + price wherever the inputs allowed), scored as recorded on
+  2026-10-25/26 and not re-scored. 9 of the scams are real. **Case08 (scam) and
+  all 5 legitimate cases were role-played by the author.**
+
+| set | scam / legit | recall at ≥ 25 | false alarms at ≥ 25 | recall at ≥ 50 | false alarms at ≥ 50 | cuts meeting recall ≥ 85% at the lowest false-alarm rate | AUC |
+|---|---|---|---|---|---|---|---|
+| validation | 61 / 28 | 1.000 [0.941, 1.000] | 0.000 [0.000, 0.121] | 0.869 [0.762, 0.932] | 0.000 [0.000, 0.121] | 2–59 | 1.000 |
+| new-wording pairs | 72 / 72 | 0.944 [0.866, 0.978] | 0.000 [0.000, 0.051] | 0.417 [0.310, 0.532] | 0.000 [0.000, 0.051] | 2–49 | 1.000 |
+| blind test | 10 / 5 | 1.000 [0.722, 1.000] | 0.400 [0.118, 0.769] | 0.900 [0.596, 0.982] | 0.200 [0.036, 0.624] | 27–53 | 0.960 |
+
+1. **The 25 cut meets the recall ≥ 85% rule on all three sets**, with no false
+   alarms on either corpus set. ROC does not single 25 out, though. On the
+   corpus the scores split cleanly (every legitimate conversation scores 1 or
+   less, and almost every scam scores 49 or more: all 61 on validation, 66 of 72
+   on the pairs), so any cut from 2 to 49 does equally well. On the blind test the best range is 27–53. 25 falls just below it
+   because of one role-played legitimate case that scored 26 (case11).
+2. **The 50 cut was not chosen by ROC.** Its low recall on the new-wording pairs
+   comes from the band cap, not the threshold: the cap holds 36 scams at 49,
+   because the model rated them HIGH but layer 1 found no red flag in them
+   (`eval/results/cap_cost.json`). The blind-test false alarm at 50 is case09, a
+   role-played legitimate chat that scored 57 on an `upfront_payment` flag.
+3. **The 75 cut cannot be tested yet.** No conversation in any set reached 75;
+   the highest was 74 (blind-test case12). NLP alone tops out at 60.
+4. **The boundary rule changed nothing measured.** No score in any set fell
+   exactly on 25, 50 or 75, the only scores where "≥ 25" and FYP1's "> 25"
+   disagree.
+5. **The blind-test intervals are wide.** With 5 legitimate cases, 2 false alarms
+   out of 5 is consistent with a true rate anywhere from 12% to 77%. These
+   figures show the method; they do not pin the rate down.
+
 ---
 
 ## 5. Context: the model it replaced
@@ -267,10 +315,24 @@ scam behaviour. Validation accuracy alone could not show this.
 
 ## 6. Limitations and threats to validity
 
-1. **No independent real test set.** The only real conversations are one scam
-   and one legitimate chat, and both were used to diagnose earlier models.
-   `data/test_real/` exists, sealed and guarded by tests, but is empty. No
-   number here measures performance on unseen real conversations.
+1. **No sealed set of real conversations yet; the blind test is the closest
+   thing.** The sealed set in `data/test_real/` (`test_real_<nn>.csv`, see its
+   README) is still empty. The closest evidence is the blind test in §4.10: 15
+   cases (10 scam, 5 legitimate) submitted as WhatsApp screenshots through the
+   full system. All were collected after the model was trained, were never used
+   in training or in generating synthetic data, and are stored beside the sealed
+   set in `data/test_real/cases/`. Nine of the scams are real conversations. The
+   other scam (case08) and all five legitimate cases were role-played by the
+   author between two WhatsApp accounts. Role-played chats are written by someone
+   who knows what scams look like, so they may be easier or harder to judge than
+   real ones. With only five legitimate cases, all of them role-played, the
+   false-alarm rate cannot be estimated: 2 of 5 at ≥ 25 is consistent with a true
+   rate anywhere from 11.8% to 76.9% (Wilson 95%). The project's other 24 real
+   conversations (16 scam, 8 legitimate) cannot serve as test data: they were
+   used to ground the synthetic generation, and they are also rows in the
+   training and validation splits (20 and 4; `docs/MODEL_COMPARISON.md` §3).
+   Before the blind test, the only real conversations evaluated outside those
+   splits were the two used to diagnose earlier models (§4.6).
 2. **Validation is optimistic.** It was used for early stopping and for fitting
    the temperature.
 3. **The main test is synthetic.** The minimal pairs come from the same
@@ -298,7 +360,10 @@ scam behaviour. Validation accuracy alone could not show this.
 | `behaviour_checks.py` | `behaviour_checks.json` — §4.3 |
 | `../training/score_gates.py` | `gates_xlm-roberta-scam-v3-run1.json` — §4.7 |
 | Colab `train_colab_v3.ipynb` | `v3_run1_printout.txt` — §4.7 "at acceptance" |
+| `band_thresholds.py` | `band_thresholds.json` — §4.10 (full ROC table per set) |
 
 Data: `data/processed/random/{train,val}.csv`,
-`data/processed/augmented/minimal_pairs_test.csv`, `nlp-service/training/gates.json`.
+`data/processed/augmented/minimal_pairs_test.csv`, `nlp-service/training/gates.json`,
+and for §4.10 the recorded blind-test run, `data/test_real/cases/results.csv`
+(gitignored: it holds real phone numbers).
 The full development history is in `docs/MODEL_COMPARISON.md`.
