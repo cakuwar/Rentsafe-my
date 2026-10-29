@@ -20,7 +20,6 @@ export default {
         },
         danger: { DEFAULT: "#D64545", text: "#b23a3a" },
         amber: { DEFAULT: "#E9A23B", text: "#9c6a16" },
-        guide: { bg: "#141d33", card: "rgba(28,38,61,.7)" },
       },
       fontFamily: {
         serif: ['"Source Serif 4"', "Georgia", "serif"],
@@ -31,10 +30,13 @@ export default {
         "card-sm": "0 2px 8px rgba(27,42,74,.04)",
         cta: "0 6px 18px rgba(27,42,74,.22)",
         "cta-teal": "0 6px 18px rgba(42,157,143,.3)",
-        "btn-teal": "0 4px 14px rgba(42,157,143,.3)",
+        "btn-teal": "0 8px 20px rgba(42,157,143,.35)",
         hero: "0 14px 40px rgba(27,42,74,.28)",
         explain: "0 10px 30px rgba(27,42,74,.22)",
-        guide: "0 30px 70px rgba(0,0,0,.4)",
+        // Guide and About cards, step tiles and the phone mock.
+        panel: "0 2px 12px rgba(27,42,74,.05)",
+        tile: "0 8px 22px rgba(42,157,143,.35), inset 0 1px 0 rgba(255,255,255,.25)",
+        phone: "0 20px 44px rgba(27,42,74,.22)",
       },
       keyframes: {
         rsSpin: { to: { transform: "rotate(360deg)" } },
