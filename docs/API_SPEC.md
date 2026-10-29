@@ -1066,3 +1066,37 @@ points / 25 described under [OSINT](#osint--evidenceosint);
 `priceAnomalyFraction` is the price tier's points / 15 described under
 [Price](#price--evidenceprice).
 The LLM narrative is generated **from** this score and can never change it.
+
+### Bands and the boundary rule
+
+| band (API) | shown as | score |
+|---|---|---|
+| `LOW` | Low | 0–24 |
+| `MODERATE` | Medium | 25–49 |
+| `HIGH` | High | 50–74 |
+| `CRITICAL` | Very High | 75–100 |
+
+Each band starts at its threshold, so a score of exactly 25, 50 or 75 goes to
+the **higher** band. Recall comes first: a missed scam costs the renter money,
+while a false alarm only costs them a check. Module maximums, from the code:
+NLP 60 (`SCORE_WEIGHTS.nlp`), OSINT 25 (news 12 + forum 8 + social 5, each tier
+scored once), and price 15 (top tier).
+
+**Design revision (from FYP1).** FYP1 set the bands at 0–25 / 26–50 / 51–75 /
+76–100 and said Very High required all three modules. That statement was wrong
+even with the cut at 76: NLP and OSINT alone reach 60 + 25 = 85. The Very High
+cut was moved to 75 for two reasons:
+
+- **At 76, Very High needs OSINT.** NLP and price together top out at
+  60 + 15 = 75. A scammer using a new phone number has no complaints for OSINT
+  to find, so Very High was almost unreachable for them. At 75, NLP and price
+  can reach it without OSINT, but only when both are at their maximum: a model
+  probability of at least 0.9917 (60 points after rounding), the top price tier
+  (more than 45% below the area median, or under the rent floor), and at least
+  one red flag (without one, the band cap holds the result at `MODERATE`). No
+  blind-test case reached that probability; the highest was 0.986.
+- **Consistency with the boundary rule.** All three thresholds sit on a quarter
+  of the scale (25 / 50 / 75), and each band starts at its threshold.
+
+How the thresholds hold up on data (ROC, with 95% confidence intervals):
+[MODEL_EVALUATION.md §4.10](MODEL_EVALUATION.md#410-risk-band-thresholds-roc).
