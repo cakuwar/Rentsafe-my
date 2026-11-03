@@ -36,12 +36,22 @@ TESSDATA_DIR = os.getenv("TESSDATA_DIR", str(SERVICE_DIR / "tessdata"))
 TESSERACT_CMD = os.getenv("TESSERACT_CMD")
 PRIMARY_MODEL = os.getenv("PRIMARY_MODEL", "xlm-roberta-base")
 SECONDARY_MODEL = os.getenv("SECONDARY_MODEL", "joeddav/xlm-roberta-large-xnli")
-# Relative paths in .env (e.g. ./models/...) resolve against the service root,
-# so the service works regardless of the directory it was started from.
-FINETUNED_MODEL_DIR = str(
-	(SERVICE_DIR / os.getenv(
-		"FINETUNED_MODEL_DIR",
-		"models/xlm-roberta-scam-random",
-	)).resolve()
+
+
+def _model_location(value):
+	"""A local checkpoint folder, or else a Hugging Face Hub repo id.
+
+	Relative paths (e.g. ./models/...) resolve against the service root, so the
+	service works regardless of the directory it was started from. A value that
+	is not an existing folder (e.g. cakuwar/rentsafe-xlmr-v3) is passed to
+	from_pretrained unchanged and downloaded from the Hub. A private repo needs
+	HF_TOKEN in the environment; huggingface_hub reads it itself.
+	"""
+	local = (SERVICE_DIR / value).resolve()
+	return str(local) if local.is_dir() else value
+
+
+FINETUNED_MODEL_DIR = _model_location(
+	os.getenv("FINETUNED_MODEL_DIR", "models/xlm-roberta-scam-v3-run1")
 )
 ZERO_SHOT_LABELS = ["scam rental listing", "legitimate rental listing"]

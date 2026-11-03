@@ -1,0 +1,11 @@
+# Unlike .gitignore, a pattern here matches only at the build-context root
+# unless it starts with **/ , so nested caches need the **/ prefix.
+.venv/
+models/
+**/__pycache__/
+**/*.pyc
+.env
+.pytest_cache/
+
+# Personal data from real screenshots, kept local (same rule as .gitignore).
+eval/results/blind_legit/

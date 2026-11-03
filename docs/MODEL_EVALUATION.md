@@ -26,8 +26,11 @@ Positive class = **SCAM** throughout.
 **Status.** Run 1 did **not** meet all of its pre-registered acceptance criteria
 when trained (two of nine gates failed, §4.7). It is deployed as an **interim**
 model because it outperformed the model it replaced on every test both were
-given (§5). The evaluation's main limitation is that no independent set of real
-conversations exists yet (§6).
+given (§5). The evaluation's main limitation is that the sealed set of real
+conversations is still empty. The closest evidence is the blind test (§4.10):
+15 cases collected after training, in which 9 of the 10 scams are real
+conversations but all 5 legitimate cases are role-played, too few to estimate
+the false-alarm rate (§6).
 
 ---
 

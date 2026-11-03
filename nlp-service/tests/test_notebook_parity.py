@@ -83,7 +83,7 @@ def tiny_checkpoint(tmp_path_factory):
 def service(tiny_checkpoint, monkeypatch):
     """The classifier pointed at the tiny checkpoint, with a clean load state."""
     monkeypatch.setattr(config, "FINETUNED_MODEL_DIR", tiny_checkpoint)
-    for name, value in (("_model", None), ("_tokenizer", None), ("_load_failed", False),
+    for name, value in (("_model", None), ("_tokenizer", None), ("_load_attempts", 0),
                         ("_scam_index", 1), ("_temperature", 1.0)):
         monkeypatch.setattr(classifier, name, value)
     tokenizer, model = classifier._load()

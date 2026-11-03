@@ -14,9 +14,12 @@ calibration comes from the checkpoint's own temperature (below), and the
 independent check on the score is layer 1's evidence plus the backend's band
 cap.
 
-The model is lazy-loaded on first request so the API starts fast and the tests
-run without touching the weights. If the weights are missing the service still
-answers, reporting an unknown probability and saying so in `status`.
+The server loads the model at startup (the lifespan in app/main.py), so the
+first /classify does not pay for it - on a fresh Hugging Face Space that
+includes downloading the weights. Code that calls classify() without the
+server, such as the tests and eval scripts, still loads on first use. If the
+weights cannot be loaded the service still answers, reporting an unknown
+probability and saying so in `status`; MAX_LOAD_ATTEMPTS says when it retries.
 
 This layer produces a probability and nothing else. Layer 1's red flags are not
 an input here and add no points - see the note beside MAX_LENGTH.
@@ -44,6 +47,7 @@ to catch.
 """
 import logging
 import threading
+import time
 
 from app import config
 from app.turns import count_messages
@@ -113,28 +117,46 @@ _tokenizer = None
 _scam_index = 1
 _temperature = DEFAULT_TEMPERATURE
 _load_lock = threading.Lock()
-_load_failed = False
+
+# Loading is tried at most twice: at server startup, and once more on the next
+# /classify if that failed - enough to ride out a transient Hub or network
+# error. After that /classify reports model_unavailable until restart, rather
+# than repeating a slow, failing download on every request.
+MAX_LOAD_ATTEMPTS = 2
+_load_attempts = 0
+
+
+def load() -> bool:
+    """Load the fine-tuned weights now; called once at server startup.
+
+    True if the model is ready. On failure the reason is logged and this
+    returns False: the server keeps running, and the next /classify tries once
+    more.
+    """
+    return _load()[1] is not None
 
 
 def _load():
-    """Load the fine-tuned weights once, on first use.
+    """The fine-tuned (tokenizer, model), loading them if not yet loaded.
 
-    Returns (tokenizer, model) or (None, None) if the weights are unavailable,
-    in which case the caller reports an unknown probability.
+    Returns (None, None) if the weights are unavailable, in which case the
+    caller reports an unknown probability.
     """
-    global _model, _tokenizer, _scam_index, _temperature, _load_failed
+    global _model, _tokenizer, _scam_index, _temperature, _load_attempts
 
     if _model is not None:
         return _tokenizer, _model
-    if _load_failed:
+    if _load_attempts >= MAX_LOAD_ATTEMPTS:
         return None, None
 
     with _load_lock:
-        # Another thread may have finished while this one waited.
+        # Another thread may have finished, or used the last attempt, while
+        # this one waited.
         if _model is not None:
             return _tokenizer, _model
-        if _load_failed:
+        if _load_attempts >= MAX_LOAD_ATTEMPTS:
             return None, None
+        _load_attempts += 1
 
         try:
             from transformers import (
@@ -142,7 +164,11 @@ def _load():
                 AutoTokenizer,
             )
 
-            logger.info("loading layer-2 model from %s", config.FINETUNED_MODEL_DIR)
+            logger.info(
+                "loading layer-2 model from %s (attempt %d of %d)",
+                config.FINETUNED_MODEL_DIR, _load_attempts, MAX_LOAD_ATTEMPTS,
+            )
+            started = time.monotonic()
             tokenizer = AutoTokenizer.from_pretrained(config.FINETUNED_MODEL_DIR)
             model = AutoModelForSequenceClassification.from_pretrained(
                 config.FINETUNED_MODEL_DIR
@@ -159,8 +185,9 @@ def _load():
 
             _tokenizer, _model = tokenizer, model
             logger.info(
-                "layer-2 model ready (%.0fM parameters, SCAM is index %d, "
-                "temperature %.3f)",
+                "layer-2 model ready in %.1fs (%.0fM parameters, SCAM is "
+                "index %d, temperature %.3f)",
+                time.monotonic() - started,
                 model.num_parameters() / 1e6,
                 _scam_index,
                 _temperature,
@@ -168,12 +195,18 @@ def _load():
             return _tokenizer, _model
 
         except Exception:
-            _load_failed = True
-            logger.warning(
-                "could not load layer-2 weights from %s - /classify will "
-                "report an unknown probability. Train a model or fix "
-                "FINETUNED_MODEL_DIR.",
+            then = (
+                "the next /classify will try once more"
+                if _load_attempts < MAX_LOAD_ATTEMPTS
+                else "/classify will report an unknown probability until restart"
+            )
+            logger.error(
+                "could not load layer-2 model from %s (attempt %d of %d); %s. "
+                "Check FINETUNED_MODEL_DIR, and HF_TOKEN for a private Hub repo.",
                 config.FINETUNED_MODEL_DIR,
+                _load_attempts,
+                MAX_LOAD_ATTEMPTS,
+                then,
                 exc_info=True,
             )
             return None, None

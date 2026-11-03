@@ -1,12 +1,18 @@
 # RentSafe MY NLP microservice dependencies
+# CPU-only torch wheels. Without this index, torch on Linux pulls in several GB
+# of CUDA libraries that a CPU-only deployment never uses.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
 fastapi==0.115.4
 uvicorn[standard]==0.32.0
 pydantic==2.9.2
 python-multipart==0.0.12
 
 # ML / NLP
-torch==2.5.1
+torch==2.14.1+cpu
+# transformers 5.x removed tokenizer.prepare_for_model (used in app/layer2/classifier.py)
 transformers==4.46.2
+huggingface_hub==0.36.2
 sentencepiece==0.2.0
 numpy==1.26.4
 scikit-learn==1.5.2
