@@ -3,6 +3,7 @@
 Endpoints:
   POST /classify  - normalise text, then run both layers concurrently
   POST /ocr       - extract text from one or more WhatsApp screenshots
+  GET  /health    - liveness only; never loads the model
 
 /classify runs the two layers independently and returns both:
 
@@ -14,11 +15,16 @@ Red flags add nothing to scam_probability. The backend combines them once, in
 aggregateScore, where the documented formula weighs this probability at 60
 alongside OSINT and price.
 
-Not implemented: GET /health.
+The layer-2 model is loaded at startup (`lifespan`), before the server accepts
+requests. If that fails the server starts anyway: /health, /docs, /ocr and
+layer 1 do not need the model, and /classify tries loading it once more.
 """
 import asyncio
+import logging
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, UploadFile, File, HTTPException
+from uvicorn.logging import DefaultFormatter
 from app.schemas.io import (
     ClassifyRequest,
     ClassifyResponse,
@@ -28,7 +34,7 @@ from app.schemas.io import (
 )
 from app.normaliser.normaliser import normalise
 from app.layer1.red_flags import analyse as l1_analyse
-from app.layer2.classifier import classify as l2_classify, count_turns
+from app.layer2.classifier import classify as l2_classify, count_turns, load as l2_load
 from app.ocr.ocr import (
     combine_pages,
     images_bytes_to_text,
@@ -39,7 +45,30 @@ from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 from starlette.concurrency import run_in_threadpool
 
-app = FastAPI(title="RentSafe MY NLP Service", version="0.1.0")
+# Uvicorn configures only its own loggers. Without a handler here, the service's
+# "rentsafe.*" INFO lines (model loading) were dropped and its errors printed
+# with no level, so give them uvicorn's format to read as part of the same log.
+_log = logging.getLogger("rentsafe")
+if not _log.handlers:
+    _handler = logging.StreamHandler()
+    _handler.setFormatter(DefaultFormatter("%(levelprefix)s %(name)s: %(message)s"))
+    _log.addHandler(_handler)
+    _log.setLevel(logging.INFO)
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Load the layer-2 model before the server takes requests.
+
+    Otherwise the first /classify pays for it, which on a fresh Space includes
+    the Hub download. l2_load logs a failure and returns; it never raises, so a
+    missing model cannot stop the server from starting.
+    """
+    await run_in_threadpool(l2_load)
+    yield
+
+
+app = FastAPI(title="RentSafe MY NLP Service", version="0.1.0", lifespan=lifespan)
 
 #################################################################################
 # ERROR HANDLING
@@ -90,6 +119,17 @@ async def validation_exception_handler(
 # ENDPOINTS
 #################################################################################
 MAX_OCR_PAGES = 20
+
+
+@app.get("/health")
+async def health():
+    """Liveness check: the server is up and answering.
+
+    Deliberately touches neither the model nor anything else, so it answers even
+    while layer 2 is unavailable. Whether the model loaded is in the startup log
+    and in /classify's `layer2.status`.
+    """
+    return {"status": "ok"}
 
 
 @app.post("/ocr", response_model=OCRResponse)
