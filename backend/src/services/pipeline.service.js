@@ -36,7 +36,9 @@ async function attempt(name, work) {
  *      this point: it explains the score, it does not set it
  *   4. generate the narrative FROM the finished result: the score is set by
  *      then, and the narrative is checked against it (llm.service.js)
- *   5. persist, without letting a DB failure break the response
+ *   5. save the result (no personal data: listings.repo.js) in the
+ *      background, so the answer never waits on the database and a database
+ *      failure is only logged
  *
  * Each signal is attempted independently, so an unimplemented or failing
  * service degrades the score's ceiling rather than the request.
@@ -125,6 +127,8 @@ export async function runAnalysisPipeline({
 
   result.narrative = (await attempt("llm", () => generateNarrative(result))) ?? null;
 
-  await attempt("persist", () => insertListing(result));
+  // Not awaited: with the database down, its 3 s connect timeout would be
+  // added to every answer. attempt() catches and logs any failure.
+  void attempt("persist", () => insertListing(result, property));
   return result;
 }

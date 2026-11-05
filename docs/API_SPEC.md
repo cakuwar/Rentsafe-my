@@ -350,11 +350,11 @@ queries is kept once: a candidate beats context, then the strongest identifier
 wins.
 
 *Layer 2 — LLM judge (when configured).* One batched call per search, only when
-there is at least one candidate, within a **15 s** budget. At most **10**
+there is at least one candidate, within a **30 s** budget. At most **10**
 candidates are sent, strongest queries first (phone > ren > name > company,
 search-rank order within each); the rest are listed in context as `unjudged`
 and score nothing. `judgeCandidates` says how many were sent. The only retry is
-one, 1 s later, after a 5xx (the model is overloaded), inside the same 15 s;
+one, 1 s later, after a 5xx (the model is overloaded), inside the same 30 s;
 `verifierRetried` says whether it happened. Prompt:
 `backend/src/prompts/osintVerifier.prompt.js` (`VERIFIER_PROMPT_VERSION`). The
 judge receives **only** `{ id, queryType, identifier, domain, title, snippet }`
@@ -384,7 +384,7 @@ key is set; `OSINT_LLM_VERIFY=false` turns it off.
 
 | `verifierError` | when | retried |
 |---|---|---|
-| `timeout` | no answer within 15 s | no |
+| `timeout` | no answer within 30 s | no |
 | `429` | rate or free-tier limit | no |
 | `invalid_model` | HTTP 404, or a 400 naming the model (check `GEMINI_MODEL` / `ANTHROPIC_MODEL`) | no |
 | `unavailable` | HTTP 5xx — e.g. 503 "This model is currently experiencing high demand" | **once**, 1 s later |
@@ -914,7 +914,7 @@ prompt in `backend/src/prompts/narrative.prompt.js`):
   "ms": "Iklan ini mempunyai risiko tinggi. Wang diminta terlebih dahulu. ...",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
-  "promptVersion": "v2"
+  "promptVersion": "v4"
 }
 ```
 
@@ -927,17 +927,65 @@ the frontend then builds its explanation from the result's own fields.
   a phone number (the OSINT judge's rule).
 - **The check:** a text is dropped when it names a band other than
   `riskBand` (or, when capped, `bandCap.uncappedBand`), writes a number that is
-  not in the facts, or is empty or over 1,200 characters.
+  not in the facts, reassures, or is empty or over 1,200 characters.
+  *Reassuring* means calling this listing, landlord, owner or agent genuine,
+  legitimate, trustworthy or safe, or calling something a sign that they are
+  (EN and MS). Scammers imitate every sign of a proper letting: on blind-test
+  case05, a real scam, `gpt-4o-mini` wrote "Arranging to see the unit in person
+  is a strong sign of a genuine listing". Advice that only mentions being
+  genuine passes ("a genuine landlord will let you view", "verify that the
+  landlord is genuine", "a low score is not a sign that the listing is safe").
+  Prompt v4 asks for the same.
 - **Provider:** the OSINT judge's (`LLM_VERIFIER_PROVIDER`, `GEMINI_MODEL` /
   `ANTHROPIC_MODEL`) unless `NARRATIVE_PROVIDER` names another;
   `LLM_NARRATIVE=false` turns it off. 15 s budget, one retry after a 5xx,
   cached 7 days under `narrative:<prompt version>:<provider>:<model>:<SHA-256 of the facts>`.
+- **OpenAI (narrative only):** `NARRATIVE_PROVIDER=openai` with
+  `OPENAI_API_KEY` and `OPENAI_MODEL` (no default model) sends the narrative to
+  OpenAI's chat completions API, while the judge stays on its own provider and
+  key. The request asks for a strict JSON schema (`en`, `ms`) at temperature 0,
+  capped at 1,024 tokens (`max_completion_tokens`). An error status is treated
+  like the SDKs' errors (one retry after a 5xx), and a refusal leaves the
+  narrative null. OpenAI's reasoning models (the o-series, GPT-5 and later)
+  refuse temperature 0, so use a non-reasoning model such as `gpt-4o-mini`;
+  the log says so when that is the error. `provider` is then `"openai"`.
 - **Backfilled:** results saved before the narrative existed can be given one
   with `backend/scripts/narrate_results.js`, which writes only `narrative` and
   adds `backfilled: true`.
 
 ### `GET /listings/:id`
-Fetch a stored analysis row by `listingId`.
+Fetch a saved analysis by the `listingId` that `POST /analyze` returned. Every
+analysis is saved in the background after it is answered; a database failure is
+logged and never affects the answer.
+
+```json
+{
+  "listingId": "8c5a885a-1d4f-4938-87f4-ddb81c07af5d",
+  "createdAt": "2026-11-05T08:00:00.000Z",
+  "sourceType": "screenshot",
+  "riskScore": 64,
+  "riskBand": "HIGH",
+  "components": { "nlp": { "points": 59, "max": 60, "included": true }, "...": "..." },
+  "facts": { "band": "HIGH", "score": 64, "redFlags": [ "..." ], "osint": { "...": "..." }, "price": { "...": "..." } },
+  "narrative": { "en": "...", "ms": "...", "provider": "openai", "model": "gpt-4o-mini", "promptVersion": "v4" },
+  "property": { "price": 450, "area": "Cyberjaya", "bedrooms": null, "propertyType": "room" }
+}
+```
+
+| status | when |
+|---|---|
+| 200 | saved result |
+| 400 | the id is not a UUID (the database is not queried) |
+| 404 | nothing saved under the id |
+| 503 | the database cannot be reached |
+
+**No personal data is saved** (`backend/src/db/listings.repo.js`, migration
+003). `facts` is the narrative's own input, which by design holds no chat text
+and no identifier: red-flag labels, not snippets; OSINT source domains and
+counts, not search text, names or phone numbers. The conversation and the
+agent's name, phone, REN number and company are never written; their columns
+stay NULL. The form's listing details are kept, since they describe the
+property, not a person. `riskScore` is null when `riskBand` is `UNKNOWN`.
 
 ---
 

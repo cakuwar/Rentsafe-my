@@ -27,7 +27,7 @@ const files = process.argv.slice(2).filter((arg) => !arg.startsWith("--"));
 
 async function run() {
   const settings = narrativeSettings();
-  if (!settings.enabled) throw new Error("narrative is off: check GEMINI_API_KEY / GEMINI_MODEL in backend/.env");
+  if (!settings.enabled) throw new Error("narrative is off: check NARRATIVE_PROVIDER and that provider's key and model in backend/.env (the log line above says which)");
   if (files.length === 0) throw new Error("give one or more api_result.json files");
 
   let failed = 0;

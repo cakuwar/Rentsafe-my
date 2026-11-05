@@ -1,11 +1,13 @@
-# Unlike .gitignore, a pattern here matches only at the build-context root
-# unless it starts with **/ , so nested caches need the **/ prefix.
-.venv/
-models/
+# Allowlist: exclude everything, then let back in only what the service needs
+# at runtime. The image goes to a public registry, so anything not listed here
+# (training data, eval results, notebooks, .env, models/, the venv) can never
+# end up in it by accident.
+*
+!app/
+!tessdata/
+!requirements.txt
+
+# Exceptions inside the allowed folders. Unlike .gitignore, a pattern here
+# matches only at the build-context root unless it starts with **/ .
 **/__pycache__/
 **/*.pyc
-.env
-.pytest_cache/
-
-# Personal data from real screenshots, kept local (same rule as .gitignore).
-eval/results/blind_legit/

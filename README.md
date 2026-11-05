@@ -29,7 +29,7 @@ The score combines three independent signals:
                 |  (backend, port 4000)   |       |  + Redis (cache) |
                 +-----+-------------+-----+       +------------------+
                       |             |
-       internal REST  |             |  Serper.dev  +  Gemini (judge + narrative)
+       internal REST  |             |  Serper.dev + Gemini (judge) + OpenAI (narrative)
                       v             v
           +------------------------+
           |  Python 3.11 + FastAPI  |  NLP service (port 8000)
@@ -41,11 +41,11 @@ The score combines three independent signals:
 ## Tech stack
 
 - **Frontend:** React 18, Vite, Tailwind CSS, i18next (BM/EN)
-- **Backend:** Node.js, Express, pg, ioredis, BullMQ
+- **Backend:** Node.js, Express, pg, ioredis, zod
 - **NLP service:** Python 3.11, FastAPI, PyTorch, HuggingFace Transformers, Tesseract + Pillow
-- **Data:** PostgreSQL 15, Redis
-- **External:** Serper.dev (OSINT), Google Gemini (OSINT judge + narrative; Anthropic Claude supported as an alternative)
-- **Deploy:** Vercel (frontend), Railway (backend + NLP + DB)
+- **Data:** PostgreSQL 15 (price baseline, saved results without personal data), Redis (cache)
+- **External:** Serper.dev / SerpApi (OSINT search), Google Gemini (OSINT judge), OpenAI `gpt-4o-mini` (narrative; Gemini or Claude can write it instead)
+- **Running it:** locally, with PostgreSQL and Redis in Docker. The NLP service is also packaged as a Hugging Face Docker Space (`nlp-service/README.md`); the backend and frontend are not deployed.
 
 ## Getting started
 
@@ -80,8 +80,11 @@ cp frontend/.env.example frontend/.env
 # 2. bring up Postgres + Redis (and optionally all services) with Docker
 docker compose up -d db redis
 
-# 3. install + run each service (separate terminals)
-cd backend && npm install && npm run dev          # http://localhost:4000
+# 3. once, and after pulling new migrations: bring the database up to date
+cd backend && npm install && npm run migrate && npm run seed
+
+# 4. run each service (separate terminals)
+cd backend && npm run dev                          # http://localhost:4000
 cd nlp-service && pip install -r requirements.txt && uvicorn app.main:app --reload  # http://localhost:8000
 cd frontend && npm install && npm run dev          # http://localhost:5173
 ```
@@ -97,7 +100,7 @@ rentsafe-my/
 ├── frontend/       React 18 + Tailwind SPA
 ├── database/       SQL schema, migrations, seeds
 ├── data/           Datasets (raw scam/legit, synthetic, processed)
-├── docs/           Architecture, API spec, setup, dataset card
+├── docs/           Architecture, API spec, setup, NLP layers, model evaluation
 └── scripts/        Dev / data-collection helper scripts
 ```
 
@@ -106,5 +109,9 @@ rentsafe-my/
 - **FYP1 (Weeks 1–14):** setup, dataset v1.0, Shortform Normaliser, NLP classifier (F1 ≥ 0.80), price-anomaly module.
 - **FYP2 (Weeks 15–28):** OSINT module, scoring engine, LLM narrative, React frontend + OCR, testing + UAT.
 
-Files that belong to FYP2 are stubbed with `TODO(FYP2)` markers so the skeleton
-is complete from day one.
+**Status (November 2026).** Every module is implemented and tested: normaliser,
+layer 1 red flags, layer 2 classifier, OCR, OSINT search with the LLM judge,
+price anomaly, scoring engine, narrative, saved results and the bilingual
+frontend. The classifier's evaluation, including a 15-case blind test of the
+whole system, is in `docs/MODEL_EVALUATION.md`. Not done yet: user acceptance
+testing with real users.

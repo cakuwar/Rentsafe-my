@@ -1,12 +1,8 @@
-"""Request/response models for the NLP API."""
-# Tentukan bentuk data api -io
+"""Request/response models for the NLP API (POST /classify, POST /ocr)."""
 
 from typing import Any, Literal
 from pydantic import BaseModel, Field
 
-# TODO: define ClassifyRequest (text: str, language: "auto"|"ms"|"en" default "auto"),
-# ClassifyResponse (scam_probability: float, normalised_text: str,
-# red_flags: list[str], layer2: dict), and OCRResponse (extracted_text: str).
 
 class ClassifyRequest(BaseModel):
     text: str = Field(min_length=2)

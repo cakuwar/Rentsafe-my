@@ -1,10 +1,9 @@
 // Protects the Serper/Anthropic budget by capping requests per IP.
 import rateLimit from "express-rate-limit";
 
-// TODO: configure and export `rateLimiter` using express-rate-limit.
-// Pick a window + max requests that makes sense given Serper's free-tier
-// monthly search cap (see osint.service.js) — you don't want one user's
-// testing to burn your whole month's quota.
+// Every route: 100 requests per IP per 15 minutes, enough for normal use
+// while stopping one client from spending the paid search and LLM quota
+// (osint.service.js adds daily search limits on top).
 export const rateLimiter = rateLimit({
 	windowMs: 15 * 60 * 1000,
 	limit: 100,

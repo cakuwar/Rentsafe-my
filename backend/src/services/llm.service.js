@@ -21,6 +21,8 @@
 //
 // Provider and model are the OSINT judge's (LLM_VERIFIER_PROVIDER,
 // GEMINI_MODEL / ANTHROPIC_MODEL) unless NARRATIVE_PROVIDER names another.
+// NARRATIVE_PROVIDER=openai (OPENAI_API_KEY, OPENAI_MODEL) is for the
+// narrative alone: the judge keeps its own provider and key.
 // One call per new result within a 15 s budget, retried once after a 5xx,
 // and cached by the facts so an identical result is not paid for twice.
 import { createHash } from "node:crypto";
@@ -64,6 +66,44 @@ const ANTHROPIC_TOOL = {
   },
 };
 
+// Same contract again for OpenAI, as structured output (a strict JSON schema).
+const OPENAI_RESPONSE_FORMAT = {
+  type: "json_schema",
+  json_schema: {
+    name: "narrative",
+    strict: true,
+    schema: {
+      type: "object",
+      properties: {
+        en: { type: "string" },
+        ms: { type: "string" },
+      },
+      required: ["en", "ms"],
+      additionalProperties: false,
+    },
+  },
+};
+
+// Where each provider's key and model come from. A provider with no default
+// model stays off until its model ID is set, rather than guess one.
+const PROVIDERS = {
+  gemini: {
+    key: () => config.geminiApiKey,
+    model: () => config.geminiModel,
+    noModel: "GEMINI_MODEL is empty; narrative off (copy the model ID from Google AI Studio)",
+  },
+  anthropic: {
+    key: () => config.anthropicApiKey,
+    model: () => config.anthropicModel || DEFAULT_ANTHROPIC_MODEL,
+  },
+  openai: {
+    key: () => config.openaiApiKey,
+    model: () => config.openaiModel,
+    noModel: "OPENAI_MODEL is empty; narrative off (copy a model ID from platform.openai.com/docs/models)",
+  },
+};
+const PROVIDER_NAMES = Object.keys(PROVIDERS).join(", ");
+
 const warned = new Set();
 function warnOnce(key, message) {
   if (warned.has(key)) return;
@@ -80,24 +120,24 @@ export function narrativeSettings() {
   if (config.llmNarrative === false) return off;
 
   const provider = config.narrativeProvider ?? config.llmVerifierProvider;
-  if (provider !== "gemini" && provider !== "anthropic") {
-    warnOnce(`provider:${provider}`, `narrative provider "${provider}" is not gemini or anthropic; narrative off`);
+  const source = Object.hasOwn(PROVIDERS, provider) ? PROVIDERS[provider] : null;
+  if (!source) {
+    warnOnce(`provider:${provider}`, `narrative provider "${provider}" is not one of ${PROVIDER_NAMES}; narrative off`);
     return off;
   }
 
-  const key = provider === "gemini" ? config.geminiApiKey : config.anthropicApiKey;
-  if (!isRealKey(key)) {
-    if (config.llmNarrative === true) {
-      warnOnce(`key:${provider}`, `LLM_NARRATIVE is on but no ${provider} API key is set; narrative off`);
+  if (!isRealKey(source.key())) {
+    // Naming a provider only for the narrative is as clear a request as
+    // LLM_NARRATIVE=true, so a missing key is worth a warning either way.
+    if (config.llmNarrative === true || config.narrativeProvider) {
+      warnOnce(`key:${provider}`, `narrative provider is ${provider} but no ${provider} API key is set; narrative off`);
     }
     return off;
   }
 
-  const model = provider === "gemini"
-    ? config.geminiModel
-    : config.anthropicModel || DEFAULT_ANTHROPIC_MODEL;
+  const model = source.model();
   if (!model) {
-    warnOnce("model:gemini", "GEMINI_MODEL is empty; narrative off (copy the model ID from Google AI Studio)");
+    warnOnce(`model:${provider}`, source.noModel);
     return off;
   }
   return { enabled: true, provider, model };
@@ -180,6 +220,24 @@ const BAND_PHRASES = {
 };
 const BAND_CODES = /\b(LOW|MODERATE|HIGH|CRITICAL|UNKNOWN)\b/g;
 
+// Reassurance the prompt forbids: calling this listing (or its landlord,
+// owner, agent) genuine or safe, or calling something a sign that it is.
+// Scammers imitate every sign of a proper letting, and gpt-4o-mini wrote "a
+// strong sign of a genuine listing" for a real scam (blind-test case05).
+// Advice keeps working: "a genuine landlord will let you view", "verify that
+// the landlord is genuine", "it is not a sign that the listing is safe" all
+// pass (tests/narrative.test.js).
+const REASSURANCE = {
+  en: [
+    /(?<!\b(?:not|no|never)\s+(?:a\s+|an\s+)?(?:\w+\s+)?)\b(?:sign|signs|indication|indicator)\s+(?:of|that)\b(?:(?!\b(?:not|never|no)\b|n't\b)[^.!?]){0,40}?\b(?:genuine|legitimate|legit|trustworthy|safe|honest)\b/i,
+    /(?<!\b(?:that|whether|if|ensure|confirm|verify|check)\s+)\b(?:this|the)\s+(?:listing|unit|offer|letting|landlord|owner|agent)\s+(?:is|seems|looks|appears)\s+(?:to\s+be\s+)?(?:likely\s+|probably\s+)?(?:genuine|legitimate|legit|trustworthy|safe|honest)\b/i,
+  ],
+  ms: [
+    /(?<!\b(?:bukan|tidak|tiada|tak)\s+(?:satu\s+)?)\btanda\b(?:(?!\b(?:tidak|bukan|tak)\b)[^.!?]){0,40}?\b(?:tulen|asli|selamat|jujur|boleh dipercayai)\b/i,
+    /(?<!\b(?:bahawa|sama ada|jika|kalau|pastikan|sahkan|semak)\s+)\b(?:iklan|unit|tawaran|tuan rumah|pemilik|ejen)\s+(?:ini\s+)?(?:adalah\s+|kelihatan\s+|nampak\s+)?(?:tulen|asli|selamat|jujur|boleh dipercayai)\b/i,
+  ],
+};
+
 function numbersIn(text) {
   return (String(text).match(/\d[\d,]*(?:\.\d+)?/g) ?? []).map((token) => Number(token.replace(/,/g, "")));
 }
@@ -197,7 +255,7 @@ function bandsNamed(text, language) {
  * when either language is empty or over MAX_CHARS, writes a number that
  * appears nowhere in the facts (100, the scale, aside), or names a band other
  * than the result's — or, when the band was capped, the band before the cap,
- * which the narrative is asked to explain.
+ * which the narrative is asked to explain — or reassures (REASSURANCE).
  */
 export function checkNarrative(raw, facts) {
   const allowedNumbers = new Set([100, ...numbersIn(JSON.stringify(facts))]);
@@ -214,6 +272,9 @@ export function checkNarrative(raw, facts) {
 
     const band = bandsNamed(text, language).find((name) => !allowedBands.has(name));
     if (band) return { ok: false, reason: `${language} names band ${band}, result is ${facts.band}` };
+
+    const reassurance = REASSURANCE[language].map((pattern) => text.match(pattern)).find(Boolean);
+    if (reassurance) return { ok: false, reason: `${language} reassures: "${reassurance[0]}"` };
 
     narrative[language] = text;
   }
@@ -262,6 +323,57 @@ async function callAnthropic(model, facts, signal) {
   return block.input;
 }
 
+const OPENAI_URL = "https://api.openai.com/v1/chat/completions";
+
+// OpenAI's reasoning models (the o-series, GPT-5 and later) accept only the
+// default temperature. The narrative keeps temperature 0, so say what to pick
+// instead of leaving a bare "Unsupported value".
+const TEMPERATURE_HINT =
+  " (this looks like a reasoning model, which does not take temperature 0; pick a non-reasoning model such as gpt-4o-mini)";
+
+async function callOpenAI(model, facts, signal) {
+  const response = await fetch(OPENAI_URL, {
+    method: "POST",
+    signal,
+    headers: {
+      Authorization: `Bearer ${config.openaiApiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model,
+      temperature: 0,
+      // OpenAI renamed max_tokens to max_completion_tokens.
+      max_completion_tokens: 1024,
+      messages: [
+        { role: "system", content: NARRATIVE_SYSTEM_PROMPT },
+        { role: "user", content: userMessage(facts) },
+      ],
+      response_format: OPENAI_RESPONSE_FORMAT,
+    }),
+  });
+
+  // An error is a non-2xx status with { error: { message, code } }. The code
+  // is a word ("insufficient_quota"), so the HTTP status is what gets
+  // classified; it is set on the thrown error so classifyJudgeError retries a
+  // 5xx like the SDKs.
+  const body = await response.json().catch(() => null);
+  if (!response.ok) {
+    let reason = typeof body?.error?.message === "string" ? body.error.message : "request failed";
+    if (response.status === 400 && /temperature/i.test(reason)) reason += TEMPERATURE_HINT;
+    throw Object.assign(new Error(`OpenAI ${response.status}: ${reason}`), { status: response.status });
+  }
+
+  // With a strict schema the content is the JSON itself, or null with a
+  // `refusal` when the model declines.
+  const message = body?.choices?.[0]?.message;
+  if (typeof message?.content !== "string") {
+    throw new SyntaxError(message?.refusal ? `narrative refused: ${message.refusal}` : "narrative reply had no content");
+  }
+  return JSON.parse(message.content);
+}
+
+const CALLERS = { gemini: callGemini, anthropic: callAnthropic, openai: callOpenAI };
+
 /** One call within TIMEOUT_MS, retried once 1 s later after a 5xx only. */
 async function callWithBudget(settings, facts) {
   const controller = new AbortController();
@@ -273,10 +385,7 @@ async function callWithBudget(settings, facts) {
     }, TIMEOUT_MS);
   });
 
-  const call = () =>
-    settings.provider === "gemini"
-      ? callGemini(settings.model, facts, controller.signal)
-      : callAnthropic(settings.model, facts, controller.signal);
+  const call = () => CALLERS[settings.provider](settings.model, facts, controller.signal);
   const attempt = async () => {
     try {
       return await call();

@@ -10,17 +10,22 @@ export function isRealKey(key) {
 }
 
 // Key shapes that may turn up in an SDK error message even when the value is
-// not the configured one: Google "AIza…" and "AQ.…", Anthropic "sk-ant-…".
+// not the configured one: Google "AIza…" and "AQ.…", Anthropic "sk-ant-…",
+// OpenAI "sk-proj-…" and older plain "sk-…".
 const KEY_SHAPES = [
   /AIza[0-9A-Za-z_-]{20,}/g,
   /AQ\.[0-9A-Za-z_.-]{20,}/g,
   /sk-ant-[0-9A-Za-z_-]{10,}/g,
+  /\bsk-[0-9A-Za-z_-]{20,}/g,
 ];
 
 /** Strip api_key=..., every configured key, and anything shaped like a key. */
 export function redactSecrets(text) {
   let out = String(text ?? "").replace(/(api_key=)[^&\s"']+/gi, "$1[redacted]");
-  const keys = [config.serperApiKey, config.serpapiApiKey, config.geminiApiKey, config.anthropicApiKey];
+  const keys = [
+    config.serperApiKey, config.serpapiApiKey, config.geminiApiKey, config.anthropicApiKey,
+    config.openaiApiKey,
+  ];
   for (const key of keys) {
     if (typeof key === "string" && key.trim().length >= 8) out = out.split(key.trim()).join("[redacted]");
   }

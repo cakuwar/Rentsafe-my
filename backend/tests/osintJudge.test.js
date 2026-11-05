@@ -19,6 +19,8 @@ vi.mock("../src/services/cache.service.js", () => ({
   counterIncrBy: h.cache.incr,
 }));
 vi.mock("../src/services/nlp.service.js", () => ({ classifyText: h.classifyText, ocrScreenshots: vi.fn() }));
+// The pipeline saves every result; tests must never write to a real database.
+vi.mock("../src/db/listings.repo.js", () => ({ insertListing: vi.fn(async () => null) }));
 vi.mock("@google/genai", async (importOriginal) => ({
   ...(await importOriginal()),
   GoogleGenAI: class {
@@ -289,11 +291,11 @@ describe.each(["gemini", "anthropic"])("judge via %s", (provider) => {
     expect(result.points).toBe(8);
   });
 
-  it("reports a timeout after 15 s", async () => {
+  it("reports a timeout after 30 s", async () => {
     respond({ phone: [hit("https://forum.lowyat.net/t/12", "Warning", "012-345 6789 scammed me")] });
     h.gemini.mockImplementation(() => new Promise(() => {}));
     h.anthropic.mockImplementation(() => new Promise(() => {}));
-    const result = await withFakeTimers(() => searchAgentReputation({ phone: PHONE }), 15_000);
+    const result = await withFakeTimers(() => searchAgentReputation({ phone: PHONE }), 30_000);
 
     expect(result.verifier).toBe("rules_only");
     expect(result.verifierError).toBe("timeout");
