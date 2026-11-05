@@ -1,17 +1,25 @@
 # Held-out real conversations — SEALED
 
-This folder is the honest test set. It is **empty on purpose** until real
-conversations are put here, and nothing in it may ever be used for training.
+This folder is the honest test set, and nothing in it may ever be used for
+training.
+
+**Status (November 2026).** The sealed CSV set (`test_real_<nn>.csv`) is still
+empty. Beside it, `cases/` holds the **blind test** of the whole system, run on
+2026-10-25/26: 15 cases (10 scam, 5 legitimate) collected after the model was
+trained, each with its screenshots, form input, API result and frontend result.
+Nine of the scams are real conversations; case08 (scam) and all five legitimate
+cases were role-played by the author. `cases/run_case.py --rebuild` rebuilds
+`cases/results.csv`. Results: `docs/MODEL_EVALUATION.md` §4.10 and §6.
 
 ## Why it exists
 
-Every number currently reported for layer 2 — including a validation F1 of
-1.0000 — is measured on data that is ~95% synthetic, generated from about 20
-templates, with the model's checkpoint selected on that same validation set. All
-24 real conversations the project holds are inside `data/processed/random/` and
-`data/processed/grouped/`, so they are in training.
+Every number reported for layer 2 on the corpus is measured on data that is
+~95% synthetic, generated from about 20 templates, with the model's checkpoint
+selected on the validation set. All 24 real conversations the project holds are
+inside `data/processed/random/` and `data/processed/grouped/`, so they are in
+training.
 
-That means **no existing number predicts real-world performance.** This folder
+That means **no corpus number predicts real-world performance.** This folder
 is where that gets fixed.
 
 ## The rule

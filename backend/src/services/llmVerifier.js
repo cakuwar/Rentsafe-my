@@ -3,7 +3,7 @@
 // saying "bukan scam" and a victim's report all contain the same words. The
 // judge labels each candidate that survived the rules in osint.service.js.
 //
-// One batched call per search within a 15 s budget. The only retry is a
+// One batched call per search within a 30 s budget. The only retry is a
 // single one after a 5xx ("unavailable": the model is overloaded — a real
 // gemini-3.8-flash call returned 503 "high demand"), 1 s later, inside the
 // same budget. Any other failure throws at once, and the caller falls back to
@@ -23,7 +23,11 @@ export const VERDICT_LABELS = [
   "unrelated",
 ];
 
-const TIMEOUT_MS = 15_000;
+// 30 s, not 15: in the blind test (2026-10-26) Gemini took about 24 s to
+// judge one case, so a 15 s budget threw away an answer that was coming and
+// fell back to rules only. The judge runs alongside the NLP call, so most of
+// this wait is hidden behind it.
+const TIMEOUT_MS = 30_000;
 const RETRY_DELAY_MS = 1000;
 const MAX_ERROR_CHARS = 300;
 const DEFAULT_ANTHROPIC_MODEL = "claude-haiku-4-5-20251001";
@@ -237,7 +241,7 @@ export function sanitiseVerdicts(raw, candidates) {
  * candidates: [{ id, queryType, identifier, domain, title, snippet }]; any
  * other field is stripped before sending. Throws a JudgeError (with
  * .verifierError and .retried) on failure. Retries once, 1 s later, only when
- * the provider is unavailable (5xx); the 15 s budget covers both attempts.
+ * the provider is unavailable (5xx); the 30 s budget covers both attempts.
  */
 export async function verifyCandidates(candidates, settings = verifierSettings()) {
   if (!settings.enabled) throw new JudgeError("other", "OSINT judge is not configured");

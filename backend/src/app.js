@@ -13,6 +13,7 @@ import healthRoutes from "./routes/health.routes.js";
 import analyzeRoutes from "./routes/analyze.routes.js";
 import searchRoutes from "./routes/search.routes.js";
 import priceRoutes from "./routes/price.routes.js";
+import listingRoutes from "./routes/listing.routes.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 
 const app = express();
@@ -39,6 +40,7 @@ app.use("/api/health", healthRoutes);
 app.use("/api/analyze", analyzeRoutes);
 app.use("/api/search", searchRoutes);
 app.use("/api/price", priceRoutes);
+app.use("/api/listings", listingRoutes);
 
 app.use((req, res) => {
 	res.status(404).json({ error: "Route not found" });

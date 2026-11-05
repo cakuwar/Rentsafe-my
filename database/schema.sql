@@ -5,26 +5,28 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -- 1. listings ---------------------------------------------------------------
--- User-submitted listings + parsed metadata + computed result.
+-- One row per analysis: the computed result, never the personal data behind
+-- it (migration 003). raw_text and the agent columns are always NULL: the
+-- chat and the agent's identifiers are not stored (data minimisation, PDPA).
 CREATE TABLE IF NOT EXISTS listings (
     listing_id       UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    raw_text         TEXT NOT NULL,
+    raw_text         TEXT,                     -- not stored (always NULL)
     source_type      TEXT NOT NULL CHECK (source_type IN ('text', 'screenshot')),
-    agent_name       TEXT,
-    agent_phone      TEXT,
-    ren_number       TEXT,
-    company_name     TEXT,
-    price            NUMERIC(10, 2),
+    agent_name       TEXT,                     -- not stored (always NULL)
+    agent_phone      TEXT,                     -- not stored (always NULL)
+    ren_number       TEXT,                     -- not stored (always NULL)
+    company_name     TEXT,                     -- not stored (always NULL)
+    price            NUMERIC(10, 2),           -- from the Listing details form
     area             TEXT,
     bedrooms         INTEGER,
     property_type    TEXT,
-    risk_score       INTEGER CHECK (risk_score BETWEEN 0 AND 100),
-    risk_band        TEXT CHECK (risk_band IN ('LOW','MODERATE','HIGH','CRITICAL')),
+    risk_score       INTEGER CHECK (risk_score BETWEEN 0 AND 100),  -- NULL when UNKNOWN
+    risk_band        TEXT CHECK (risk_band IN ('LOW','MODERATE','HIGH','CRITICAL','UNKNOWN')),
     component_scores JSONB,
-    narrative        TEXT,
+    facts            JSONB,                    -- llm.service.js narrativeFacts(result)
+    narrative        JSONB,                    -- { en, ms, provider, model, promptVersion }
     created_at       TIMESTAMPTZ NOT NULL DEFAULT now()
 );
-CREATE INDEX IF NOT EXISTS idx_listings_phone ON listings (agent_phone);
 CREATE INDEX IF NOT EXISTS idx_listings_created ON listings (created_at);
 
 -- 2. price_baseline ---------------------------------------------------------

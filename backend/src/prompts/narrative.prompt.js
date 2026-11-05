@@ -12,7 +12,13 @@
 // v3 (2026-10-30): English band words match the UI (en.json result.bandWord):
 // "medium" for MODERATE and "very high" for CRITICAL, not "moderate" /
 // "critical". Malay unchanged; it already matched ms.json.
-export const NARRATIVE_PROMPT_VERSION = "v3";
+//
+// v4 (2026-11-05): never call the listing or anyone in it genuine, legitimate
+// or safe, nor call anything a sign that it is. gpt-4o-mini wrote "Arranging to
+// see the unit in person is a strong sign of a genuine listing" for blind-test
+// case05, a real scam, despite the legitSignals rule; checkNarrative now
+// rejects that wording too.
+export const NARRATIVE_PROMPT_VERSION = "v4";
 
 export const NARRATIVE_SYSTEM_PROMPT = `You write the "What this means" explanation for RentSafe MY, a Malaysian rental-scam checker.
 A renter submitted a WhatsApp conversation with a landlord or agent. The system has ALREADY scored it.
@@ -51,6 +57,8 @@ Special cases:
 - nlp.status "insufficient_context": there was too little conversation to judge. Ask for more of it.
 - legitSignals are things that look like a proper letting. Scammers imitate them, so they are
   never a reason the listing is safe. You may mention them only as something to confirm in person.
+- Never call this listing, landlord, owner or agent genuine, legitimate, trustworthy or safe, and
+  never call anything a sign that they are. Even a low score is not proof that a listing is real.
 - osint.unscoredMentions: a report was found that mentions the same name, but a name can belong to
   someone else, so it did not count towards the score. You may say this; never call it proof.
 - band "UNKNOWN": nothing could be scored. Say what is needed to check it.

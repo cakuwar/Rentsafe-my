@@ -44,6 +44,7 @@ export const openapiSpec = {
     { name: "Analysis", description: "Full risk analysis of a rental conversation" },
     { name: "Public search", description: "Look an agent up on the public web (OSINT)" },
     { name: "Price", description: "Compare a rent with the KL / Selangor baseline" },
+    { name: "Saved results", description: "Results of earlier analyses, without personal data" },
   ],
   paths: {
     "/api/health": {
@@ -249,6 +250,40 @@ export const openapiSpec = {
           },
           400: validationError,
           503: { description: "baseline_unavailable", content: { "application/json": { schema: { $ref: "#/components/schemas/PriceResult" } } } },
+        },
+      },
+    },
+    "/api/listings/{id}": {
+      get: {
+        tags: ["Saved results"],
+        summary: "Fetch a saved analysis result",
+        description: "Every analysis is saved under its `listingId`. Only what the system produced is kept: score, "
+          + "band, components, the facts the explanation was written from, the explanation, and the Listing details "
+          + "form. Never the conversation, nor the agent's name, phone, REN number or company.",
+        parameters: [{ name: "id", in: "path", required: true, schema: { type: "string", format: "uuid" } }],
+        responses: {
+          200: {
+            description: "The saved result",
+            content: { "application/json": { schema: { type: "object", properties: {
+              listingId: { type: "string", format: "uuid" },
+              createdAt: { type: "string", format: "date-time" },
+              sourceType: { type: "string", enum: ["text", "screenshot"] },
+              riskScore: { type: "integer", nullable: true, description: "null when the band is UNKNOWN" },
+              riskBand: { type: "string", enum: ["LOW", "MODERATE", "HIGH", "CRITICAL", "UNKNOWN"] },
+              components: { type: "object", nullable: true },
+              facts: { type: "object", description: "The explanation's input: band, score, red-flag labels, price figures, OSINT counts" },
+              narrative: { type: "object", nullable: true, properties: {
+                en: { type: "string" }, ms: { type: "string" }, provider: { type: "string" }, model: { type: "string" }, promptVersion: { type: "string" },
+              } },
+              property: { type: "object", properties: {
+                price: { type: "number", nullable: true }, area: { type: "string", nullable: true },
+                bedrooms: { type: "integer", nullable: true }, propertyType: { type: "string", nullable: true },
+              } },
+            } } } },
+          },
+          400: { description: "The id is not a UUID" },
+          404: { description: "No result saved under this id" },
+          503: { description: "The database cannot be reached" },
         },
       },
     },

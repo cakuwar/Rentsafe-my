@@ -1,16 +1,13 @@
-// Central config, read once from env.
+// Central config, read once from the environment (backend/.env; every
+// variable is listed in backend/.env.example). Local-dev defaults where one
+// makes sense; secrets stay undefined when unset.
 //
-// TODO: implement yourself.
-// 1. Build a `config` object read from process.env. Based on backend/.env.example
-//    you'll need at least: NODE_ENV, PORT, DATABASE_URL, REDIS_URL,
-//    NLP_SERVICE_URL, SERPER_API_KEY, ANTHROPIC_API_KEY, ANTHROPIC_MODEL,
-//    FRONTEND_ORIGIN. Give sane local-dev defaults where it makes sense
-//    (e.g. PORT=4000) and leave secrets undefined if not set.
-// 2. Decide SCORE_WEIGHTS for the three signals (nlp / osint / price) — this
-//    is a real design decision for your report: how much should each signal
-//    contribute to the final 0-100 score? They must sum to 100.
-// 3. Decide RISK_BANDS: the score ranges that map to LOW/MODERATE/HIGH/CRITICAL
-//    (and whatever UI colour you want per band).
+// SCORE_WEIGHTS: how much each signal can add to the 0-100 score. The NLP
+// classifier reads the conversation itself, so it carries the most; OSINT
+// needs public complaints to exist, and a low price alone is weak evidence.
+// RISK_BANDS: the score ranges behind LOW / MODERATE / HIGH / CRITICAL; a
+// score on a boundary goes to the higher band (docs/API_SPEC.md, and the ROC
+// check in docs/MODEL_EVALUATION.md §4.10).
 
 // An empty `KEY=` line in .env must fall back to the default, not become 0 —
 // a daily search limit of 0 would silently disable OSINT.
@@ -50,7 +47,8 @@ export const config = {
   llmVerifierProvider: (process.env.LLM_VERIFIER_PROVIDER ?? "").trim().toLowerCase() || "gemini",
   osintLlmVerify: boolFromEnv("OSINT_LLM_VERIFY"),
   // Result narrative (services/llm.service.js). Same provider and model as the
-  // judge unless NARRATIVE_PROVIDER names another; LLM_NARRATIVE=false turns
+  // judge unless NARRATIVE_PROVIDER names another (gemini, anthropic or
+  // openai); LLM_NARRATIVE=false turns
   // it off, and the frontend then builds the explanation from the result.
   narrativeProvider: (process.env.NARRATIVE_PROVIDER ?? "").trim().toLowerCase() || null,
   llmNarrative: boolFromEnv("LLM_NARRATIVE"),
@@ -58,6 +56,11 @@ export const config = {
   geminiModel: process.env.GEMINI_MODEL?.trim() || undefined,
   anthropicApiKey: process.env.ANTHROPIC_API_KEY,
   anthropicModel: process.env.ANTHROPIC_MODEL,
+  // OpenAI, for the narrative only (NARRATIVE_PROVIDER=openai); the OSINT
+  // judge never uses it. OPENAI_MODEL has no default on purpose: copy a
+  // non-reasoning model ID from platform.openai.com/docs/models.
+  openaiApiKey: process.env.OPENAI_API_KEY,
+  openaiModel: process.env.OPENAI_MODEL?.trim() || undefined,
   frontendOrigin: process.env.FRONTEND_ORIGIN ?? "http://localhost:5173",
 };
 

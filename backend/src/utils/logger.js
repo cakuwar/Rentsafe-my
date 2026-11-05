@@ -1,6 +1,6 @@
-// Minimal logger. Swap for pino/winston later if needed.
-// TODO: export a `logger` object with info/warn/error(message) methods,
-// each printing a timestamped line to the appropriate console stream.
+// Minimal logger: one timestamped line per message, info to stdout and
+// warn / error to stderr. Messages that could carry a secret or a phone
+// number are redacted or masked by the caller (utils/keys.js, maskPhone).
 function write(method, message) {
 	console[method](`[${new Date().toISOString()}] ${message}`);
 }
