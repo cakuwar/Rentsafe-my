@@ -47,6 +47,10 @@ services:
     build: ./frontend
     depends_on: [backend]
     env_file: ./frontend/.env
+    environment:
+      # where vite.config.js sends /api calls; inside Docker that is the
+      # backend container, not localhost
+      BACKEND_URL: http://backend:4000
     ports:
       - "${FRONTEND_PORT:-5173}:5173"
     profiles: ["full"]

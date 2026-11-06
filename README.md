@@ -70,6 +70,10 @@ After installing dependencies once, run this from the project root:
 This starts PostgreSQL and Redis with Docker, then opens separate terminals for
 the backend, NLP/OCR service, and frontend.
 
+To let UAT testers use it from their own devices, `.\scripts\run-uat.ps1`
+does the same and then shares the frontend on a public Cloudflare tunnel link
+(`docs/SETUP.md` §5).
+
 ```bash
 # 1. clone, then copy env templates
 cp .env.example .env

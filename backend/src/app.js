@@ -18,6 +18,14 @@ import { errorHandler } from "./middleware/errorHandler.js";
 
 const app = express();
 
+// Requests can reach the API through proxies on this same machine: the Vite
+// server's /api proxy, and the Cloudflare tunnel used for UAT
+// (scripts/run-uat.ps1). Without this, every request looks like it comes from
+// 127.0.0.1, so all testers share one rate-limit budget. Trusting loopback
+// only lets req.ip use X-Forwarded-For when the hop before is local; a
+// client connecting directly from elsewhere cannot set its own IP.
+app.set("trust proxy", "loopback");
+
 app.use(helmet());
 app.use(cors({ origin: config.frontendOrigin }));
 app.use(morgan("dev"));
