@@ -1,10 +1,13 @@
 // Axios instance + API calls to the RentSafe backend (contract: docs/API_SPEC.md).
 import axios from "axios";
 
-// Analysis can take a while: NLP + OSINT (with its 15 s judge budget) run in
+// Analysis can take a while: NLP + OSINT (with its 30 s judge budget) run in
 // parallel, and screenshots go through OCR first.
+//
+// "/api" is relative: the request goes to whatever address served the page,
+// and the Vite server passes it on to the backend (vite.config.js).
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:4000/api",
+  baseURL: import.meta.env.VITE_API_BASE_URL || "/api",
   timeout: 120000,
 });
 

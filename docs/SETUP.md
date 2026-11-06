@@ -81,6 +81,34 @@ curl -X POST http://localhost:8000/classify \
   -d '{"text":"byr deposit dulu, owner overseas","language":"auto"}'
 ```
 
+## 5. Share it for user acceptance testing (UAT)
+
+The system is not deployed. To let testers use it from their own phone or
+laptop while it runs on this machine, install Cloudflare's tunnel tool once and
+run the UAT script:
+
+```powershell
+winget install --id Cloudflare.cloudflared   # once
+.\scripts\run-uat.ps1
+```
+
+The script starts the database, backend and NLP service (without auto-reload),
+builds the frontend and serves the built version on port 4173, then opens a
+Cloudflare quick tunnel and prints a public `https://….trycloudflare.com` link
+(also copied to the clipboard). Only port 4173 is shared. The frontend passes
+`/api` calls on to the backend (`frontend/vite.config.js`), so the backend, NLP
+service and database are never exposed directly. The backend trusts
+`X-Forwarded-For` from local proxies only (`backend/src/app.js`), so each tester
+gets their own rate-limit budget.
+
+- Keep the machine on, awake and online for the whole session.
+- The link changes every time the script runs.
+- Each analysis spends API credit (search, judge, narrative). OSINT results are
+  cached per identifier, so many testers checking the same number cost one
+  search.
+- To stop: `.\scripts\stop-uat.ps1`, or close the "RentSafe UAT" windows.
+  PostgreSQL and Redis keep running in Docker for next time.
+
 ## Tests
 
 ```bash
