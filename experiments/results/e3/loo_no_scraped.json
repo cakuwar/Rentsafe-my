@@ -1,0 +1,493 @@
+{
+  "generated_at": "2026-11-09T15:06:59.627Z",
+  "method": "leave-one-out over data/processed/baseline_listings.csv; D4 eligibility applied after removing the held-out listing; production scoreAgainstBaseline; price_adjusted",
+  "definitions": {
+    "flagged": "the held-out listing receives > 0 points",
+    "flagged10": "the held-out listing receives >= 10 points",
+    "fp_rate_gt0": "flagged / scored",
+    "fp_rate_ge10": "flagged10 / scored",
+    "scored": "held-out listings whose stratum is still eligible (>= 5 listings, >= 3 buildings) without them"
+  },
+  "variants": [
+    {
+      "name": "start30_guard",
+      "p25Guard": true
+    },
+    {
+      "name": "start30_noguard",
+      "p25Guard": false
+    }
+  ],
+  "whole_units": {
+    "listings": 13764,
+    "not_scored": 1440,
+    "variants": {
+      "start30_guard": {
+        "scored": 12324,
+        "flagged": 1036,
+        "flagged10": 1036,
+        "tiers": {
+          "10": 788,
+          "15": 248
+        },
+        "guarded": 18,
+        "fp_rate_gt0": 0.0841,
+        "fp_rate_ge10": 0.0841
+      },
+      "start30_noguard": {
+        "scored": 12324,
+        "flagged": 1054,
+        "flagged10": 1054,
+        "tiers": {
+          "10": 806,
+          "15": 248
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0855,
+        "fp_rate_ge10": 0.0855
+      }
+    }
+  },
+  "rooms": {
+    "listings": 84,
+    "not_scored": 20,
+    "variants": {
+      "start30_guard": {
+        "scored": 64,
+        "flagged": 5,
+        "flagged10": 5,
+        "tiers": {
+          "10": 3,
+          "15": 2
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0781,
+        "fp_rate_ge10": 0.0781
+      },
+      "start30_noguard": {
+        "scored": 64,
+        "flagged": 5,
+        "flagged10": 5,
+        "tiers": {
+          "10": 3,
+          "15": 2
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0781,
+        "fp_rate_ge10": 0.0781
+      }
+    }
+  },
+  "by_property_type": {
+    "room": {
+      "start30_guard": {
+        "scored": 64,
+        "flagged": 5,
+        "flagged10": 5,
+        "tiers": {
+          "10": 3,
+          "15": 2
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0781,
+        "fp_rate_ge10": 0.0781
+      },
+      "start30_noguard": {
+        "scored": 64,
+        "flagged": 5,
+        "flagged10": 5,
+        "tiers": {
+          "10": 3,
+          "15": 2
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0781,
+        "fp_rate_ge10": 0.0781
+      }
+    },
+    "condo": {
+      "start30_guard": {
+        "scored": 8715,
+        "flagged": 760,
+        "flagged10": 760,
+        "tiers": {
+          "10": 555,
+          "15": 205
+        },
+        "guarded": 14,
+        "fp_rate_gt0": 0.0872,
+        "fp_rate_ge10": 0.0872
+      },
+      "start30_noguard": {
+        "scored": 8715,
+        "flagged": 774,
+        "flagged10": 774,
+        "tiers": {
+          "10": 569,
+          "15": 205
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0888,
+        "fp_rate_ge10": 0.0888
+      }
+    },
+    "apartment": {
+      "start30_guard": {
+        "scored": 3319,
+        "flagged": 267,
+        "flagged10": 267,
+        "tiers": {
+          "10": 225,
+          "15": 42
+        },
+        "guarded": 4,
+        "fp_rate_gt0": 0.0804,
+        "fp_rate_ge10": 0.0804
+      },
+      "start30_noguard": {
+        "scored": 3319,
+        "flagged": 271,
+        "flagged10": 271,
+        "tiers": {
+          "10": 229,
+          "15": 42
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0817,
+        "fp_rate_ge10": 0.0817
+      }
+    },
+    "flat": {
+      "start30_guard": {
+        "scored": 290,
+        "flagged": 9,
+        "flagged10": 9,
+        "tiers": {
+          "10": 8,
+          "15": 1
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.031,
+        "fp_rate_ge10": 0.031
+      },
+      "start30_noguard": {
+        "scored": 290,
+        "flagged": 9,
+        "flagged10": 9,
+        "tiers": {
+          "10": 8,
+          "15": 1
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.031,
+        "fp_rate_ge10": 0.031
+      }
+    }
+  },
+  "by_source": {
+    "manual": {
+      "start30_guard": {
+        "scored": 64,
+        "flagged": 5,
+        "flagged10": 5,
+        "tiers": {
+          "10": 3,
+          "15": 2
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0781,
+        "fp_rate_ge10": 0.0781
+      },
+      "start30_noguard": {
+        "scored": 64,
+        "flagged": 5,
+        "flagged10": 5,
+        "tiers": {
+          "10": 3,
+          "15": 2
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0781,
+        "fp_rate_ge10": 0.0781
+      }
+    },
+    "kaggle": {
+      "start30_guard": {
+        "scored": 12324,
+        "flagged": 1036,
+        "flagged10": 1036,
+        "tiers": {
+          "10": 788,
+          "15": 248
+        },
+        "guarded": 18,
+        "fp_rate_gt0": 0.0841,
+        "fp_rate_ge10": 0.0841
+      },
+      "start30_noguard": {
+        "scored": 12324,
+        "flagged": 1054,
+        "flagged10": 1054,
+        "tiers": {
+          "10": 806,
+          "15": 248
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0855,
+        "fp_rate_ge10": 0.0855
+      }
+    }
+  },
+  "examples_start30_guard_ge10": [
+    {
+      "stratum": "Puchong (Selangor) master",
+      "building": "Aurora Residence",
+      "source": "manual",
+      "price": 650,
+      "median": 1000,
+      "p25": 850,
+      "points": 10,
+      "deviation": 0.35
+    },
+    {
+      "stratum": "Subang Jaya common",
+      "building": "Impian Meridian",
+      "source": "manual",
+      "price": 450,
+      "median": 850,
+      "p25": 575,
+      "points": 15,
+      "deviation": 0.4706
+    },
+    {
+      "stratum": "Subang Jaya common",
+      "building": "USJ 2",
+      "source": "manual",
+      "price": 450,
+      "median": 850,
+      "p25": 575,
+      "points": 15,
+      "deviation": 0.4706
+    },
+    {
+      "stratum": "Subang Jaya common",
+      "building": "Casa Subang Jaya",
+      "source": "manual",
+      "price": 500,
+      "median": 850,
+      "p25": 550,
+      "points": 10,
+      "deviation": 0.4118
+    },
+    {
+      "stratum": "Seri Kembangan master",
+      "building": "Meta City",
+      "source": "manual",
+      "price": 600,
+      "median": 955,
+      "p25": 912.5,
+      "points": 10,
+      "deviation": 0.3717
+    },
+    {
+      "stratum": "Taman Desa condo 4",
+      "building": "Tiara Faber",
+      "source": "kaggle",
+      "price": 1440,
+      "median": 3960,
+      "p25": 3960,
+      "points": 15,
+      "deviation": 0.6364
+    },
+    {
+      "stratum": "Cheras (KL) condo 3",
+      "building": "Majestic Maxim",
+      "source": "kaggle",
+      "price": 1200,
+      "median": 1800,
+      "p25": 1620,
+      "points": 10,
+      "deviation": 0.3333
+    },
+    {
+      "stratum": "Cheras (KL) condo 3",
+      "building": "Majestic Maxim",
+      "source": "kaggle",
+      "price": 720,
+      "median": 1800,
+      "p25": 1620,
+      "points": 15,
+      "deviation": 0.6
+    },
+    {
+      "stratum": "Cheras (KL) condo 3",
+      "building": "Riana South @ Bukit Manda'rina",
+      "source": "kaggle",
+      "price": 1080,
+      "median": 1800,
+      "p25": 1620,
+      "points": 10,
+      "deviation": 0.4
+    },
+    {
+      "stratum": "Cheras (KL) condo 3",
+      "building": "Majestic Maxim",
+      "source": "kaggle",
+      "price": 1080,
+      "median": 1800,
+      "p25": 1620,
+      "points": 10,
+      "deviation": 0.4
+    },
+    {
+      "stratum": "Cheras (KL) condo 3",
+      "building": "Warisan City View",
+      "source": "kaggle",
+      "price": 840,
+      "median": 1800,
+      "p25": 1620,
+      "points": 15,
+      "deviation": 0.5333
+    },
+    {
+      "stratum": "Cheras (KL) condo 3",
+      "building": "Nusa Mewah Villa Condominium",
+      "source": "kaggle",
+      "price": 1140,
+      "median": 1800,
+      "p25": 1620,
+      "points": 10,
+      "deviation": 0.3667
+    },
+    {
+      "stratum": "Cheras (KL) condo 3",
+      "building": "Ketumbar Heights",
+      "source": "kaggle",
+      "price": 1080,
+      "median": 1800,
+      "p25": 1620,
+      "points": 10,
+      "deviation": 0.4
+    },
+    {
+      "stratum": "Cheras (KL) condo 3",
+      "building": "",
+      "source": "kaggle",
+      "price": 1140,
+      "median": 1800,
+      "p25": 1620,
+      "points": 10,
+      "deviation": 0.3667
+    },
+    {
+      "stratum": "Cheras (KL) condo 3",
+      "building": "Majestic Maxim",
+      "source": "kaggle",
+      "price": 1080,
+      "median": 1800,
+      "p25": 1620,
+      "points": 10,
+      "deviation": 0.4
+    },
+    {
+      "stratum": "Cheras (KL) condo 3",
+      "building": "Majestic Maxim",
+      "source": "kaggle",
+      "price": 1078.8,
+      "median": 1800,
+      "p25": 1620,
+      "points": 10,
+      "deviation": 0.4007
+    },
+    {
+      "stratum": "Cheras (KL) condo 3",
+      "building": "Puncak Banyan",
+      "source": "kaggle",
+      "price": 1260,
+      "median": 1800,
+      "p25": 1620,
+      "points": 10,
+      "deviation": 0.3
+    },
+    {
+      "stratum": "Cheras (KL) condo 3",
+      "building": "Majestic Maxim",
+      "source": "kaggle",
+      "price": 1200,
+      "median": 1800,
+      "p25": 1620,
+      "points": 10,
+      "deviation": 0.3333
+    },
+    {
+      "stratum": "Cheras (KL) condo 3",
+      "building": "Majestic Maxim",
+      "source": "kaggle",
+      "price": 1078.8,
+      "median": 1800,
+      "p25": 1620,
+      "points": 10,
+      "deviation": 0.4007
+    },
+    {
+      "stratum": "Cheras (KL) condo 3",
+      "building": "Puncak Banyan",
+      "source": "kaggle",
+      "price": 1198.8,
+      "median": 1800,
+      "p25": 1620,
+      "points": 10,
+      "deviation": 0.334
+    },
+    {
+      "stratum": "Sentul apartment 2",
+      "building": "Bandar Baru Sentul",
+      "source": "kaggle",
+      "price": 1020,
+      "median": 1680,
+      "p25": 1500,
+      "points": 10,
+      "deviation": 0.3929
+    },
+    {
+      "stratum": "Sentul apartment 2",
+      "building": "Perumahan Awam Sri Kelantan",
+      "source": "kaggle",
+      "price": 960,
+      "median": 1680,
+      "p25": 1500,
+      "points": 10,
+      "deviation": 0.4286
+    },
+    {
+      "stratum": "Mont Kiara condo 1",
+      "building": "Arte Mont Kiara",
+      "source": "kaggle",
+      "price": 1558.8,
+      "median": 2520,
+      "p25": 2040,
+      "points": 10,
+      "deviation": 0.3814
+    },
+    {
+      "stratum": "Mont Kiara condo 1",
+      "building": "The Ooak (Kiara 163)",
+      "source": "kaggle",
+      "price": 1500,
+      "median": 2520,
+      "p25": 2040,
+      "points": 10,
+      "deviation": 0.4048
+    },
+    {
+      "stratum": "Mont Kiara condo 1",
+      "building": "The Ooak (Kiara 163)",
+      "source": "kaggle",
+      "price": 1680,
+      "median": 2520,
+      "p25": 2040,
+      "points": 10,
+      "deviation": 0.3333
+    }
+  ]
+}

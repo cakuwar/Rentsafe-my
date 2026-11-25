@@ -1,0 +1,73 @@
+{
+ "phase": "A",
+ "label": "",
+ "smoke": false,
+ "started": "2026-11-10T11:01:49+0800",
+ "finished": "2026-11-10T11:04:35+0800",
+ "cpu_logical": 12,
+ "ram_total_gb": 7.7,
+ "cases": 15,
+ "http_200": 15,
+ "score_matches_table_4_11": 12,
+ "band_matches": 15,
+ "mismatches": [
+  {
+   "case_id": "case10",
+   "score": 59,
+   "table_4_11_score": 64,
+   "band": "HIGH",
+   "blind_band": "HIGH",
+   "nlp_pts": 59,
+   "blind_nlp_pts": "59",
+   "osint_pts": 0,
+   "blind_osint_pts": "5",
+   "price_pts": 0,
+   "blind_price_pts": "0",
+   "osint_status": "search_failed"
+  },
+  {
+   "case_id": "case12",
+   "score": 69,
+   "table_4_11_score": 74,
+   "band": "HIGH",
+   "blind_band": "HIGH",
+   "nlp_pts": 59,
+   "blind_nlp_pts": "59",
+   "osint_pts": 0,
+   "blind_osint_pts": "5",
+   "price_pts": 10,
+   "blind_price_pts": "10",
+   "osint_status": "search_failed"
+  },
+  {
+   "case_id": "case13",
+   "score": 59,
+   "table_4_11_score": 64,
+   "band": "HIGH",
+   "blind_band": "HIGH",
+   "nlp_pts": 59,
+   "blind_nlp_pts": "59",
+   "osint_pts": 0,
+   "blind_osint_pts": "5",
+   "price_pts": 0,
+   "blind_price_pts": "0",
+   "osint_status": "search_failed"
+  }
+ ],
+ "end_to_end_total_s": 113.09,
+ "end_to_end_median_s": 6.537,
+ "end_to_end_max_s": 16.132,
+ "ocr_median_s": 2.028,
+ "classify_median_s": 0.216,
+ "rest_median_s": 4.086,
+ "explanations": 15,
+ "model_service_warmup_s": 3.317,
+ "resources": {
+  "samples": 161,
+  "available_mb_min": 603,
+  "available_mb_median": 828,
+  "cpu_pct_mean": 37.6,
+  "rss_nlp_mb_max": 1032,
+  "rss_backend_mb_max": 97
+ }
+}

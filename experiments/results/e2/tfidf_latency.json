@@ -1,0 +1,7 @@
+{
+ "note": "TF-IDF+LR variant B, CPU, one conversation per call, model already loaded",
+ "validation_median_s": 0.002,
+ "validation_mean_s": 0.0022,
+ "blind_median_s": 0.0033,
+ "blind_max_s": 0.0089
+}

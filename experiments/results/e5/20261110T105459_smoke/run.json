@@ -1,0 +1,10 @@
+﻿{
+    "tag":  "20261110T105459_smoke",
+    "smoke":  true,
+    "weights_sha256":  "dc4244d28c223a4375173cbbe6628f2c874609e5dcf34c6b3672403dc5851a9f",
+    "baseline_rows":  "698 whole-unit strata, 19 room strata",
+    "model_service_start_s":  40.5,
+    "postflight_unchanged":  true,
+    "experiment_project_removed":  true,
+    "completed":  true
+}

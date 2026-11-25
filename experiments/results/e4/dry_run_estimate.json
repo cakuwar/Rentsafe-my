@@ -1,0 +1,18 @@
+{
+ "prompt_sha256": "485edc001fedfe3696d58f3ccacb52083fa01df5121392572ba9f74ecc8d46d2",
+ "estimate": {
+  "calls": 254,
+  "input_tokens_est": 86997,
+  "output_tokens_max": 15240,
+  "cost_usd_est": 0.0222,
+  "cost_usd_upper_x3": 0.0666,
+  "blind_estimated_from_ocr_counts": false
+ },
+ "texts_by_set": {
+  "blind_15": 15,
+  "new_wording_144": 144,
+  "validation_95": 95
+ },
+ "texts_with_replacements": 46,
+ "texts_still_matching_a_pattern": []
+}

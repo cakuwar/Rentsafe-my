@@ -1,0 +1,317 @@
+{
+ "lost": [
+  [
+   "Cheras (KL)",
+   "condo",
+   "0"
+  ],
+  [
+   "Damansara Perdana",
+   "condo",
+   "2"
+  ],
+  [
+   "Kelana Jaya",
+   "condo",
+   "3"
+  ],
+  [
+   "Pantai",
+   "condo",
+   "2"
+  ],
+  [
+   "Segambut",
+   "condo",
+   "1"
+  ],
+  [
+   "Setapak",
+   "condo",
+   "0"
+  ]
+ ],
+ "gained": [],
+ "median_changed": [
+  [
+   "Ampang (KL)",
+   "condo",
+   "3",
+   2160.0,
+   2100.0
+  ],
+  [
+   "Ampang (KL)",
+   "condo",
+   "4",
+   3300.0,
+   3150.0
+  ],
+  [
+   "Ara Damansara",
+   "condo",
+   "3",
+   3060.0,
+   3120.0
+  ],
+  [
+   "Bangsar South",
+   "condo",
+   "1",
+   2500.0,
+   2520.0
+  ],
+  [
+   "Bukit Bintang",
+   "condo",
+   "1",
+   2640.0,
+   2520.0
+  ],
+  [
+   "Bukit Bintang",
+   "condo",
+   "2",
+   3840.0,
+   3360.0
+  ],
+  [
+   "Bukit Bintang",
+   "condo",
+   "3",
+   4020.0,
+   3840.0
+  ],
+  [
+   "Bukit Jalil",
+   "condo",
+   "2",
+   1558.2,
+   1557.6
+  ],
+  [
+   "Bukit Jalil",
+   "condo",
+   "3",
+   2280.0,
+   2278.8
+  ],
+  [
+   "Cheras (KL)",
+   "condo",
+   "4",
+   2220.0,
+   2160.0
+  ],
+  [
+   "Damansara Heights",
+   "condo",
+   "1",
+   1920.0,
+   1680.0
+  ],
+  [
+   "Damansara Heights",
+   "condo",
+   "2",
+   5290.0,
+   2368.8
+  ],
+  [
+   "Desa Petaling",
+   "condo",
+   "3",
+   1379.4,
+   1438.8
+  ],
+  [
+   "Dutamas",
+   "condo",
+   "2",
+   2640.0,
+   2160.0
+  ],
+  [
+   "Jalan Kuching",
+   "condo",
+   "2",
+   2160.0,
+   2130.0
+  ],
+  [
+   "KL City Centre",
+   "condo",
+   "1",
+   2220.0,
+   2160.0
+  ],
+  [
+   "KL City Centre",
+   "condo",
+   "2",
+   3600.0,
+   3360.0
+  ],
+  [
+   "KL City Centre",
+   "condo",
+   "3",
+   3180.0,
+   3000.0
+  ],
+  [
+   "KL City Centre",
+   "condo",
+   "4",
+   5880.0,
+   6000.0
+  ],
+  [
+   "KLCC",
+   "condo",
+   "1",
+   3120.0,
+   3000.0
+  ],
+  [
+   "KLCC",
+   "condo",
+   "2",
+   3840.0,
+   3600.0
+  ],
+  [
+   "KLCC",
+   "condo",
+   "3",
+   4560.0,
+   4440.0
+  ],
+  [
+   "Kepong",
+   "condo",
+   "2",
+   1800.0,
+   1860.0
+  ],
+  [
+   "Keramat",
+   "condo",
+   "2",
+   4380.0,
+   4260.0
+  ],
+  [
+   "Keramat",
+   "condo",
+   "4",
+   2400.0,
+   2340.0
+  ],
+  [
+   "Kota Damansara",
+   "condo",
+   "1",
+   1920.0,
+   1860.0
+  ],
+  [
+   "Kota Damansara",
+   "condo",
+   "2",
+   2760.0,
+   2520.0
+  ],
+  [
+   "Mont Kiara",
+   "condo",
+   "1",
+   2400.0,
+   2460.0
+  ],
+  [
+   "Mont Kiara",
+   "condo",
+   "3",
+   4200.0,
+   4080.0
+  ],
+  [
+   "Mont Kiara",
+   "condo",
+   "4",
+   5760.0,
+   5520.0
+  ],
+  [
+   "Old Klang Road",
+   "condo",
+   "2",
+   2280.0,
+   2220.0
+  ],
+  [
+   "Old Klang Road",
+   "condo",
+   "3",
+   2220.0,
+   2190.0
+  ],
+  [
+   "Pantai",
+   "condo",
+   "3",
+   3400.0,
+   3000.0
+  ],
+  [
+   "Petaling Jaya",
+   "condo",
+   "2",
+   2400.0,
+   2459.4
+  ],
+  [
+   "Puchong (Selangor)",
+   "flat",
+   "3",
+   900.0,
+   870.0
+  ],
+  [
+   "Rawang",
+   "apartment",
+   "3",
+   912.0,
+   930.0
+  ],
+  [
+   "Rawang",
+   "condo",
+   "3",
+   1560.0,
+   1620.0
+  ],
+  [
+   "Subang Jaya",
+   "condo",
+   "3",
+   2370.0,
+   2340.0
+  ],
+  [
+   "Wangsa Maju",
+   "condo",
+   "2",
+   2040.0,
+   2340.0
+  ],
+  [
+   "Wangsa Maju",
+   "condo",
+   "4",
+   2400.0,
+   2370.0
+  ]
+ ]
+}

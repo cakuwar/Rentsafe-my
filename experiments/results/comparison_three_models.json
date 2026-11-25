@@ -1,0 +1,37 @@
+{
+ "note": "three-way comparison; run 1 values from the repo records (v3_run1_printout.txt, confusion_matrices.md, MODEL_EVALUATION.md, data/test_real/cases/results.csv)",
+ "xlmr_run1": {
+  "validation_accuracy": 0.9789,
+  "validation_macro_f1": 0.9768,
+  "new_wording_accuracy": 0.9722,
+  "pair_accuracy": 0.9444,
+  "blind_scams_caught": "10/10",
+  "blind_false_alarms": "1/5",
+  "blind_roc_auc": 0.94,
+  "latency_median_s": 0.18,
+  "cost_usd": 0
+ },
+ "tfidf_b": {
+  "validation_accuracy": 1.0,
+  "validation_macro_f1": 1.0,
+  "new_wording_accuracy": 0.9722,
+  "pair_accuracy": 0.9444,
+  "blind_scams_caught": "8/10",
+  "blind_false_alarms": "1/5",
+  "blind_roc_auc": 0.88,
+  "latency_median_s": 0.002,
+  "cost_usd": 0
+ },
+ "gpt_4o_mini": {
+  "validation_accuracy": 0.9474,
+  "validation_macro_f1": 0.9406,
+  "new_wording_accuracy": 1.0,
+  "pair_accuracy": 1.0,
+  "blind_scams_caught": "9/10",
+  "blind_false_alarms": "1/5",
+  "blind_roc_auc": 0.88,
+  "latency_median_s": 1.223,
+  "latency_p95_s": 22.96,
+  "cost_usd": 0.0134
+ }
+}
