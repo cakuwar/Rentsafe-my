@@ -1,0 +1,497 @@
+{
+  "generated_at": "2026-11-09T15:06:18+00:00",
+  "method": "median over strata scorable in both sources (>= 5 listings, >= 3 buildings each) of scraped median / kaggle median, raw prices",
+  "external": "kaggle",
+  "reference": "scraped",
+  "strata_used": 14,
+  "min_strata": 3,
+  "stratum_median_factor": 1.8399,
+  "spread": {
+    "min_ratio": 0.9487,
+    "max_ratio": 3.2432
+  },
+  "building_matched": {
+    "method": "median over (building, bedrooms) pairs listed in both sources of reference median / external median, raw prices",
+    "all_pairs": {
+      "pairs": 41,
+      "factor": 1.2,
+      "iqr": [
+        1.0714,
+        1.3913
+      ],
+      "min_ratio": 0.8333,
+      "max_ratio": 5.0
+    },
+    "pairs_with_3plus_external_2plus_reference": {
+      "pairs": 10,
+      "factor": 1.1864,
+      "iqr": [
+        1.0623,
+        1.2793
+      ],
+      "min_ratio": 0.8817,
+      "max_ratio": 2.0727
+    }
+  },
+  "applied_method": "building_matched",
+  "factor": 1.2,
+  "applied": true,
+  "status": "applied",
+  "strata": [
+    {
+      "area": "Wangsa Maju",
+      "property_type": "condo",
+      "bedrooms": 2,
+      "kaggle": {
+        "listings": 10,
+        "buildings": 4,
+        "median": 1950.0
+      },
+      "scraped": {
+        "listings": 5,
+        "buildings": 5,
+        "median": 1850.0
+      },
+      "ratio": 0.9487
+    },
+    {
+      "area": "Mont Kiara",
+      "property_type": "condo",
+      "bedrooms": 1,
+      "kaggle": {
+        "listings": 36,
+        "buildings": 8,
+        "median": 2050.0
+      },
+      "scraped": {
+        "listings": 7,
+        "buildings": 4,
+        "median": 2100.0
+      },
+      "ratio": 1.0244
+    },
+    {
+      "area": "Bangsar South",
+      "property_type": "condo",
+      "bedrooms": 2,
+      "kaggle": {
+        "listings": 19,
+        "buildings": 8,
+        "median": 2300.0
+      },
+      "scraped": {
+        "listings": 7,
+        "buildings": 3,
+        "median": 2800.0
+      },
+      "ratio": 1.2174
+    },
+    {
+      "area": "Bukit Jalil",
+      "property_type": "condo",
+      "bedrooms": 3,
+      "kaggle": {
+        "listings": 162,
+        "buildings": 34,
+        "median": 1899.0
+      },
+      "scraped": {
+        "listings": 5,
+        "buildings": 3,
+        "median": 2600.0
+      },
+      "ratio": 1.3691
+    },
+    {
+      "area": "Mont Kiara",
+      "property_type": "condo",
+      "bedrooms": 2,
+      "kaggle": {
+        "listings": 47,
+        "buildings": 10,
+        "median": 3000.0
+      },
+      "scraped": {
+        "listings": 7,
+        "buildings": 5,
+        "median": 4300.0
+      },
+      "ratio": 1.4333
+    },
+    {
+      "area": "Bukit Bintang",
+      "property_type": "condo",
+      "bedrooms": 2,
+      "kaggle": {
+        "listings": 31,
+        "buildings": 10,
+        "median": 2800.0
+      },
+      "scraped": {
+        "listings": 6,
+        "buildings": 5,
+        "median": 4300.0
+      },
+      "ratio": 1.5357
+    },
+    {
+      "area": "Wangsa Maju",
+      "property_type": "condo",
+      "bedrooms": 4,
+      "kaggle": {
+        "listings": 50,
+        "buildings": 16,
+        "median": 1975.0
+      },
+      "scraped": {
+        "listings": 5,
+        "buildings": 4,
+        "median": 3600.0
+      },
+      "ratio": 1.8228
+    },
+    {
+      "area": "Bukit Bintang",
+      "property_type": "condo",
+      "bedrooms": 1,
+      "kaggle": {
+        "listings": 22,
+        "buildings": 9,
+        "median": 2100.0
+      },
+      "scraped": {
+        "listings": 5,
+        "buildings": 4,
+        "median": 3900.0
+      },
+      "ratio": 1.8571
+    },
+    {
+      "area": "KLCC",
+      "property_type": "condo",
+      "bedrooms": 2,
+      "kaggle": {
+        "listings": 59,
+        "buildings": 22,
+        "median": 3000.0
+      },
+      "scraped": {
+        "listings": 12,
+        "buildings": 9,
+        "median": 6240.0
+      },
+      "ratio": 2.08
+    },
+    {
+      "area": "Mont Kiara",
+      "property_type": "condo",
+      "bedrooms": 3,
+      "kaggle": {
+        "listings": 101,
+        "buildings": 40,
+        "median": 3400.0
+      },
+      "scraped": {
+        "listings": 13,
+        "buildings": 10,
+        "median": 7100.0
+      },
+      "ratio": 2.0882
+    },
+    {
+      "area": "KL City Centre",
+      "property_type": "condo",
+      "bedrooms": 2,
+      "kaggle": {
+        "listings": 42,
+        "buildings": 16,
+        "median": 2800.0
+      },
+      "scraped": {
+        "listings": 8,
+        "buildings": 4,
+        "median": 6100.0
+      },
+      "ratio": 2.1786
+    },
+    {
+      "area": "KLCC",
+      "property_type": "condo",
+      "bedrooms": 1,
+      "kaggle": {
+        "listings": 46,
+        "buildings": 21,
+        "median": 2500.0
+      },
+      "scraped": {
+        "listings": 11,
+        "buildings": 5,
+        "median": 6000.0
+      },
+      "ratio": 2.4
+    },
+    {
+      "area": "KL City Centre",
+      "property_type": "condo",
+      "bedrooms": 3,
+      "kaggle": {
+        "listings": 39,
+        "buildings": 20,
+        "median": 2500.0
+      },
+      "scraped": {
+        "listings": 5,
+        "buildings": 4,
+        "median": 7000.0
+      },
+      "ratio": 2.8
+    },
+    {
+      "area": "KLCC",
+      "property_type": "condo",
+      "bedrooms": 3,
+      "kaggle": {
+        "listings": 54,
+        "buildings": 18,
+        "median": 3700.0
+      },
+      "scraped": {
+        "listings": 5,
+        "buildings": 5,
+        "median": 12000.0
+      },
+      "ratio": 3.2432
+    }
+  ],
+  "near_misses": [
+    {
+      "area": "Bangsar South",
+      "property_type": "condo",
+      "bedrooms": 1,
+      "status": {
+        "kaggle": "scorable",
+        "scraped": "thin"
+      },
+      "listings": {
+        "kaggle": 10,
+        "scraped": 4
+      },
+      "ratio": 1.2195
+    },
+    {
+      "area": "Bukit Bintang",
+      "property_type": "condo",
+      "bedrooms": 3,
+      "status": {
+        "kaggle": "scorable",
+        "scraped": "thin"
+      },
+      "listings": {
+        "kaggle": 18,
+        "scraped": 4
+      },
+      "ratio": 2.0155
+    },
+    {
+      "area": "Cheras (KL)",
+      "property_type": "condo",
+      "bedrooms": 1,
+      "status": {
+        "kaggle": "scorable",
+        "scraped": "thin"
+      },
+      "listings": {
+        "kaggle": 59,
+        "scraped": 4
+      },
+      "ratio": 1.4286
+    },
+    {
+      "area": "Damansara Heights",
+      "property_type": "condo",
+      "bedrooms": 1,
+      "status": {
+        "kaggle": "scorable",
+        "scraped": "few-bldg"
+      },
+      "listings": {
+        "kaggle": 9,
+        "scraped": 8
+      },
+      "ratio": 4.2143
+    },
+    {
+      "area": "Damansara Heights",
+      "property_type": "condo",
+      "bedrooms": 2,
+      "status": {
+        "kaggle": "scorable",
+        "scraped": "thin"
+      },
+      "listings": {
+        "kaggle": 6,
+        "scraped": 4
+      },
+      "ratio": 4.382
+    },
+    {
+      "area": "Damansara Perdana",
+      "property_type": "condo",
+      "bedrooms": 3,
+      "status": {
+        "kaggle": "scorable",
+        "scraped": "thin"
+      },
+      "listings": {
+        "kaggle": 56,
+        "scraped": 3
+      },
+      "ratio": 1.8824
+    },
+    {
+      "area": "Keramat",
+      "property_type": "condo",
+      "bedrooms": 2,
+      "status": {
+        "kaggle": "scorable",
+        "scraped": "few-bldg"
+      },
+      "listings": {
+        "kaggle": 26,
+        "scraped": 6
+      },
+      "ratio": 1.4648
+    },
+    {
+      "area": "Keramat",
+      "property_type": "condo",
+      "bedrooms": 3,
+      "status": {
+        "kaggle": "scorable",
+        "scraped": "thin"
+      },
+      "listings": {
+        "kaggle": 88,
+        "scraped": 3
+      },
+      "ratio": 3.4211
+    },
+    {
+      "area": "Kota Damansara",
+      "property_type": "condo",
+      "bedrooms": 2,
+      "status": {
+        "kaggle": "scorable",
+        "scraped": "thin"
+      },
+      "listings": {
+        "kaggle": 9,
+        "scraped": 3
+      },
+      "ratio": 1.8095
+    },
+    {
+      "area": "Mont Kiara",
+      "property_type": "condo",
+      "bedrooms": 4,
+      "status": {
+        "kaggle": "scorable",
+        "scraped": "thin"
+      },
+      "listings": {
+        "kaggle": 49,
+        "scraped": 3
+      },
+      "ratio": 3.4783
+    },
+    {
+      "area": "Old Klang Road",
+      "property_type": "condo",
+      "bedrooms": 3,
+      "status": {
+        "kaggle": "scorable",
+        "scraped": "thin"
+      },
+      "listings": {
+        "kaggle": 104,
+        "scraped": 3
+      },
+      "ratio": 1.5342
+    },
+    {
+      "area": "Segambut",
+      "property_type": "condo",
+      "bedrooms": 1,
+      "status": {
+        "kaggle": "few-bldg",
+        "scraped": "few-bldg"
+      },
+      "listings": {
+        "kaggle": 8,
+        "scraped": 6
+      },
+      "ratio": 1.4908
+    },
+    {
+      "area": "Segambut",
+      "property_type": "condo",
+      "bedrooms": 3,
+      "status": {
+        "kaggle": "scorable",
+        "scraped": "thin"
+      },
+      "listings": {
+        "kaggle": 59,
+        "scraped": 3
+      },
+      "ratio": 1.15
+    },
+    {
+      "area": "Seri Kembangan",
+      "property_type": "condo",
+      "bedrooms": 2,
+      "status": {
+        "kaggle": "scorable",
+        "scraped": "thin"
+      },
+      "listings": {
+        "kaggle": 48,
+        "scraped": 3
+      },
+      "ratio": 1.3333
+    },
+    {
+      "area": "Setapak",
+      "property_type": "condo",
+      "bedrooms": 3,
+      "status": {
+        "kaggle": "scorable",
+        "scraped": "thin"
+      },
+      "listings": {
+        "kaggle": 334,
+        "scraped": 4
+      },
+      "ratio": 1.1094
+    },
+    {
+      "area": "Wangsa Maju",
+      "property_type": "condo",
+      "bedrooms": 3,
+      "status": {
+        "kaggle": "scorable",
+        "scraped": "thin"
+      },
+      "listings": {
+        "kaggle": 120,
+        "scraped": 4
+      },
+      "ratio": 1.3
+    }
+  ],
+  "caveats": [
+    "The ratio mixes time and platform: Kaggle is Mudah asking prices, the scrape is iProperty / PropertyGuru asking prices, which skew to agent-listed and higher-end units. This data cannot separate the two effects.",
+    "The overlap strata are all condo strata in KL / Selangor districts the scrape happened to reach; the factor is assumed to hold for apartments and other areas."
+  ],
+  "fallbacks": []
+}

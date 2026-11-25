@@ -1,0 +1,661 @@
+{
+ "settings": "E2. TF-IDF + logistic regression baseline (offline).\n\nFixed before any result was seen:\n  features   word 1-2-gram TF-IDF + character 3-5-gram TF-IDF on the raw text\n             (scikit-learn defaults otherwise: lowercase=True, min_df=1, no\n             sublinear tf); fitted on the training rows only\n  model      LogisticRegression(class_weight=\"balanced\", solver=\"liblinear\",\n             random_state=42, max_iter=5000)\n  C          chosen from {0.1, 1, 10} on dev macro-F1 (dev = run 1's 183 rows:\n             95 validation + 88 held-out pair rows); ties -> the smaller C\n  threshold  0.5, never tuned\n  variant A  trained on the 379 corpus rows only\n  variant B  trained on run 1's 1,223 rows (379 corpus + 844 pair rows)\nTest sets are scored once with the chosen C. The validation set is part of\ndev, so its scores are in-sample for the choice of C (as for run 1, which used\nit for early stopping).\n",
+ "A_corpus_379": {
+  "train_rows": 379,
+  "dev_macro_f1_by_C": {
+   "0.1": 0.7906,
+   "1": 0.8283,
+   "10": 0.8626
+  },
+  "chosen_C": 10,
+  "n_features": 36894,
+  "validation_95": {
+   "n": 95,
+   "tp": 63,
+   "fn": 0,
+   "fp": 0,
+   "tn": 32,
+   "accuracy": 1.0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "specificity": 1.0,
+   "f1": 1.0,
+   "macro_f1": 1.0,
+   "mcc": 1.0,
+   "roc_auc": 1.0
+  },
+  "new_wording_144": {
+   "n": 144,
+   "tp": 20,
+   "fn": 52,
+   "fp": 12,
+   "tn": 60,
+   "accuracy": 0.5556,
+   "precision": 0.625,
+   "recall": 0.2778,
+   "specificity": 0.8333,
+   "f1": 0.3846,
+   "macro_f1": 0.5184,
+   "mcc": 0.1336,
+   "roc_auc": 0.6763,
+   "pair_accuracy": 0.1111,
+   "pairs": 72,
+   "by_language": {
+    "en": {
+     "pairs": 23,
+     "pair_accuracy": 0.1304,
+     "row_accuracy": 0.5652,
+     "missed_scams": 18,
+     "false_alarms": 2
+    },
+    "mix": {
+     "pairs": 25,
+     "pair_accuracy": 0.16,
+     "row_accuracy": 0.58,
+     "missed_scams": 11,
+     "false_alarms": 10
+    },
+    "ms": {
+     "pairs": 24,
+     "pair_accuracy": 0.0417,
+     "row_accuracy": 0.5208,
+     "missed_scams": 23,
+     "false_alarms": 0
+    }
+   }
+  },
+  "run1_split_166": {
+   "n": 166,
+   "tp": 30,
+   "fn": 53,
+   "fp": 13,
+   "tn": 70,
+   "accuracy": 0.6024,
+   "precision": 0.6977,
+   "recall": 0.3614,
+   "specificity": 0.8434,
+   "f1": 0.4762,
+   "macro_f1": 0.5779,
+   "mcc": 0.2338,
+   "roc_auc": 0.6657,
+   "full_pair_accuracy": 0.2361,
+   "full_pairs": 72,
+   "fragment_pair_accuracy": 0.0,
+   "fragment_pairs": 11
+  },
+  "gates": {
+   "real_legit_production": {
+    "expect": "LEGITIMATE",
+    "p_scam": 0.5379,
+    "passed": false
+   },
+   "real_legit_clean": {
+    "expect": "LEGITIMATE",
+    "p_scam": 0.5571,
+    "passed": false
+   },
+   "real_scam_production": {
+    "expect": "SCAM",
+    "p_scam": 0.6782,
+    "passed": true
+   },
+   "shortcut_base": {
+    "expect": "LEGITIMATE",
+    "p_scam": 0.3654,
+    "passed": true
+   },
+   "shortcut_plus_prices": {
+    "expect": "LEGITIMATE",
+    "p_scam": 0.49,
+    "passed": true
+   },
+   "shortcut_plus_prices_terms": {
+    "expect": "LEGITIMATE",
+    "p_scam": 0.4751,
+    "passed": true
+   },
+   "ablation_full_scam": {
+    "expect": "SCAM",
+    "p_scam": 0.7135,
+    "passed": true
+   },
+   "ablation_mechanics_removed": {
+    "expect": "LEGITIMATE",
+    "p_scam": 0.4114,
+    "passed": true
+   },
+   "english_courier_scam": {
+    "expect": "SCAM",
+    "p_scam": 0.7184,
+    "passed": true
+   }
+  },
+  "gates_passed": 7,
+  "blind_15": {
+   "scams_caught": "9/10",
+   "recall": 0.9,
+   "recall_wilson95": [
+    0.596,
+    0.982
+   ],
+   "false_alarms": "4/5",
+   "false_alarm_rate": 0.8,
+   "false_alarm_wilson95": [
+    0.376,
+    0.964
+   ],
+   "per_case": {
+    "case01": 0.7266,
+    "case02": 0.5613,
+    "case03": 0.3229,
+    "case04": 0.5747,
+    "case05": 0.5142,
+    "case06": 0.6588,
+    "case07": 0.4448,
+    "case08": 0.836,
+    "case09": 0.7698,
+    "case10": 0.5512,
+    "case11": 0.8054,
+    "case12": 0.9109,
+    "case13": 0.5484,
+    "case14": 0.7064,
+    "case15": 0.555
+   }
+  },
+  "top20_features": {
+   "SCAM": [
+    {
+     "feature": "word__dulu",
+     "weight": 1.443
+    },
+    {
+     "feature": "word__view",
+     "weight": 1.319
+    },
+    {
+     "feature": "word__kena",
+     "weight": 1.025
+    },
+    {
+     "feature": "word__fee",
+     "weight": 1.006
+    },
+    {
+     "feature": "word__account",
+     "weight": 0.966
+    },
+    {
+     "feature": "word__to",
+     "weight": 0.965
+    },
+    {
+     "feature": "word__balik",
+     "weight": 0.888
+    },
+    {
+     "feature": "word__bayar",
+     "weight": 0.871
+    },
+    {
+     "feature": "word__booking",
+     "weight": 0.87
+    },
+    {
+     "feature": "word__agreement",
+     "weight": 0.856
+    },
+    {
+     "feature": "word__dia",
+     "weight": 0.834
+    },
+    {
+     "feature": "word__it",
+     "weight": 0.815
+    },
+    {
+     "feature": "word__kalau",
+     "weight": 0.811
+    },
+    {
+     "feature": "word__aggrement",
+     "weight": 0.81
+    },
+    {
+     "feature": "word__proses",
+     "weight": 0.804
+    },
+    {
+     "feature": "word__duit",
+     "weight": 0.773
+    },
+    {
+     "feature": "word__lepas",
+     "weight": 0.773
+    },
+    {
+     "feature": "word__kena bayar",
+     "weight": 0.749
+    },
+    {
+     "feature": "word__refund",
+     "weight": 0.737
+    },
+    {
+     "feature": "word__baru",
+     "weight": 0.734
+    }
+   ],
+   "LEGITIMATE": [
+    {
+     "feature": "word__renter okay",
+     "weight": -0.951
+    },
+    {
+     "feature": "word__rumah",
+     "weight": -0.897
+    },
+    {
+     "feature": "word__check",
+     "weight": -0.822
+    },
+    {
+     "feature": "word__okay",
+     "weight": -0.782
+    },
+    {
+     "feature": "word__thank you",
+     "weight": -0.775
+    },
+    {
+     "feature": "word__thank",
+     "weight": -0.775
+    },
+    {
+     "feature": "word__house",
+     "weight": -0.751
+    },
+    {
+     "feature": "word__owner rumah",
+     "weight": -0.745
+    },
+    {
+     "feature": "word__baik",
+     "weight": -0.735
+    },
+    {
+     "feature": "word__bulan",
+     "weight": -0.725
+    },
+    {
+     "feature": "word__aircond",
+     "weight": -0.717
+    },
+    {
+     "feature": "word__termasuk",
+     "weight": -0.709
+    },
+    {
+     "feature": "word__ok saya",
+     "weight": -0.699
+    },
+    {
+     "feature": "word__masa",
+     "weight": -0.695
+    },
+    {
+     "feature": "word__furnished",
+     "weight": -0.682
+    },
+    {
+     "feature": "word__owner deposit",
+     "weight": -0.668
+    },
+    {
+     "feature": "word__the deposit",
+     "weight": -0.645
+    },
+    {
+     "feature": "word__dapur",
+     "weight": -0.64
+    },
+    {
+     "feature": "word__ok",
+     "weight": -0.636
+    },
+    {
+     "feature": "word__sampai",
+     "weight": -0.626
+    }
+   ]
+  }
+ },
+ "B_run1_1223": {
+  "train_rows": 1223,
+  "dev_macro_f1_by_C": {
+   "0.1": 0.9944,
+   "1": 0.9944,
+   "10": 1.0
+  },
+  "chosen_C": 10,
+  "n_features": 44842,
+  "validation_95": {
+   "n": 95,
+   "tp": 63,
+   "fn": 0,
+   "fp": 0,
+   "tn": 32,
+   "accuracy": 1.0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "specificity": 1.0,
+   "f1": 1.0,
+   "macro_f1": 1.0,
+   "mcc": 1.0,
+   "roc_auc": 1.0
+  },
+  "new_wording_144": {
+   "n": 144,
+   "tp": 68,
+   "fn": 4,
+   "fp": 0,
+   "tn": 72,
+   "accuracy": 0.9722,
+   "precision": 1.0,
+   "recall": 0.9444,
+   "specificity": 1.0,
+   "f1": 0.9714,
+   "macro_f1": 0.9722,
+   "mcc": 0.9459,
+   "roc_auc": 1.0,
+   "pair_accuracy": 0.9444,
+   "pairs": 72,
+   "by_language": {
+    "en": {
+     "pairs": 23,
+     "pair_accuracy": 0.9565,
+     "row_accuracy": 0.9783,
+     "missed_scams": 1,
+     "false_alarms": 0
+    },
+    "mix": {
+     "pairs": 25,
+     "pair_accuracy": 1.0,
+     "row_accuracy": 1.0,
+     "missed_scams": 0,
+     "false_alarms": 0
+    },
+    "ms": {
+     "pairs": 24,
+     "pair_accuracy": 0.875,
+     "row_accuracy": 0.9375,
+     "missed_scams": 3,
+     "false_alarms": 0
+    }
+   }
+  },
+  "run1_split_166": {
+   "n": 166,
+   "tp": 80,
+   "fn": 3,
+   "fp": 0,
+   "tn": 83,
+   "accuracy": 0.9819,
+   "precision": 1.0,
+   "recall": 0.9639,
+   "specificity": 1.0,
+   "f1": 0.9816,
+   "macro_f1": 0.9819,
+   "mcc": 0.9645,
+   "roc_auc": 1.0,
+   "full_pair_accuracy": 0.9583,
+   "full_pairs": 72,
+   "fragment_pair_accuracy": 1.0,
+   "fragment_pairs": 11
+  },
+  "gates": {
+   "real_legit_production": {
+    "expect": "LEGITIMATE",
+    "p_scam": 0.2804,
+    "passed": true
+   },
+   "real_legit_clean": {
+    "expect": "LEGITIMATE",
+    "p_scam": 0.3457,
+    "passed": true
+   },
+   "real_scam_production": {
+    "expect": "SCAM",
+    "p_scam": 0.8753,
+    "passed": true
+   },
+   "shortcut_base": {
+    "expect": "LEGITIMATE",
+    "p_scam": 0.0074,
+    "passed": true
+   },
+   "shortcut_plus_prices": {
+    "expect": "LEGITIMATE",
+    "p_scam": 0.0178,
+    "passed": true
+   },
+   "shortcut_plus_prices_terms": {
+    "expect": "LEGITIMATE",
+    "p_scam": 0.0247,
+    "passed": true
+   },
+   "ablation_full_scam": {
+    "expect": "SCAM",
+    "p_scam": 0.9925,
+    "passed": true
+   },
+   "ablation_mechanics_removed": {
+    "expect": "LEGITIMATE",
+    "p_scam": 0.7618,
+    "passed": false
+   },
+   "english_courier_scam": {
+    "expect": "SCAM",
+    "p_scam": 0.7902,
+    "passed": true
+   }
+  },
+  "gates_passed": 8,
+  "blind_15": {
+   "scams_caught": "8/10",
+   "recall": 0.8,
+   "recall_wilson95": [
+    0.49,
+    0.943
+   ],
+   "false_alarms": "1/5",
+   "false_alarm_rate": 0.2,
+   "false_alarm_wilson95": [
+    0.036,
+    0.624
+   ],
+   "per_case": {
+    "case01": 0.6903,
+    "case02": 0.6738,
+    "case03": 0.3473,
+    "case04": 0.284,
+    "case05": 0.4887,
+    "case06": 0.7334,
+    "case07": 0.6077,
+    "case08": 0.8921,
+    "case09": 0.21,
+    "case10": 0.9111,
+    "case11": 0.7264,
+    "case12": 0.8101,
+    "case13": 0.4842,
+    "case14": 0.596,
+    "case15": 0.2433
+   }
+  },
+  "top20_features": {
+   "SCAM": [
+    {
+     "feature": "word__dulu",
+     "weight": 2.52
+    },
+    {
+     "feature": "word__kena",
+     "weight": 2.403
+    },
+    {
+     "feature": "word__transfer",
+     "weight": 2.016
+    },
+    {
+     "feature": "word__to",
+     "weight": 1.782
+    },
+    {
+     "feature": "word__baru",
+     "weight": 1.734
+    },
+    {
+     "feature": "word__then",
+     "weight": 1.691
+    },
+    {
+     "feature": "word__owner transfer",
+     "weight": 1.532
+    },
+    {
+     "feature": "word__you ll",
+     "weight": 1.504
+    },
+    {
+     "feature": "word__booking dulu",
+     "weight": 1.493
+    },
+    {
+     "feature": "word__account",
+     "weight": 1.417
+    },
+    {
+     "feature": "word__kena bayar",
+     "weight": 1.413
+    },
+    {
+     "feature": "word__first",
+     "weight": 1.343
+    },
+    {
+     "feature": "word__owner kena",
+     "weight": 1.336
+    },
+    {
+     "feature": "word__refund",
+     "weight": 1.316
+    },
+    {
+     "feature": "word__balik",
+     "weight": 1.315
+    },
+    {
+     "feature": "word__it",
+     "weight": 1.286
+    },
+    {
+     "feature": "word__reserve",
+     "weight": 1.257
+    },
+    {
+     "feature": "word__owner saya",
+     "weight": 1.244
+    },
+    {
+     "feature": "word__bayar booking",
+     "weight": 1.237
+    },
+    {
+     "feature": "word__tak",
+     "weight": 1.221
+    }
+   ],
+   "LEGITIMATE": [
+    {
+     "feature": "word__sign",
+     "weight": -3.063
+    },
+    {
+     "feature": "word__masa",
+     "weight": -2.324
+    },
+    {
+     "feature": "word__masa sign",
+     "weight": -2.102
+    },
+    {
+     "feature": "word__at",
+     "weight": -1.919
+    },
+    {
+     "feature": "word__signing",
+     "weight": -1.678
+    },
+    {
+     "feature": "word__kat",
+     "weight": -1.565
+    },
+    {
+     "feature": "word__ll meet",
+     "weight": -1.561
+    },
+    {
+     "feature": "word__kat unit",
+     "weight": -1.481
+    },
+    {
+     "feature": "word__meet",
+     "weight": -1.474
+    },
+    {
+     "feature": "word__agreement",
+     "weight": -1.397
+    },
+    {
+     "feature": "char__ sign",
+     "weight": -1.373
+    },
+    {
+     "feature": "char__ sig",
+     "weight": -1.373
+    },
+    {
+     "feature": "word__jumpa",
+     "weight": -1.36
+    },
+    {
+     "feature": "word__meet you",
+     "weight": -1.354
+    },
+    {
+     "feature": "word__sign agreement",
+     "weight": -1.296
+    },
+    {
+     "feature": "char__sig",
+     "weight": -1.283
+    },
+    {
+     "feature": "char__sign",
+     "weight": -1.283
+    },
+    {
+     "feature": "char__ign",
+     "weight": -1.283
+    },
+    {
+     "feature": "word__booking deposit",
+     "weight": -1.268
+    },
+    {
+     "feature": "word__no booking",
+     "weight": -1.262
+    }
+   ]
+  }
+ }
+}

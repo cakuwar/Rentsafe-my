@@ -1,0 +1,12 @@
+{
+ "model": "gpt-4o-mini",
+ "temperature": 0,
+ "response_format": {"type": "json_object"},
+ "max_tokens": 60,
+ "seed": 42,
+ "system": "Classify whether this Malaysian rental conversation (English, Malay or Manglish) between a Renter and an Owner/agent is a scam or a legitimate letting. Reply only with JSON: {\"label\": \"scam\" or \"legitimate\", \"p_scam\": 0 to 1}.",
+ "user_template": "{conversation}",
+ "decision_rule": "SCAM if p_scam >= 0.5. If p_scam is missing or not a number in [0, 1], the label decides. If neither is valid, the call is an error: reported separately and excluded from the metrics.",
+ "retries": "HTTP 429, 5xx and timeouts retried up to 3 times with backoff; an unparseable reply is not retried",
+ "pricing_usd_per_1M_tokens": {"input": 0.15, "output": 0.60, "note": "gpt-4o-mini list price used for the estimate; the actual cost is computed from the usage the API returns"}
+}

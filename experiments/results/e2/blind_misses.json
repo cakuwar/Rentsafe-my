@@ -1,0 +1,107 @@
+{
+ "case01": {
+  "label": "SCAM",
+  "p_whole_chat": 0.6903,
+  "windows": 8,
+  "p_best_window": 0.7485,
+  "messages": 50
+ },
+ "case02": {
+  "label": "SCAM",
+  "p_whole_chat": 0.6738,
+  "windows": 5,
+  "p_best_window": 0.7405,
+  "messages": 33
+ },
+ "case03": {
+  "label": "LEGITIMATE",
+  "p_whole_chat": 0.3473,
+  "windows": 2,
+  "p_best_window": 0.3471,
+  "messages": 17
+ },
+ "case04": {
+  "label": "LEGITIMATE",
+  "p_whole_chat": 0.284,
+  "windows": 1,
+  "p_best_window": 0.284,
+  "messages": 14
+ },
+ "case05": {
+  "label": "SCAM",
+  "p_whole_chat": 0.4887,
+  "windows": 2,
+  "p_best_window": 0.6331,
+  "messages": 17
+ },
+ "case06": {
+  "label": "SCAM",
+  "p_whole_chat": 0.7334,
+  "windows": 5,
+  "p_best_window": 0.7825,
+  "messages": 34
+ },
+ "case07": {
+  "label": "SCAM",
+  "p_whole_chat": 0.6077,
+  "windows": 7,
+  "p_best_window": 0.8011,
+  "messages": 45
+ },
+ "case08": {
+  "label": "SCAM",
+  "p_whole_chat": 0.8921,
+  "windows": 2,
+  "p_best_window": 0.8988,
+  "messages": 18
+ },
+ "case09": {
+  "label": "LEGITIMATE",
+  "p_whole_chat": 0.21,
+  "windows": 1,
+  "p_best_window": 0.21,
+  "messages": 11
+ },
+ "case10": {
+  "label": "SCAM",
+  "p_whole_chat": 0.9111,
+  "windows": 4,
+  "p_best_window": 0.9201,
+  "messages": 28
+ },
+ "case11": {
+  "label": "LEGITIMATE",
+  "p_whole_chat": 0.7264,
+  "windows": 1,
+  "p_best_window": 0.7264,
+  "messages": 12
+ },
+ "case12": {
+  "label": "SCAM",
+  "p_whole_chat": 0.8101,
+  "windows": 1,
+  "p_best_window": 0.8101,
+  "messages": 14
+ },
+ "case13": {
+  "label": "SCAM",
+  "p_whole_chat": 0.4842,
+  "windows": 29,
+  "p_best_window": 0.8951,
+  "messages": 153
+ },
+ "case14": {
+  "label": "SCAM",
+  "p_whole_chat": 0.596,
+  "windows": 11,
+  "p_best_window": 0.7896,
+  "messages": 62
+ },
+ "case15": {
+  "label": "LEGITIMATE",
+  "p_whole_chat": 0.2433,
+  "windows": 5,
+  "p_best_window": 0.4346,
+  "messages": 34
+ }
+}

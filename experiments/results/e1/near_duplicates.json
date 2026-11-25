@@ -1,0 +1,1143 @@
+{
+ "settings": "E1. Near-duplicate check between the 15 blind-test transcripts and the training data.\n\nFixed before any result was seen:\n  training items  the 474 corpus conversations (random/train.csv 379 + random/val.csv 95)\n                  and run 1's 932 minimal-pair training rows = 1,406 items\n  preprocessing   speaker labels (\"Renter:\", \"Owner:\") removed from the start of each\n                  line (they occur in every text); lowercase; words = [a-z0-9]+\n  1. cosine       character 3-5-gram TF-IDF (fitted on the 1,406 items + 15 cases), cosine\n  2. containment  share of the case's word 8-grams that also occur in the item\n  3. longest run  longest common sequence of consecutive words (difflib, autojunk off)\n  flag            cosine >= 0.80 OR containment >= 0.20 OR longest run >= 15 words\n  reference       the same three figures between cases 2/6/10 and 12/13 (known shared scripts)\n\nRun with the nlp-service venv: .venv/Scripts/python.exe -I -B experiments/scripts/e1_near_duplicates.py\nNumbers and item ids go to experiments/results/e1/near_duplicates.json. The overlapping\ntext (redacted) goes OUTSIDE the repo: ~/rentsafe_experiments_data/e1/overlaps.md.\n",
+ "cases": {
+  "case01": {
+   "label": "SCAM",
+   "origin": "real",
+   "words": 371,
+   "max_cosine": 0.1323,
+   "max_containment": 0.0,
+   "max_longest_run_words": 3,
+   "flagged": false,
+   "best": {
+    "cosine": {
+     "item": "corpus:val:64",
+     "origin": "synthetic",
+     "group": "S15",
+     "label": "SCAM",
+     "cosine": 0.1323,
+     "containment": 0.0,
+     "longest_run_words": 3
+    },
+    "containment": {
+     "item": "corpus:train:0",
+     "origin": "synthetic",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.0385,
+     "containment": 0.0,
+     "longest_run_words": 2
+    },
+    "longest_run": {
+     "item": "corpus:train:7",
+     "origin": "real",
+     "group": "L03",
+     "label": "LEGITIMATE",
+     "cosine": 0.0303,
+     "containment": 0.0,
+     "longest_run_words": 3
+    }
+   },
+   "items_over_threshold": 0
+  },
+  "case02": {
+   "label": "SCAM",
+   "origin": "real",
+   "words": 229,
+   "max_cosine": 0.1497,
+   "max_containment": 0.0,
+   "max_longest_run_words": 2,
+   "flagged": false,
+   "best": {
+    "cosine": {
+     "item": "pairs:MP0092-F:SCAM",
+     "origin": "minimal_pair",
+     "group": "MP0092",
+     "label": "SCAM",
+     "cosine": 0.1497,
+     "containment": 0.0,
+     "longest_run_words": 2
+    },
+    "containment": {
+     "item": "corpus:train:0",
+     "origin": "synthetic",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.0252,
+     "containment": 0.0,
+     "longest_run_words": 1
+    },
+    "longest_run": {
+     "item": "corpus:train:4",
+     "origin": "real",
+     "group": "L08",
+     "label": "LEGITIMATE",
+     "cosine": 0.0698,
+     "containment": 0.0,
+     "longest_run_words": 2
+    }
+   },
+   "items_over_threshold": 0
+  },
+  "case03": {
+   "label": "LEGITIMATE",
+   "origin": "role-play",
+   "words": 119,
+   "max_cosine": 0.1353,
+   "max_containment": 0.0,
+   "max_longest_run_words": 3,
+   "flagged": false,
+   "best": {
+    "cosine": {
+     "item": "pairs:MP0006:SCAM",
+     "origin": "minimal_pair",
+     "group": "MP0006",
+     "label": "SCAM",
+     "cosine": 0.1353,
+     "containment": 0.0,
+     "longest_run_words": 3
+    },
+    "containment": {
+     "item": "corpus:train:0",
+     "origin": "synthetic",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.0204,
+     "containment": 0.0,
+     "longest_run_words": 1
+    },
+    "longest_run": {
+     "item": "corpus:val:9",
+     "origin": "synthetic",
+     "group": "S10",
+     "label": "SCAM",
+     "cosine": 0.1078,
+     "containment": 0.0,
+     "longest_run_words": 3
+    }
+   },
+   "items_over_threshold": 0
+  },
+  "case04": {
+   "label": "LEGITIMATE",
+   "origin": "role-play",
+   "words": 98,
+   "max_cosine": 0.1334,
+   "max_containment": 0.0,
+   "max_longest_run_words": 3,
+   "flagged": false,
+   "best": {
+    "cosine": {
+     "item": "corpus:train:97",
+     "origin": "synthetic",
+     "group": "S16",
+     "label": "SCAM",
+     "cosine": 0.1334,
+     "containment": 0.0,
+     "longest_run_words": 2
+    },
+    "containment": {
+     "item": "corpus:train:0",
+     "origin": "synthetic",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.0559,
+     "containment": 0.0,
+     "longest_run_words": 2
+    },
+    "longest_run": {
+     "item": "corpus:train:32",
+     "origin": "synthetic",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.0945,
+     "containment": 0.0,
+     "longest_run_words": 3
+    }
+   },
+   "items_over_threshold": 0
+  },
+  "case05": {
+   "label": "SCAM",
+   "origin": "real",
+   "words": 133,
+   "max_cosine": 0.1729,
+   "max_containment": 0.0,
+   "max_longest_run_words": 4,
+   "flagged": false,
+   "best": {
+    "cosine": {
+     "item": "pairs:MP0263:LEGIT",
+     "origin": "minimal_pair",
+     "group": "MP0263",
+     "label": "LEGITIMATE",
+     "cosine": 0.1729,
+     "containment": 0.0,
+     "longest_run_words": 3
+    },
+    "containment": {
+     "item": "corpus:train:0",
+     "origin": "synthetic",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.122,
+     "containment": 0.0,
+     "longest_run_words": 2
+    },
+    "longest_run": {
+     "item": "corpus:train:62",
+     "origin": "synthetic",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.0816,
+     "containment": 0.0,
+     "longest_run_words": 4
+    }
+   },
+   "items_over_threshold": 0
+  },
+  "case06": {
+   "label": "SCAM",
+   "origin": "real",
+   "words": 161,
+   "max_cosine": 0.1315,
+   "max_containment": 0.026,
+   "max_longest_run_words": 11,
+   "flagged": false,
+   "best": {
+    "cosine": {
+     "item": "corpus:val:88",
+     "origin": "synthetic",
+     "group": "S11",
+     "label": "SCAM",
+     "cosine": 0.1315,
+     "containment": 0.0,
+     "longest_run_words": 6
+    },
+    "containment": {
+     "item": "corpus:train:103",
+     "origin": "synthetic",
+     "group": "S14",
+     "label": "SCAM",
+     "cosine": 0.1122,
+     "containment": 0.026,
+     "longest_run_words": 11
+    },
+    "longest_run": {
+     "item": "corpus:train:103",
+     "origin": "synthetic",
+     "group": "S14",
+     "label": "SCAM",
+     "cosine": 0.1122,
+     "containment": 0.026,
+     "longest_run_words": 11
+    }
+   },
+   "items_over_threshold": 0
+  },
+  "case07": {
+   "label": "SCAM",
+   "origin": "real",
+   "words": 305,
+   "max_cosine": 0.1222,
+   "max_containment": 0.0,
+   "max_longest_run_words": 3,
+   "flagged": false,
+   "best": {
+    "cosine": {
+     "item": "pairs:MP0084:LEGIT",
+     "origin": "minimal_pair",
+     "group": "MP0084",
+     "label": "LEGITIMATE",
+     "cosine": 0.1222,
+     "containment": 0.0,
+     "longest_run_words": 2
+    },
+    "containment": {
+     "item": "corpus:train:0",
+     "origin": "synthetic",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.0253,
+     "containment": 0.0,
+     "longest_run_words": 1
+    },
+    "longest_run": {
+     "item": "corpus:train:40",
+     "origin": "synthetic",
+     "group": "S08",
+     "label": "SCAM",
+     "cosine": 0.0644,
+     "containment": 0.0,
+     "longest_run_words": 3
+    }
+   },
+   "items_over_threshold": 0
+  },
+  "case08": {
+   "label": "SCAM",
+   "origin": "role-play",
+   "words": 117,
+   "max_cosine": 0.1483,
+   "max_containment": 0.0,
+   "max_longest_run_words": 3,
+   "flagged": false,
+   "best": {
+    "cosine": {
+     "item": "pairs:MP0232:SCAM",
+     "origin": "minimal_pair",
+     "group": "MP0232",
+     "label": "SCAM",
+     "cosine": 0.1483,
+     "containment": 0.0,
+     "longest_run_words": 3
+    },
+    "containment": {
+     "item": "corpus:train:0",
+     "origin": "synthetic",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.1151,
+     "containment": 0.0,
+     "longest_run_words": 2
+    },
+    "longest_run": {
+     "item": "corpus:train:38",
+     "origin": "synthetic",
+     "group": "L03",
+     "label": "LEGITIMATE",
+     "cosine": 0.0546,
+     "containment": 0.0,
+     "longest_run_words": 3
+    }
+   },
+   "items_over_threshold": 0
+  },
+  "case09": {
+   "label": "LEGITIMATE",
+   "origin": "role-play",
+   "words": 148,
+   "max_cosine": 0.2151,
+   "max_containment": 0.0,
+   "max_longest_run_words": 5,
+   "flagged": false,
+   "best": {
+    "cosine": {
+     "item": "pairs:MP0186:LEGIT",
+     "origin": "minimal_pair",
+     "group": "MP0186",
+     "label": "LEGITIMATE",
+     "cosine": 0.2151,
+     "containment": 0.0,
+     "longest_run_words": 5
+    },
+    "containment": {
+     "item": "corpus:train:0",
+     "origin": "synthetic",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.0968,
+     "containment": 0.0,
+     "longest_run_words": 3
+    },
+    "longest_run": {
+     "item": "pairs:MP0005:LEGIT",
+     "origin": "minimal_pair",
+     "group": "MP0005",
+     "label": "LEGITIMATE",
+     "cosine": 0.1719,
+     "containment": 0.0,
+     "longest_run_words": 5
+    }
+   },
+   "items_over_threshold": 0
+  },
+  "case10": {
+   "label": "SCAM",
+   "origin": "real",
+   "words": 136,
+   "max_cosine": 0.106,
+   "max_containment": 0.0,
+   "max_longest_run_words": 3,
+   "flagged": false,
+   "best": {
+    "cosine": {
+     "item": "corpus:train:228",
+     "origin": "synthetic",
+     "group": "S10",
+     "label": "SCAM",
+     "cosine": 0.106,
+     "containment": 0.0,
+     "longest_run_words": 3
+    },
+    "containment": {
+     "item": "corpus:train:0",
+     "origin": "synthetic",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.0375,
+     "containment": 0.0,
+     "longest_run_words": 1
+    },
+    "longest_run": {
+     "item": "corpus:train:8",
+     "origin": "real",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.0619,
+     "containment": 0.0,
+     "longest_run_words": 3
+    }
+   },
+   "items_over_threshold": 0
+  },
+  "case11": {
+   "label": "LEGITIMATE",
+   "origin": "role-play",
+   "words": 111,
+   "max_cosine": 0.1409,
+   "max_containment": 0.0,
+   "max_longest_run_words": 3,
+   "flagged": false,
+   "best": {
+    "cosine": {
+     "item": "pairs:MP0002:LEGIT",
+     "origin": "minimal_pair",
+     "group": "MP0002",
+     "label": "LEGITIMATE",
+     "cosine": 0.1409,
+     "containment": 0.0,
+     "longest_run_words": 3
+    },
+    "containment": {
+     "item": "corpus:train:0",
+     "origin": "synthetic",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.0944,
+     "containment": 0.0,
+     "longest_run_words": 2
+    },
+    "longest_run": {
+     "item": "corpus:train:6",
+     "origin": "synthetic",
+     "group": "S11",
+     "label": "SCAM",
+     "cosine": 0.1226,
+     "containment": 0.0,
+     "longest_run_words": 3
+    }
+   },
+   "items_over_threshold": 0
+  },
+  "case12": {
+   "label": "SCAM",
+   "origin": "real",
+   "words": 160,
+   "max_cosine": 0.2132,
+   "max_containment": 0.0,
+   "max_longest_run_words": 5,
+   "flagged": false,
+   "best": {
+    "cosine": {
+     "item": "corpus:train:200",
+     "origin": "real",
+     "group": "S01",
+     "label": "SCAM",
+     "cosine": 0.2132,
+     "containment": 0.0,
+     "longest_run_words": 2
+    },
+    "containment": {
+     "item": "corpus:train:0",
+     "origin": "synthetic",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.0281,
+     "containment": 0.0,
+     "longest_run_words": 1
+    },
+    "longest_run": {
+     "item": "corpus:train:44",
+     "origin": "synthetic",
+     "group": "S11",
+     "label": "SCAM",
+     "cosine": 0.0808,
+     "containment": 0.0,
+     "longest_run_words": 5
+    }
+   },
+   "items_over_threshold": 0
+  },
+  "case13": {
+   "label": "SCAM",
+   "origin": "real",
+   "words": 760,
+   "max_cosine": 0.1578,
+   "max_containment": 0.0027,
+   "max_longest_run_words": 9,
+   "flagged": false,
+   "best": {
+    "cosine": {
+     "item": "corpus:train:200",
+     "origin": "real",
+     "group": "S01",
+     "label": "SCAM",
+     "cosine": 0.1578,
+     "containment": 0.0,
+     "longest_run_words": 2
+    },
+    "containment": {
+     "item": "corpus:train:44",
+     "origin": "synthetic",
+     "group": "S11",
+     "label": "SCAM",
+     "cosine": 0.13,
+     "containment": 0.0027,
+     "longest_run_words": 9
+    },
+    "longest_run": {
+     "item": "corpus:train:44",
+     "origin": "synthetic",
+     "group": "S11",
+     "label": "SCAM",
+     "cosine": 0.13,
+     "containment": 0.0027,
+     "longest_run_words": 9
+    }
+   },
+   "items_over_threshold": 0
+  },
+  "case14": {
+   "label": "SCAM",
+   "origin": "real",
+   "words": 451,
+   "max_cosine": 0.147,
+   "max_containment": 0.0,
+   "max_longest_run_words": 3,
+   "flagged": false,
+   "best": {
+    "cosine": {
+     "item": "pairs:MP0229:LEGIT",
+     "origin": "minimal_pair",
+     "group": "MP0229",
+     "label": "LEGITIMATE",
+     "cosine": 0.147,
+     "containment": 0.0,
+     "longest_run_words": 3
+    },
+    "containment": {
+     "item": "corpus:train:0",
+     "origin": "synthetic",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.0395,
+     "containment": 0.0,
+     "longest_run_words": 2
+    },
+    "longest_run": {
+     "item": "corpus:train:76",
+     "origin": "synthetic",
+     "group": "S16",
+     "label": "SCAM",
+     "cosine": 0.0502,
+     "containment": 0.0,
+     "longest_run_words": 3
+    }
+   },
+   "items_over_threshold": 0
+  },
+  "case15": {
+   "label": "LEGITIMATE",
+   "origin": "role-play",
+   "words": 178,
+   "max_cosine": 0.1698,
+   "max_containment": 0.0,
+   "max_longest_run_words": 3,
+   "flagged": false,
+   "best": {
+    "cosine": {
+     "item": "pairs:MP0006:LEGIT",
+     "origin": "minimal_pair",
+     "group": "MP0006",
+     "label": "LEGITIMATE",
+     "cosine": 0.1698,
+     "containment": 0.0,
+     "longest_run_words": 2
+    },
+    "containment": {
+     "item": "corpus:train:0",
+     "origin": "synthetic",
+     "group": "S03",
+     "label": "SCAM",
+     "cosine": 0.0175,
+     "containment": 0.0,
+     "longest_run_words": 1
+    },
+    "longest_run": {
+     "item": "corpus:train:147",
+     "origin": "synthetic",
+     "group": "S15",
+     "label": "SCAM",
+     "cosine": 0.0745,
+     "containment": 0.0,
+     "longest_run_words": 3
+    }
+   },
+   "items_over_threshold": 0
+  }
+ },
+ "reference_pairs": {
+  "case02~case06": {
+   "cosine": 0.0946,
+   "containment_a_in_b": 0.0,
+   "containment_b_in_a": 0.0,
+   "longest_run_words": 2
+  },
+  "case02~case10": {
+   "cosine": 0.0515,
+   "containment_a_in_b": 0.0,
+   "containment_b_in_a": 0.0,
+   "longest_run_words": 1
+  },
+  "case06~case10": {
+   "cosine": 0.1926,
+   "containment_a_in_b": 0.0649,
+   "containment_b_in_a": 0.0775,
+   "longest_run_words": 17
+  },
+  "case12~case13": {
+   "cosine": 0.2749,
+   "containment_a_in_b": 0.1438,
+   "containment_b_in_a": 0.0292,
+   "longest_run_words": 18
+  }
+ },
+ "max_between_any_two_cases": {
+  "case01~case02": {
+   "cosine": 0.0987,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case01~case03": {
+   "cosine": 0.0719,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case01~case04": {
+   "cosine": 0.0314,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case01~case05": {
+   "cosine": 0.0286,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case01~case06": {
+   "cosine": 0.0695,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case01~case07": {
+   "cosine": 0.1314,
+   "containment_max": 0.0,
+   "longest_run_words": 3
+  },
+  "case01~case08": {
+   "cosine": 0.0193,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case01~case09": {
+   "cosine": 0.0323,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case01~case10": {
+   "cosine": 0.0641,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case01~case11": {
+   "cosine": 0.0227,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case01~case12": {
+   "cosine": 0.0975,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case01~case13": {
+   "cosine": 0.1268,
+   "containment_max": 0.0,
+   "longest_run_words": 3
+  },
+  "case01~case14": {
+   "cosine": 0.1165,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case01~case15": {
+   "cosine": 0.1165,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case02~case03": {
+   "cosine": 0.0493,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case02~case04": {
+   "cosine": 0.0173,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case02~case05": {
+   "cosine": 0.026,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case02~case06": {
+   "cosine": 0.0946,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case02~case07": {
+   "cosine": 0.0545,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case02~case08": {
+   "cosine": 0.0269,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case02~case09": {
+   "cosine": 0.0242,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case02~case10": {
+   "cosine": 0.0515,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case02~case11": {
+   "cosine": 0.0211,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case02~case12": {
+   "cosine": 0.0701,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case02~case13": {
+   "cosine": 0.0805,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case02~case14": {
+   "cosine": 0.093,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case02~case15": {
+   "cosine": 0.0777,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case03~case04": {
+   "cosine": 0.0243,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case03~case05": {
+   "cosine": 0.0207,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case03~case06": {
+   "cosine": 0.0844,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case03~case07": {
+   "cosine": 0.1253,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case03~case08": {
+   "cosine": 0.0224,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case03~case09": {
+   "cosine": 0.0183,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case03~case10": {
+   "cosine": 0.0472,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case03~case11": {
+   "cosine": 0.0116,
+   "containment_max": 0.0,
+   "longest_run_words": 0
+  },
+  "case03~case12": {
+   "cosine": 0.0779,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case03~case13": {
+   "cosine": 0.094,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case03~case14": {
+   "cosine": 0.1268,
+   "containment_max": 0.0,
+   "longest_run_words": 3
+  },
+  "case03~case15": {
+   "cosine": 0.1445,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case04~case05": {
+   "cosine": 0.0691,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case04~case06": {
+   "cosine": 0.0304,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case04~case07": {
+   "cosine": 0.0194,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case04~case08": {
+   "cosine": 0.0678,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case04~case09": {
+   "cosine": 0.098,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case04~case10": {
+   "cosine": 0.0325,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case04~case11": {
+   "cosine": 0.0566,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case04~case12": {
+   "cosine": 0.0205,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case04~case13": {
+   "cosine": 0.0204,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case04~case14": {
+   "cosine": 0.0342,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case04~case15": {
+   "cosine": 0.0213,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case05~case06": {
+   "cosine": 0.0273,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case05~case07": {
+   "cosine": 0.0276,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case05~case08": {
+   "cosine": 0.1367,
+   "containment_max": 0.0,
+   "longest_run_words": 4
+  },
+  "case05~case09": {
+   "cosine": 0.0781,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case05~case10": {
+   "cosine": 0.0433,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case05~case11": {
+   "cosine": 0.0863,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case05~case12": {
+   "cosine": 0.0248,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case05~case13": {
+   "cosine": 0.0248,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case05~case14": {
+   "cosine": 0.062,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case05~case15": {
+   "cosine": 0.0363,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case06~case07": {
+   "cosine": 0.0825,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case06~case08": {
+   "cosine": 0.0197,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case06~case09": {
+   "cosine": 0.0236,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case06~case10": {
+   "cosine": 0.1926,
+   "containment_max": 0.0775,
+   "longest_run_words": 17
+  },
+  "case06~case11": {
+   "cosine": 0.0208,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case06~case12": {
+   "cosine": 0.0583,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case06~case13": {
+   "cosine": 0.089,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case06~case14": {
+   "cosine": 0.1092,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case06~case15": {
+   "cosine": 0.0823,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case07~case08": {
+   "cosine": 0.0241,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case07~case09": {
+   "cosine": 0.0196,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case07~case10": {
+   "cosine": 0.0548,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case07~case11": {
+   "cosine": 0.0204,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case07~case12": {
+   "cosine": 0.0741,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case07~case13": {
+   "cosine": 0.148,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case07~case14": {
+   "cosine": 0.117,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case07~case15": {
+   "cosine": 0.1184,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case08~case09": {
+   "cosine": 0.0778,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case08~case10": {
+   "cosine": 0.0345,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case08~case11": {
+   "cosine": 0.0936,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case08~case12": {
+   "cosine": 0.0165,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case08~case13": {
+   "cosine": 0.0246,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case08~case14": {
+   "cosine": 0.0462,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case08~case15": {
+   "cosine": 0.0392,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case09~case10": {
+   "cosine": 0.0276,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case09~case11": {
+   "cosine": 0.1765,
+   "containment_max": 0.0,
+   "longest_run_words": 4
+  },
+  "case09~case12": {
+   "cosine": 0.0231,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case09~case13": {
+   "cosine": 0.0272,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case09~case14": {
+   "cosine": 0.0454,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case09~case15": {
+   "cosine": 0.0368,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case10~case11": {
+   "cosine": 0.0232,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case10~case12": {
+   "cosine": 0.0411,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case10~case13": {
+   "cosine": 0.054,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case10~case14": {
+   "cosine": 0.0703,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case10~case15": {
+   "cosine": 0.0634,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case11~case12": {
+   "cosine": 0.0116,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case11~case13": {
+   "cosine": 0.0246,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case11~case14": {
+   "cosine": 0.0466,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case11~case15": {
+   "cosine": 0.0129,
+   "containment_max": 0.0,
+   "longest_run_words": 0
+  },
+  "case12~case13": {
+   "cosine": 0.2749,
+   "containment_max": 0.1438,
+   "longest_run_words": 18
+  },
+  "case12~case14": {
+   "cosine": 0.0991,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case12~case15": {
+   "cosine": 0.0689,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case13~case14": {
+   "cosine": 0.1093,
+   "containment_max": 0.0,
+   "longest_run_words": 2
+  },
+  "case13~case15": {
+   "cosine": 0.1059,
+   "containment_max": 0.0,
+   "longest_run_words": 1
+  },
+  "case14~case15": {
+   "cosine": 0.1173,
+   "containment_max": 0.0,
+   "longest_run_words": 3
+  }
+ }
+}

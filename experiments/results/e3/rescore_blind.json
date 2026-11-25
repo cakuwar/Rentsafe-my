@@ -1,0 +1,228 @@
+[
+ {
+  "case": "case03",
+  "stratum": {
+   "area": "Shah Alam",
+   "propertyType": "room",
+   "roomType": "common"
+  },
+  "price": 400,
+  "recorded": {
+   "median": 715,
+   "p25": 662.5,
+   "n": 6,
+   "buildings": 6,
+   "sources": [
+    "manual"
+   ],
+   "deviation": 0.4406,
+   "points": 10,
+   "guard": null
+  },
+  "current": {
+   "median": 715,
+   "p25": 662.5,
+   "n": 6,
+   "buildings": 6,
+   "sources": "manual",
+   "status": "scorable",
+   "scored": true,
+   "deviation": 0.4406,
+   "points": 10,
+   "guard": null
+  },
+  "no_scraped": {
+   "median": 715,
+   "p25": 662.5,
+   "n": 6,
+   "buildings": 6,
+   "sources": "manual",
+   "status": "scorable",
+   "scored": true,
+   "deviation": 0.4406,
+   "points": 10,
+   "guard": null
+  }
+ },
+ {
+  "case": "case04",
+  "stratum": {
+   "area": "Petaling Jaya",
+   "propertyType": "condo",
+   "bedrooms": 0
+  },
+  "price": 1100,
+  "recorded": {
+   "median": 1320,
+   "p25": 1290,
+   "n": 20,
+   "buildings": 7,
+   "sources": [
+    "kaggle"
+   ],
+   "deviation": 0.1667,
+   "points": 0,
+   "guard": null
+  },
+  "current": {
+   "median": 1320,
+   "p25": 1290,
+   "n": 20,
+   "buildings": 7,
+   "sources": "kaggle",
+   "status": "scorable",
+   "scored": true,
+   "deviation": 0.1667,
+   "points": 0,
+   "guard": null
+  },
+  "no_scraped": {
+   "median": 1320,
+   "p25": 1290,
+   "n": 20,
+   "buildings": 7,
+   "sources": "kaggle",
+   "status": "scorable",
+   "scored": true,
+   "deviation": 0.1667,
+   "points": 0,
+   "guard": null
+  }
+ },
+ {
+  "case": "case05",
+  "stratum": {
+   "area": "Subang Jaya",
+   "propertyType": "room",
+   "roomType": "common"
+  },
+  "price": 500,
+  "recorded": {
+   "median": 750,
+   "p25": 487.5,
+   "n": 8,
+   "buildings": 8,
+   "sources": [
+    "manual"
+   ],
+   "deviation": 0.3333,
+   "points": 0,
+   "guard": "at_or_above_p25"
+  },
+  "current": {
+   "median": 750,
+   "p25": 487.5,
+   "n": 8,
+   "buildings": 8,
+   "sources": "manual",
+   "status": "scorable",
+   "scored": true,
+   "deviation": 0.3333,
+   "points": 0,
+   "guard": "at_or_above_p25"
+  },
+  "no_scraped": {
+   "median": 750,
+   "p25": 487.5,
+   "n": 8,
+   "buildings": 8,
+   "sources": "manual",
+   "status": "scorable",
+   "scored": true,
+   "deviation": 0.3333,
+   "points": 0,
+   "guard": "at_or_above_p25"
+  }
+ },
+ {
+  "case": "case12",
+  "stratum": {
+   "area": "Shah Alam",
+   "propertyType": "room",
+   "roomType": "common"
+  },
+  "price": 450,
+  "recorded": {
+   "median": 715,
+   "p25": 662.5,
+   "n": 6,
+   "buildings": 6,
+   "sources": [
+    "manual"
+   ],
+   "deviation": 0.3706,
+   "points": 10,
+   "guard": null
+  },
+  "current": {
+   "median": 715,
+   "p25": 662.5,
+   "n": 6,
+   "buildings": 6,
+   "sources": "manual",
+   "status": "scorable",
+   "scored": true,
+   "deviation": 0.3706,
+   "points": 10,
+   "guard": null
+  },
+  "no_scraped": {
+   "median": 715,
+   "p25": 662.5,
+   "n": 6,
+   "buildings": 6,
+   "sources": "manual",
+   "status": "scorable",
+   "scored": true,
+   "deviation": 0.3706,
+   "points": 10,
+   "guard": null
+  }
+ },
+ {
+  "case": "case14",
+  "stratum": {
+   "area": "Setapak",
+   "propertyType": "room",
+   "roomType": "master"
+  },
+  "price": 700,
+  "recorded": {
+   "median": 1000,
+   "p25": 1000,
+   "n": 8,
+   "buildings": 7,
+   "sources": [
+    "manual",
+    "scraped"
+   ],
+   "deviation": 0.3,
+   "points": 10,
+   "guard": null
+  },
+  "current": {
+   "median": 1000,
+   "p25": 1000,
+   "n": 8,
+   "buildings": 7,
+   "sources": "manual+scraped",
+   "status": "scorable",
+   "scored": true,
+   "deviation": 0.3,
+   "points": 10,
+   "guard": null
+  },
+  "no_scraped": {
+   "median": 1000,
+   "p25": 1000,
+   "n": 6,
+   "buildings": 6,
+   "sources": "manual",
+   "status": "scorable",
+   "scored": true,
+   "deviation": 0.3,
+   "points": 10,
+   "guard": null
+  }
+ }
+]

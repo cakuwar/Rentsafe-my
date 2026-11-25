@@ -1,0 +1,519 @@
+{
+  "generated_at": "2026-11-09T15:06:04.235Z",
+  "method": "leave-one-out over data/processed/baseline_listings.csv; D4 eligibility applied after removing the held-out listing; production scoreAgainstBaseline; price_adjusted",
+  "definitions": {
+    "flagged": "the held-out listing receives > 0 points",
+    "flagged10": "the held-out listing receives >= 10 points",
+    "fp_rate_gt0": "flagged / scored",
+    "fp_rate_ge10": "flagged10 / scored",
+    "scored": "held-out listings whose stratum is still eligible (>= 5 listings, >= 3 buildings) without them"
+  },
+  "variants": [
+    {
+      "name": "start30_guard",
+      "p25Guard": true
+    },
+    {
+      "name": "start30_noguard",
+      "p25Guard": false
+    }
+  ],
+  "whole_units": {
+    "listings": 13998,
+    "not_scored": 1448,
+    "variants": {
+      "start30_guard": {
+        "scored": 12550,
+        "flagged": 1070,
+        "flagged10": 1070,
+        "tiers": {
+          "10": 809,
+          "15": 261
+        },
+        "guarded": 29,
+        "fp_rate_gt0": 0.0853,
+        "fp_rate_ge10": 0.0853
+      },
+      "start30_noguard": {
+        "scored": 12550,
+        "flagged": 1099,
+        "flagged10": 1099,
+        "tiers": {
+          "10": 833,
+          "15": 266
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0876,
+        "fp_rate_ge10": 0.0876
+      }
+    }
+  },
+  "rooms": {
+    "listings": 102,
+    "not_scored": 13,
+    "variants": {
+      "start30_guard": {
+        "scored": 89,
+        "flagged": 6,
+        "flagged10": 6,
+        "tiers": {
+          "10": 4,
+          "15": 2
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0674,
+        "fp_rate_ge10": 0.0674
+      },
+      "start30_noguard": {
+        "scored": 89,
+        "flagged": 6,
+        "flagged10": 6,
+        "tiers": {
+          "10": 4,
+          "15": 2
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0674,
+        "fp_rate_ge10": 0.0674
+      }
+    }
+  },
+  "by_property_type": {
+    "room": {
+      "start30_guard": {
+        "scored": 89,
+        "flagged": 6,
+        "flagged10": 6,
+        "tiers": {
+          "10": 4,
+          "15": 2
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0674,
+        "fp_rate_ge10": 0.0674
+      },
+      "start30_noguard": {
+        "scored": 89,
+        "flagged": 6,
+        "flagged10": 6,
+        "tiers": {
+          "10": 4,
+          "15": 2
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0674,
+        "fp_rate_ge10": 0.0674
+      }
+    },
+    "condo": {
+      "start30_guard": {
+        "scored": 8939,
+        "flagged": 794,
+        "flagged10": 794,
+        "tiers": {
+          "10": 576,
+          "15": 218
+        },
+        "guarded": 25,
+        "fp_rate_gt0": 0.0888,
+        "fp_rate_ge10": 0.0888
+      },
+      "start30_noguard": {
+        "scored": 8939,
+        "flagged": 819,
+        "flagged10": 819,
+        "tiers": {
+          "10": 596,
+          "15": 223
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0916,
+        "fp_rate_ge10": 0.0916
+      }
+    },
+    "apartment": {
+      "start30_guard": {
+        "scored": 3320,
+        "flagged": 267,
+        "flagged10": 267,
+        "tiers": {
+          "10": 225,
+          "15": 42
+        },
+        "guarded": 4,
+        "fp_rate_gt0": 0.0804,
+        "fp_rate_ge10": 0.0804
+      },
+      "start30_noguard": {
+        "scored": 3320,
+        "flagged": 271,
+        "flagged10": 271,
+        "tiers": {
+          "10": 229,
+          "15": 42
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0816,
+        "fp_rate_ge10": 0.0816
+      }
+    },
+    "flat": {
+      "start30_guard": {
+        "scored": 291,
+        "flagged": 9,
+        "flagged10": 9,
+        "tiers": {
+          "10": 8,
+          "15": 1
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0309,
+        "fp_rate_ge10": 0.0309
+      },
+      "start30_noguard": {
+        "scored": 291,
+        "flagged": 9,
+        "flagged10": 9,
+        "tiers": {
+          "10": 8,
+          "15": 1
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0309,
+        "fp_rate_ge10": 0.0309
+      }
+    }
+  },
+  "by_source": {
+    "manual": {
+      "start30_guard": {
+        "scored": 79,
+        "flagged": 6,
+        "flagged10": 6,
+        "tiers": {
+          "10": 4,
+          "15": 2
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0759,
+        "fp_rate_ge10": 0.0759
+      },
+      "start30_noguard": {
+        "scored": 79,
+        "flagged": 6,
+        "flagged10": 6,
+        "tiers": {
+          "10": 4,
+          "15": 2
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0759,
+        "fp_rate_ge10": 0.0759
+      }
+    },
+    "scraped": {
+      "start30_guard": {
+        "scored": 228,
+        "flagged": 5,
+        "flagged10": 5,
+        "tiers": {
+          "10": 4,
+          "15": 1
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0219,
+        "fp_rate_ge10": 0.0219
+      },
+      "start30_noguard": {
+        "scored": 228,
+        "flagged": 5,
+        "flagged10": 5,
+        "tiers": {
+          "10": 4,
+          "15": 1
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0219,
+        "fp_rate_ge10": 0.0219
+      }
+    },
+    "kaggle": {
+      "start30_guard": {
+        "scored": 12332,
+        "flagged": 1065,
+        "flagged10": 1065,
+        "tiers": {
+          "10": 805,
+          "15": 260
+        },
+        "guarded": 29,
+        "fp_rate_gt0": 0.0864,
+        "fp_rate_ge10": 0.0864
+      },
+      "start30_noguard": {
+        "scored": 12332,
+        "flagged": 1094,
+        "flagged10": 1094,
+        "tiers": {
+          "10": 829,
+          "15": 265
+        },
+        "guarded": 0,
+        "fp_rate_gt0": 0.0887,
+        "fp_rate_ge10": 0.0887
+      }
+    }
+  },
+  "examples_start30_guard_ge10": [
+    {
+      "stratum": "Setapak common",
+      "building": "Putra Villa",
+      "source": "manual",
+      "price": 450,
+      "median": 750,
+      "p25": 600,
+      "points": 10,
+      "deviation": 0.4
+    },
+    {
+      "stratum": "Puchong (Selangor) master",
+      "building": "Aurora Residence",
+      "source": "manual",
+      "price": 650,
+      "median": 1000,
+      "p25": 850,
+      "points": 10,
+      "deviation": 0.35
+    },
+    {
+      "stratum": "Subang Jaya common",
+      "building": "Impian Meridian",
+      "source": "manual",
+      "price": 450,
+      "median": 850,
+      "p25": 575,
+      "points": 15,
+      "deviation": 0.4706
+    },
+    {
+      "stratum": "Subang Jaya common",
+      "building": "USJ 2",
+      "source": "manual",
+      "price": 450,
+      "median": 850,
+      "p25": 575,
+      "points": 15,
+      "deviation": 0.4706
+    },
+    {
+      "stratum": "Subang Jaya common",
+      "building": "Casa Subang Jaya",
+      "source": "manual",
+      "price": 500,
+      "median": 850,
+      "p25": 550,
+      "points": 10,
+      "deviation": 0.4118
+    },
+    {
+      "stratum": "Seri Kembangan master",
+      "building": "Meta City",
+      "source": "manual",
+      "price": 600,
+      "median": 960,
+      "p25": 925,
+      "points": 10,
+      "deviation": 0.375
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Menara Alpha",
+      "source": "kaggle",
+      "price": 1680,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.3
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Wangsa Metroview",
+      "source": "kaggle",
+      "price": 1680,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.3
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Sri Jelatek Condominium",
+      "source": "kaggle",
+      "price": 1680,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.3
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Wangsa Metroview",
+      "source": "kaggle",
+      "price": 1560,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.35
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Wangsa Metroview",
+      "source": "kaggle",
+      "price": 1560,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.35
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Menara Alpha",
+      "source": "kaggle",
+      "price": 1620,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.325
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Season Garden",
+      "source": "kaggle",
+      "price": 1680,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.3
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "",
+      "source": "kaggle",
+      "price": 1560,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.35
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Platinum Splendor Residensi Semarak",
+      "source": "kaggle",
+      "price": 1438.8,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.4005
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Menara Alpha",
+      "source": "kaggle",
+      "price": 1500,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.375
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Menara Alpha",
+      "source": "kaggle",
+      "price": 1560,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.35
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Menara Alpha",
+      "source": "kaggle",
+      "price": 1440,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.4
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Menara Alpha",
+      "source": "kaggle",
+      "price": 1680,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.3
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Seasons Garden Residences @ Wangsa Maju",
+      "source": "kaggle",
+      "price": 1560,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.35
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Menara Alpha",
+      "source": "kaggle",
+      "price": 1680,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.3
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Seasons Garden Residences @ Wangsa Maju",
+      "source": "kaggle",
+      "price": 1678.8,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.3005
+    },
+    {
+      "stratum": "Wangsa Maju condo 3",
+      "building": "Platinum Splendor Residensi Semarak",
+      "source": "kaggle",
+      "price": 1440,
+      "median": 2400,
+      "p25": 1830,
+      "points": 10,
+      "deviation": 0.4
+    },
+    {
+      "stratum": "Wangsa Maju condo 4",
+      "building": "Sri Kinabalu",
+      "source": "kaggle",
+      "price": 1560,
+      "median": 2460,
+      "p25": 1920,
+      "points": 10,
+      "deviation": 0.3659
+    },
+    {
+      "stratum": "Wangsa Maju condo 4",
+      "building": "Desa Putra (Wangsa Maju)",
+      "source": "kaggle",
+      "price": 480,
+      "median": 2460,
+      "p25": 1920,
+      "points": 15,
+      "deviation": 0.8049
+    }
+  ]
+}

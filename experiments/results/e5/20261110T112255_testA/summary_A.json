@@ -1,0 +1,30 @@
+{
+ "phase": "A",
+ "label": "",
+ "smoke": false,
+ "started": "2026-11-10T11:24:28+0800",
+ "finished": "2026-11-10T11:28:11+0800",
+ "cpu_logical": 12,
+ "ram_total_gb": 7.7,
+ "cases": 15,
+ "http_200": 15,
+ "score_matches_table_4_11": 15,
+ "band_matches": 15,
+ "mismatches": [],
+ "end_to_end_total_s": 167.88,
+ "end_to_end_median_s": 7.625,
+ "end_to_end_max_s": 26.012,
+ "ocr_median_s": 2.076,
+ "classify_median_s": 0.26,
+ "rest_median_s": 4.532,
+ "explanations": 15,
+ "model_service_warmup_s": 4.958,
+ "resources": {
+  "samples": 217,
+  "available_mb_min": 302,
+  "available_mb_median": 750,
+  "cpu_pct_mean": 29.9,
+  "rss_nlp_mb_max": 730,
+  "rss_backend_mb_max": 86
+ }
+}

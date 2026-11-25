@@ -1,0 +1,29 @@
+{
+ "phase": "A",
+ "label": "",
+ "smoke": true,
+ "started": "2026-11-10T10:56:17+0800",
+ "finished": "2026-11-10T10:56:33+0800",
+ "cpu_logical": 12,
+ "ram_total_gb": 7.7,
+ "cases": 2,
+ "http_200": 2,
+ "score_matches_table_4_11": 2,
+ "band_matches": 2,
+ "mismatches": [],
+ "end_to_end_total_s": 6.7,
+ "end_to_end_median_s": 3.349,
+ "end_to_end_max_s": 4.787,
+ "ocr_median_s": 3.881,
+ "classify_median_s": 0.943,
+ "rest_median_s": -1.474,
+ "explanations": 0,
+ "resources": {
+  "samples": 16,
+  "available_mb_min": 173,
+  "available_mb_median": 538,
+  "cpu_pct_mean": 40.1,
+  "rss_nlp_mb_max": 965,
+  "rss_backend_mb_max": 90
+ }
+}

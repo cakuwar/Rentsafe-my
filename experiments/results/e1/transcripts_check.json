@@ -1,0 +1,170 @@
+{
+ "all_match": true,
+ "cases": [
+  {
+   "case_id": "case01",
+   "label": "SCAM",
+   "origin": "real",
+   "pages": 6,
+   "method": "bubbles",
+   "messages": 50,
+   "recorded_messages": 50,
+   "match": true,
+   "characters": 2295
+  },
+  {
+   "case_id": "case02",
+   "label": "SCAM",
+   "origin": "real",
+   "pages": 4,
+   "method": "bubbles",
+   "messages": 33,
+   "recorded_messages": 33,
+   "match": true,
+   "characters": 1738
+  },
+  {
+   "case_id": "case03",
+   "label": "LEGITIMATE",
+   "origin": "role-play",
+   "pages": 2,
+   "method": "bubbles",
+   "messages": 17,
+   "recorded_messages": 17,
+   "match": true,
+   "characters": 772
+  },
+  {
+   "case_id": "case04",
+   "label": "LEGITIMATE",
+   "origin": "role-play",
+   "pages": 2,
+   "method": "bubbles",
+   "messages": 14,
+   "recorded_messages": 14,
+   "match": true,
+   "characters": 620
+  },
+  {
+   "case_id": "case05",
+   "label": "SCAM",
+   "origin": "real",
+   "pages": 2,
+   "method": "bubbles",
+   "messages": 17,
+   "recorded_messages": 17,
+   "match": true,
+   "characters": 784
+  },
+  {
+   "case_id": "case06",
+   "label": "SCAM",
+   "origin": "real",
+   "pages": 3,
+   "method": "bubbles",
+   "messages": 34,
+   "recorded_messages": 34,
+   "match": true,
+   "characters": 1103
+  },
+  {
+   "case_id": "case07",
+   "label": "SCAM",
+   "origin": "real",
+   "pages": 4,
+   "method": "bubbles",
+   "messages": 45,
+   "recorded_messages": 45,
+   "match": true,
+   "characters": 1824
+  },
+  {
+   "case_id": "case08",
+   "label": "SCAM",
+   "origin": "role-play",
+   "pages": 3,
+   "method": "bubbles",
+   "messages": 18,
+   "recorded_messages": 18,
+   "match": true,
+   "characters": 746
+  },
+  {
+   "case_id": "case09",
+   "label": "LEGITIMATE",
+   "origin": "role-play",
+   "pages": 2,
+   "method": "bubbles",
+   "messages": 11,
+   "recorded_messages": 11,
+   "match": true,
+   "characters": 862
+  },
+  {
+   "case_id": "case10",
+   "label": "SCAM",
+   "origin": "real",
+   "pages": 3,
+   "method": "bubbles",
+   "messages": 28,
+   "recorded_messages": 28,
+   "match": true,
+   "characters": 974
+  },
+  {
+   "case_id": "case11",
+   "label": "LEGITIMATE",
+   "origin": "role-play",
+   "pages": 3,
+   "method": "bubbles",
+   "messages": 12,
+   "recorded_messages": 12,
+   "match": true,
+   "characters": 669
+  },
+  {
+   "case_id": "case12",
+   "label": "SCAM",
+   "origin": "real",
+   "pages": 3,
+   "method": "bubbles",
+   "messages": 14,
+   "recorded_messages": 14,
+   "match": true,
+   "characters": 965
+  },
+  {
+   "case_id": "case13",
+   "label": "SCAM",
+   "origin": "real",
+   "pages": 14,
+   "method": "bubbles",
+   "messages": 153,
+   "recorded_messages": 153,
+   "match": true,
+   "characters": 4809
+  },
+  {
+   "case_id": "case14",
+   "label": "SCAM",
+   "origin": "real",
+   "pages": 9,
+   "method": "bubbles",
+   "messages": 62,
+   "recorded_messages": 62,
+   "match": true,
+   "characters": 2961
+  },
+  {
+   "case_id": "case15",
+   "label": "LEGITIMATE",
+   "origin": "role-play",
+   "pages": 4,
+   "method": "bubbles",
+   "messages": 34,
+   "recorded_messages": 34,
+   "match": true,
+   "characters": 1221
+  }
+ ]
+}

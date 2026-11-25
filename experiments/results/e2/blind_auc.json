@@ -1,0 +1,6 @@
+{
+ "note": "additional, not in the plan: threshold-free ranking on the 15 blind cases (10 scam, 5 legit)",
+ "A_corpus_379": 0.5,
+ "B_run1_1223": 0.88,
+ "xlmr_run1_recorded": 0.94
+}
